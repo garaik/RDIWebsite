@@ -1423,14 +1423,14 @@ blockquote p {
     display: inherit !important;
   }
 }
-/* line 13, ../sass/app.scss */
+/* line 15, ../sass/app.scss */
 .topline {
   background-image: url("images/toplinebg1.png");
   background-repeat: repeat-y;
   background-position: center;
   height: 7px;
 }
-/* line 19, ../sass/app.scss */
+/* line 21, ../sass/app.scss */
 .topline .row {
   background-image: url("images/toplinebg2.png");
   background-repeat: no-repeat;
@@ -1438,16 +1438,16 @@ blockquote p {
   height: 7px;
 }
 
-/* line 27, ../sass/app.scss */
+/* line 29, ../sass/app.scss */
 .menubar {
   height: 144px;
 }
-/* line 30, ../sass/app.scss */
+/* line 32, ../sass/app.scss */
 .menubar .logo {
   padding-top: 36px;
   padding-left: 14px;
 }
-/* line 34, ../sass/app.scss */
+/* line 36, ../sass/app.scss */
 .menubar .menu {
   text-align: center;
   text-transform: uppercase;
@@ -1456,24 +1456,24 @@ blockquote p {
   font-weight: 500;
   font-size: 0.9375em;
 }
-/* line 42, ../sass/app.scss */
+/* line 44, ../sass/app.scss */
 .menubar .menu a {
   color: #55575e;
   text-decoration: none;
 }
 
-/* line 49, ../sass/app.scss */
+/* line 51, ../sass/app.scss */
 .slogen {
   height: 241px;
   background: url("images/slogenbg2.png"), url("images/slogenbg1.png");
   background-repeat: no-repeat, repeat-y;
   background-position: center, center;
 }
-/* line 55, ../sass/app.scss */
+/* line 57, ../sass/app.scss */
 .slogen .columns {
   padding-left: 14px;
 }
-/* line 58, ../sass/app.scss */
+/* line 60, ../sass/app.scss */
 .slogen .columns h1 {
   color: #e8e8fe;
   font-family: 'Roboto', sans-serif;
@@ -1485,17 +1485,59 @@ blockquote p {
   background-color: rgba(47, 34, 110, 0.6);
   display: inline-block;
 }
-/* line 69, ../sass/app.scss */
+/* line 71, ../sass/app.scss */
 .slogen .columns p {
   color: white;
   line-height: 1.4375em;
   margin-top: 29px;
 }
-/* line 74, ../sass/app.scss */
+/* line 76, ../sass/app.scss */
 .slogen .columns p span {
   background-color: rgba(47, 34, 110, 0.6);
   padding: 1px 8px;
   font-size: 1.0625em;
   font-weight: 300;
   color: #e8e8fe;
+}
+
+/* line 87, ../sass/app.scss */
+.gear {
+  background: -webkit-linear-gradient(30deg, #ff0000 0%, #ff0000 50%, #0000ff 50%, #0000ff 75%, #008000 75%, #008000 100%);
+  background: -moz-linear-gradient(30deg, #ff0000 0%, #ff0000 50%, #0000ff 50%, #0000ff 75%, #008000 75%, #008000 100%);
+  background: -o-linear-gradient(30deg, #ff0000 0%, #ff0000 50%, #0000ff 50%, #0000ff 75%, #008000 75%, #008000 100%);
+  background: linear-gradient(30deg, #ff0000 0%, #ff0000 50%, #0000ff 50%, #0000ff 75%, #008000 75%, #008000 100%);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-origin: 200px 0;
+  height: 426px;
+}
+
+/* line 96, ../sass/app.scss */
+.content {
+  background-color: #ededf0;
+  height: 518px;
+}
+
+/* line 101, ../sass/app.scss */
+.contact {
+  background: url("images/contactbg1.png"), -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ceced6), color-stop(50%, #ceced6), color-stop(50%, #d8d8e0), color-stop(100%, #d8d8e0));
+  background: url("images/contactbg1.png"), -webkit-linear-gradient(left, #ceced6 0%, #ceced6 50%, #d8d8e0 50%, #d8d8e0 100%);
+  background: url("images/contactbg1.png"), -moz-linear-gradient(left, #ceced6 0%, #ceced6 50%, #d8d8e0 50%, #d8d8e0 100%);
+  background: url("images/contactbg1.png"), -o-linear-gradient(left, #ceced6 0%, #ceced6 50%, #d8d8e0 50%, #d8d8e0 100%);
+  background: url("images/contactbg1.png"), linear-gradient(left, #ceced6 0%, #ceced6 50%, #d8d8e0 50%, #d8d8e0 100%);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 266px;
+}
+
+/* line 108, ../sass/app.scss */
+.footer {
+  background: url("images/footerbg.png"), -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #0a1159), color-stop(50%, #0a1159), color-stop(50%, #121a6b), color-stop(100%, #121a6b));
+  background: url("images/footerbg.png"), -webkit-linear-gradient(left, #0a1159 0%, #0a1159 50%, #121a6b 50%, #121a6b 100%);
+  background: url("images/footerbg.png"), -moz-linear-gradient(left, #0a1159 0%, #0a1159 50%, #121a6b 50%, #121a6b 100%);
+  background: url("images/footerbg.png"), -o-linear-gradient(left, #0a1159 0%, #0a1159 50%, #121a6b 50%, #121a6b 100%);
+  background: url("images/footerbg.png"), linear-gradient(left, #0a1159 0%, #0a1159 50%, #121a6b 50%, #121a6b 100%);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 181px;
 }
