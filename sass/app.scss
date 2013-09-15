@@ -1,0 +1,84 @@
+// Global Foundation Settings
+@import "settings";
+
+// Comment out this import if you don't want to use normalize
+@import "normalize";
+
+// Comment out this import if you are customizing you imports below
+//@import "foundation";
+@import "foundation/components/global"; // *always required
+@import "foundation/components/grid";
+@import "foundation/components/type";
+
+.topline {
+  background-image: url('images/toplinebg1.png');
+  background-repeat: repeat-y;
+  background-position: center;
+  height: 7px;
+
+  .row {
+    background-image: url('images/toplinebg2.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    height: 7px;
+  }
+}
+
+.menubar {
+  height: 144px;
+
+  .logo {
+    padding-top: 36px;
+    padding-left: 14px;
+  }
+  .menu {
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 71px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: emCalc(15);
+
+    a {
+      color: #55575e;
+      text-decoration: none;
+    }
+  }
+}
+
+.slogen {
+  height: 241px;
+  background: url('images/slogenbg2.png'), url('images/slogenbg1.png');
+  background-repeat: no-repeat, repeat-y;
+  background-position: center, center;
+
+  .columns {
+    padding-left: 14px;
+
+    h1 {
+      color: #e8e8fe;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      font-size: emCalc(29);
+      margin-top: 55px;
+      margin-bottom: 0;
+      padding: 0 8px;
+      background-color: rgba(47, 34, 110, .6);
+      display: inline-block;
+    }
+    p {
+      color: white;
+      line-height: emCalc(23);
+      margin-top: 29px;
+
+      span {
+        background-color: rgba(47, 34, 110, .6);
+        padding: 1px 8px;
+        font-size: emCalc(17);
+        font-weight: 300;
+        color: #e8e8fe;
+      }
+    }
+  }
+}
+
