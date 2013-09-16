@@ -1425,12 +1425,16 @@ blockquote p {
 }
 /* line 15, ../sass/app.scss */
 .topline {
-  background-image: url("images/toplinebg1.png");
-  background-repeat: repeat-y;
-  background-position: center;
+  background: -webkit-linear-gradient(30deg, #782b8f 0%, #782b8f 50%, #eb1c23 50%, #eb1c23 100%);
+  background: -moz-linear-gradient(30deg, #782b8f 0%, #782b8f 50%, #eb1c23 50%, #eb1c23 100%);
+  background: -o-linear-gradient(30deg, #782b8f 0%, #782b8f 50%, #eb1c23 50%, #eb1c23 100%);
+  background: linear-gradient(30deg, #782b8f 0%, #782b8f 50%, #eb1c23 50%, #eb1c23 100%);
+  background-color: #eb1c23;
+  background-repeat: no-repeat;
+  background-position: -104px 0;
   height: 7px;
 }
-/* line 21, ../sass/app.scss */
+/* line 22, ../sass/app.scss */
 .topline .row {
   background-image: url("images/toplinebg2.png");
   background-repeat: no-repeat;
@@ -1438,16 +1442,16 @@ blockquote p {
   height: 7px;
 }
 
-/* line 29, ../sass/app.scss */
+/* line 30, ../sass/app.scss */
 .menubar {
   height: 144px;
 }
-/* line 32, ../sass/app.scss */
+/* line 33, ../sass/app.scss */
 .menubar .logo {
   padding-top: 36px;
   padding-left: 14px;
 }
-/* line 36, ../sass/app.scss */
+/* line 37, ../sass/app.scss */
 .menubar .menu {
   text-align: center;
   text-transform: uppercase;
@@ -1456,24 +1460,27 @@ blockquote p {
   font-weight: 500;
   font-size: 0.9375em;
 }
-/* line 44, ../sass/app.scss */
+/* line 45, ../sass/app.scss */
 .menubar .menu a {
   color: #55575e;
   text-decoration: none;
 }
 
-/* line 51, ../sass/app.scss */
+/* line 52, ../sass/app.scss */
 .slogen {
   height: 241px;
-  background: url("images/slogenbg2.png"), url("images/slogenbg1.png");
-  background-repeat: no-repeat, repeat-y;
+  background: url("images/slogenbg2.png"), -webkit-linear-gradient(90deg, #e32428 0%, #e32428 50%, #622479 50%, #622479 100%);
+  background: url("images/slogenbg2.png"), -moz-linear-gradient(90deg, #e32428 0%, #e32428 50%, #622479 50%, #622479 100%);
+  background: url("images/slogenbg2.png"), -o-linear-gradient(90deg, #e32428 0%, #e32428 50%, #622479 50%, #622479 100%);
+  background: url("images/slogenbg2.png"), linear-gradient(90deg, #e32428 0%, #e32428 50%, #622479 50%, #622479 100%);
+  background-repeat: no-repeat, no-repeat;
   background-position: center, center;
 }
-/* line 57, ../sass/app.scss */
+/* line 58, ../sass/app.scss */
 .slogen .columns {
   padding-left: 14px;
 }
-/* line 60, ../sass/app.scss */
+/* line 61, ../sass/app.scss */
 .slogen .columns h1 {
   color: #e8e8fe;
   font-family: 'Roboto', sans-serif;
@@ -1485,13 +1492,13 @@ blockquote p {
   background-color: rgba(47, 34, 110, 0.6);
   display: inline-block;
 }
-/* line 71, ../sass/app.scss */
+/* line 72, ../sass/app.scss */
 .slogen .columns p {
   color: white;
   line-height: 1.4375em;
   margin-top: 29px;
 }
-/* line 76, ../sass/app.scss */
+/* line 77, ../sass/app.scss */
 .slogen .columns p span {
   background-color: rgba(47, 34, 110, 0.6);
   padding: 1px 8px;
@@ -1500,44 +1507,77 @@ blockquote p {
   color: #e8e8fe;
 }
 
-/* line 87, ../sass/app.scss */
+/* line 88, ../sass/app.scss */
 .gear {
-  background: -webkit-linear-gradient(30deg, #ff0000 0%, #ff0000 50%, #0000ff 50%, #0000ff 75%, #008000 75%, #008000 100%);
-  background: -moz-linear-gradient(30deg, #ff0000 0%, #ff0000 50%, #0000ff 50%, #0000ff 75%, #008000 75%, #008000 100%);
-  background: -o-linear-gradient(30deg, #ff0000 0%, #ff0000 50%, #0000ff 50%, #0000ff 75%, #008000 75%, #008000 100%);
-  background: linear-gradient(30deg, #ff0000 0%, #ff0000 50%, #0000ff 50%, #0000ff 75%, #008000 75%, #008000 100%);
+  background: -webkit-linear-gradient(30deg, #f5f5f7 0%, #f5f5f7 50%, #ffffff 50%, #ffffff 100%);
+  background: -moz-linear-gradient(30deg, #f5f5f7 0%, #f5f5f7 50%, #ffffff 50%, #ffffff 100%);
+  background: -o-linear-gradient(30deg, #f5f5f7 0%, #f5f5f7 50%, #ffffff 50%, #ffffff 100%);
+  background: linear-gradient(30deg, #f5f5f7 0%, #f5f5f7 50%, #ffffff 50%, #ffffff 100%);
+  background-color: #fff;
   background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-origin: 200px 0;
+  background-position: -859px 0;
   height: 426px;
 }
+/* line 95, ../sass/app.scss */
+.gear .quotation {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.125em;
+  text-align: right;
+  border-bottom: 1px solid #a4a8b4;
+  padding-top: 58px;
+  padding-bottom: 6px;
+  color: #55575e;
+}
+/* line 106, ../sass/app.scss */
+.gear .author {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 0.9375em;
+  text-align: right;
+  padding-top: 6px;
+  color: #55575e;
+}
+/* line 115, ../sass/app.scss */
+.gear .disc {
+  padding-top: 35px;
+}
+/* line 117, ../sass/app.scss */
+.gear .disc img {
+  margin-left: -1px;
+}
 
-/* line 96, ../sass/app.scss */
+/* line 123, ../sass/app.scss */
 .content {
   background-color: #ededf0;
   height: 518px;
 }
 
-/* line 101, ../sass/app.scss */
+/* line 128, ../sass/app.scss */
 .contact {
-  background: url("images/contactbg1.png"), -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ceced6), color-stop(50%, #ceced6), color-stop(50%, #d8d8e0), color-stop(100%, #d8d8e0));
-  background: url("images/contactbg1.png"), -webkit-linear-gradient(left, #ceced6 0%, #ceced6 50%, #d8d8e0 50%, #d8d8e0 100%);
-  background: url("images/contactbg1.png"), -moz-linear-gradient(left, #ceced6 0%, #ceced6 50%, #d8d8e0 50%, #d8d8e0 100%);
-  background: url("images/contactbg1.png"), -o-linear-gradient(left, #ceced6 0%, #ceced6 50%, #d8d8e0 50%, #d8d8e0 100%);
-  background: url("images/contactbg1.png"), linear-gradient(left, #ceced6 0%, #ceced6 50%, #d8d8e0 50%, #d8d8e0 100%);
+  background: -webkit-linear-gradient(30deg, #ceced6 0%, #ceced6 50%, #d8d8e0 50%, #d8d8e0 100%);
+  background: -moz-linear-gradient(30deg, #ceced6 0%, #ceced6 50%, #d8d8e0 50%, #d8d8e0 100%);
+  background: -o-linear-gradient(30deg, #ceced6 0%, #ceced6 50%, #d8d8e0 50%, #d8d8e0 100%);
+  background: linear-gradient(30deg, #ceced6 0%, #ceced6 50%, #d8d8e0 50%, #d8d8e0 100%);
+  background-color: #ceced6;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 499px 0;
   height: 266px;
 }
 
-/* line 108, ../sass/app.scss */
+/* line 136, ../sass/app.scss */
 .footer {
-  background: url("images/footerbg.png"), -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #0a1159), color-stop(50%, #0a1159), color-stop(50%, #121a6b), color-stop(100%, #121a6b));
-  background: url("images/footerbg.png"), -webkit-linear-gradient(left, #0a1159 0%, #0a1159 50%, #121a6b 50%, #121a6b 100%);
-  background: url("images/footerbg.png"), -moz-linear-gradient(left, #0a1159 0%, #0a1159 50%, #121a6b 50%, #121a6b 100%);
-  background: url("images/footerbg.png"), -o-linear-gradient(left, #0a1159 0%, #0a1159 50%, #121a6b 50%, #121a6b 100%);
-  background: url("images/footerbg.png"), linear-gradient(left, #0a1159 0%, #0a1159 50%, #121a6b 50%, #121a6b 100%);
+  background: -webkit-linear-gradient(30deg, #0a1159 0%, #0a1159 50%, #121a6b 50%, #121a6b 100%);
+  background: -moz-linear-gradient(30deg, #0a1159 0%, #0a1159 50%, #121a6b 50%, #121a6b 100%);
+  background: -o-linear-gradient(30deg, #0a1159 0%, #0a1159 50%, #121a6b 50%, #121a6b 100%);
+  background: linear-gradient(30deg, #0a1159 0%, #0a1159 50%, #121a6b 50%, #121a6b 100%);
+  background-color: #121a6b;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: -233px 0;
   height: 181px;
+}
+
+/* line 144, ../sass/app.scss */
+#gmaps {
+  height: 266px;
 }

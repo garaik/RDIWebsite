@@ -13,9 +13,10 @@
 @import "compass";
 
 .topline {
-  background-image: url('images/toplinebg1.png');
-  background-repeat: repeat-y;
-  background-position: center;
+  @include background(linear-gradient(30deg, #782b8f 0%, #782b8f 50%, #eb1c23 50%, #eb1c23 100%));
+  background-color: #eb1c23;
+  background-repeat: no-repeat;
+  background-position: -104px 0;
   height: 7px;
 
   .row {
@@ -50,8 +51,8 @@
 
 .slogen {
   height: 241px;
-  background: url('images/slogenbg2.png'), url('images/slogenbg1.png');
-  background-repeat: no-repeat, repeat-y;
+  @include background(url('images/slogenbg2.png'), linear-gradient(90deg, #e32428 0%, #e32428 50%, #622479 50%, #622479 100%));
+  background-repeat: no-repeat, no-repeat;
   background-position: center, center;
 
   .columns {
@@ -85,12 +86,38 @@
 }
 
 .gear {
-  //@include background(linear-gradient(30deg, #f5f5f7 0%, #f5f5f7 50%, #fff 50%, #fff 100%));
-  @include background(linear-gradient(30deg, red 0%, red 50%, blue 50%, blue 75%, green 75%, green 100%));
+  @include background(linear-gradient(30deg, #f5f5f7 0%, #f5f5f7 50%, #fff 50%, #fff 100%));
+  background-color: #fff;
   background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-origin: 200px 0;
+  background-position: -859px 0;
   height: 426px;
+
+  .quotation {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: emCalc(18);
+    text-align: right;
+    border-bottom: 1px solid #a4a8b4;
+    padding-top: 58px;
+    padding-bottom: 6px;
+    color: #55575e;
+  }
+
+  .author {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: emCalc(15);
+    text-align: right;
+    padding-top: 6px;
+    color: #55575e;
+  }
+
+  .disc {
+    padding-top: 35px;
+    img {
+      margin-left: -1px;
+    }
+  }
 }
 
 .content {
@@ -99,15 +126,21 @@
 }
 
 .contact {
-  @include background(url('images/contactbg1.png'), linear-gradient(left, #ceced6 0%, #ceced6 50%, #d8d8e0 50%, #d8d8e0 100%));
+  @include background(linear-gradient(30deg, #ceced6 0%, #ceced6 50%, #d8d8e0 50%, #d8d8e0 100%));
+  background-color: #ceced6;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 499px 0;
   height: 266px;
 }
 
 .footer {
-  @include background(url('images/footerbg.png'), linear-gradient(left, #0a1159 0%, #0a1159 50%, #121a6b 50%, #121a6b 100%));
+  @include background(linear-gradient(30deg, #0a1159 0%, #0a1159 50%, #121a6b 50%, #121a6b 100%));
+  background-color: #121a6b;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: -233px 0;
   height: 181px;
+}
+
+#gmaps {
+  height: 266px;
 }
