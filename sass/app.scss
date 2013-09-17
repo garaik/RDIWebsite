@@ -12,19 +12,34 @@
 
 @import "compass";
 
+$topline-height: 7px;
+$menu-bar-top-padding: 71px;
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot');
+	src:url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('fonts/icomoon.woff') format('woff'),
+		url('fonts/icomoon.ttf') format('truetype'),
+		url('fonts/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
 .topline {
   @include background(linear-gradient(30deg, #782b8f 0%, #782b8f 50%, #eb1c23 50%, #eb1c23 100%));
   background-color: #eb1c23;
   background-repeat: no-repeat;
   background-position: -104px 0;
-  height: 7px;
+  height: $topline-height;
+}
 
-  .row {
-    background-image: url('images/toplinebg2.png');
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    height: 7px;
-  }
+@mixin menu-link {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: emCalc(15);
 }
 
 .menubar {
@@ -35,16 +50,12 @@
     padding-left: 14px;
   }
   .menu {
-    text-align: center;
-    text-transform: uppercase;
-    padding-top: 71px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: emCalc(15);
+    text-align: right;
+    padding-top: $menu-bar-top-padding;
 
     a {
+      @include menu-link;
       color: #55575e;
-      text-decoration: none;
     }
   }
 }
@@ -131,6 +142,20 @@
   background-repeat: no-repeat;
   background-position: 499px 0;
   height: 266px;
+
+  .contact-info {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: emCalc(14);
+    color: #55575e;
+    padding-top: 69px;
+    padding-left: 25px;
+    line-height: emCalc(19);
+
+    .company-name {
+      font-size: emCalc(18);
+    }
+  }
 }
 
 .footer {
@@ -139,8 +164,46 @@
   background-repeat: no-repeat;
   background-position: -233px 0;
   height: 181px;
+
+  .social {
+    padding-top: $column-gutter + emCalc(7);
+    padding-left: 0;
+
+    a.share {
+      font-family: 'icomoon';
+      font-weight: bold;
+      font-size: 23px;
+      color: #9da0bd;
+      background-color: rgba(116, 107, 192, .6);
+      padding: 7px;
+    }
+  }
+
+  .copyright {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: emCalc(12);
+    color: #a19ec2;
+    padding-top: $column-gutter;
+  }
 }
 
 #gmaps {
   height: 266px;
+}
+
+$language-selector-vpadding: 7px;
+
+#language-selector {
+  position: absolute;
+  display: block;
+  right: 0;
+  top: $topline-height + $menu-bar-top-padding - $language-selector-vpadding;
+  padding: $language-selector-vpadding 12px;
+  background-color: #dfe0e8;
+
+  a {
+    @include menu-link;
+    color: #7d7f86;
+  }
 }

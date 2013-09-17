@@ -1423,7 +1423,15 @@ blockquote p {
     display: inherit !important;
   }
 }
-/* line 15, ../sass/app.scss */
+@font-face {
+  font-family: 'icomoon';
+  src: url("fonts/icomoon.eot");
+  src: url("fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("fonts/icomoon.woff") format("woff"), url("fonts/icomoon.ttf") format("truetype"), url("fonts/icomoon.svg#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 29, ../sass/app.scss */
 .topline {
   background: -webkit-linear-gradient(30deg, #782b8f 0%, #782b8f 50%, #eb1c23 50%, #eb1c23 100%);
   background: -moz-linear-gradient(30deg, #782b8f 0%, #782b8f 50%, #eb1c23 50%, #eb1c23 100%);
@@ -1434,39 +1442,32 @@ blockquote p {
   background-position: -104px 0;
   height: 7px;
 }
-/* line 22, ../sass/app.scss */
-.topline .row {
-  background-image: url("images/toplinebg2.png");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  height: 7px;
-}
 
-/* line 30, ../sass/app.scss */
+/* line 45, ../sass/app.scss */
 .menubar {
   height: 144px;
 }
-/* line 33, ../sass/app.scss */
+/* line 48, ../sass/app.scss */
 .menubar .logo {
   padding-top: 36px;
   padding-left: 14px;
 }
-/* line 37, ../sass/app.scss */
+/* line 52, ../sass/app.scss */
 .menubar .menu {
-  text-align: center;
-  text-transform: uppercase;
+  text-align: right;
   padding-top: 71px;
+}
+/* line 56, ../sass/app.scss */
+.menubar .menu a {
+  text-transform: uppercase;
+  text-decoration: none;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 0.9375em;
-}
-/* line 45, ../sass/app.scss */
-.menubar .menu a {
   color: #55575e;
-  text-decoration: none;
 }
 
-/* line 52, ../sass/app.scss */
+/* line 63, ../sass/app.scss */
 .slogen {
   height: 241px;
   background: url("images/slogenbg2.png"), -webkit-linear-gradient(90deg, #e32428 0%, #e32428 50%, #622479 50%, #622479 100%);
@@ -1476,11 +1477,11 @@ blockquote p {
   background-repeat: no-repeat, no-repeat;
   background-position: center, center;
 }
-/* line 58, ../sass/app.scss */
+/* line 69, ../sass/app.scss */
 .slogen .columns {
   padding-left: 14px;
 }
-/* line 61, ../sass/app.scss */
+/* line 72, ../sass/app.scss */
 .slogen .columns h1 {
   color: #e8e8fe;
   font-family: 'Roboto', sans-serif;
@@ -1492,13 +1493,13 @@ blockquote p {
   background-color: rgba(47, 34, 110, 0.6);
   display: inline-block;
 }
-/* line 72, ../sass/app.scss */
+/* line 83, ../sass/app.scss */
 .slogen .columns p {
   color: white;
   line-height: 1.4375em;
   margin-top: 29px;
 }
-/* line 77, ../sass/app.scss */
+/* line 88, ../sass/app.scss */
 .slogen .columns p span {
   background-color: rgba(47, 34, 110, 0.6);
   padding: 1px 8px;
@@ -1507,7 +1508,7 @@ blockquote p {
   color: #e8e8fe;
 }
 
-/* line 88, ../sass/app.scss */
+/* line 99, ../sass/app.scss */
 .gear {
   background: -webkit-linear-gradient(30deg, #f5f5f7 0%, #f5f5f7 50%, #ffffff 50%, #ffffff 100%);
   background: -moz-linear-gradient(30deg, #f5f5f7 0%, #f5f5f7 50%, #ffffff 50%, #ffffff 100%);
@@ -1518,7 +1519,7 @@ blockquote p {
   background-position: -859px 0;
   height: 426px;
 }
-/* line 95, ../sass/app.scss */
+/* line 106, ../sass/app.scss */
 .gear .quotation {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -1529,7 +1530,7 @@ blockquote p {
   padding-bottom: 6px;
   color: #55575e;
 }
-/* line 106, ../sass/app.scss */
+/* line 117, ../sass/app.scss */
 .gear .author {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -1538,22 +1539,22 @@ blockquote p {
   padding-top: 6px;
   color: #55575e;
 }
-/* line 115, ../sass/app.scss */
+/* line 126, ../sass/app.scss */
 .gear .disc {
   padding-top: 35px;
 }
-/* line 117, ../sass/app.scss */
+/* line 128, ../sass/app.scss */
 .gear .disc img {
   margin-left: -1px;
 }
 
-/* line 123, ../sass/app.scss */
+/* line 134, ../sass/app.scss */
 .content {
   background-color: #ededf0;
   height: 518px;
 }
 
-/* line 128, ../sass/app.scss */
+/* line 139, ../sass/app.scss */
 .contact {
   background: -webkit-linear-gradient(30deg, #ceced6 0%, #ceced6 50%, #d8d8e0 50%, #d8d8e0 100%);
   background: -moz-linear-gradient(30deg, #ceced6 0%, #ceced6 50%, #d8d8e0 50%, #d8d8e0 100%);
@@ -1564,8 +1565,22 @@ blockquote p {
   background-position: 499px 0;
   height: 266px;
 }
+/* line 146, ../sass/app.scss */
+.contact .contact-info {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 0.875em;
+  color: #55575e;
+  padding-top: 69px;
+  padding-left: 25px;
+  line-height: 1.1875em;
+}
+/* line 155, ../sass/app.scss */
+.contact .contact-info .company-name {
+  font-size: 1.125em;
+}
 
-/* line 136, ../sass/app.scss */
+/* line 161, ../sass/app.scss */
 .footer {
   background: -webkit-linear-gradient(30deg, #0a1159 0%, #0a1159 50%, #121a6b 50%, #121a6b 100%);
   background: -moz-linear-gradient(30deg, #0a1159 0%, #0a1159 50%, #121a6b 50%, #121a6b 100%);
@@ -1576,8 +1591,49 @@ blockquote p {
   background-position: -233px 0;
   height: 181px;
 }
+/* line 168, ../sass/app.scss */
+.footer .social {
+  padding-top: 1.0625em;
+  padding-left: 0;
+}
+/* line 172, ../sass/app.scss */
+.footer .social a.share {
+  font-family: 'icomoon';
+  font-weight: bold;
+  font-size: 23px;
+  color: #9da0bd;
+  background-color: rgba(116, 107, 192, 0.6);
+  padding: 7px;
+}
+/* line 182, ../sass/app.scss */
+.footer .copyright {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 0.75em;
+  color: #a19ec2;
+  padding-top: 0.625em;
+}
 
-/* line 144, ../sass/app.scss */
+/* line 191, ../sass/app.scss */
 #gmaps {
   height: 266px;
+}
+
+/* line 197, ../sass/app.scss */
+#language-selector {
+  position: absolute;
+  display: block;
+  right: 0;
+  top: 71px;
+  padding: 7px 12px;
+  background-color: #dfe0e8;
+}
+/* line 205, ../sass/app.scss */
+#language-selector a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 0.9375em;
+  color: #7d7f86;
 }

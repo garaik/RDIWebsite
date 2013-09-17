@@ -8,6 +8,7 @@
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500,300' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="stylesheets/app.css">
   <link type="text/plain" rel="author" href="humans.txt" />
+  <link rel="shortcut icon" href="images/favicon.png">
   <script src="javascripts/vendor/custom.modernizr.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 </head>
@@ -20,12 +21,17 @@
     <div class="small-2 columns logo">
       <a href="#"><img src="images/p92rdilogo.png" /></a>
     </div>
-    <div class="small-offset-1 small-1 columns menu"><a href="#">Research</a></div>
-    <div class="small-1 columns menu"><a href="#">Development</a></div>
-    <div class="small-1 columns menu"><a href="#">Innovation</a></div>
-    <div class="small-1 columns menu"><a href="#">Products</a></div>
-    <div class="small-1 columns menu"><a href="#">Partners</a></div>
-    <div class="small-1 columns menu"><a href="#">Contact</a></div>
+    <div class="small-offset-1 small-6 columns menu">
+      <a href="#">Research</a> &nbsp;&nbsp;
+      <a href="#">Development</a> &nbsp;&nbsp;
+      <a href="#">Innovation</a> &nbsp;&nbsp;
+      <a href="#">Products</a> &nbsp;&nbsp;
+      <a href="#">Partners</a> &nbsp;&nbsp;
+      <a href="#">Contact</a>
+    </div>
+  </div>
+  <div id="language-selector">
+    <a href="#">English</a>
   </div>
 </div>
 <div class="slogen">
@@ -55,9 +61,28 @@
 <div class="contact">
   <div class="row">
     <div class="small-offset-1 small-5 columns" id="gmaps"></div>
+    <div class="small-3 columns contact-info">
+      <span class="company-name"><strong>P92 RDI</strong> Ltd.</span><br>
+      <br>
+      H-1038 Budapest<br>
+      Ráby Mátyás u. 26.<br>
+      <br>
+      +36 1 453 4131<br>
+      <br>
+      info@p92rdi.hu
+    </div>
   </div>
 </div>
-<div class="footer"></div>
+<div class="footer">
+  <div class="row">
+    <div class="small-offset-1 small-5 column social">
+      <a href="#" class="share">&#xe00a;</a>
+    </div>
+    <div class="small-3 columns copyright">
+      Copyright &copy;2013 P92 RDI
+    </div>
+  </div>
+</div>
 <script>
   document.write('<script src=' + ('__proto__' in {} ? 'javascripts/vendor/zepto' : 'javascripts/vendor/jquery') + '.js><\/script>')
 </script>
@@ -69,10 +94,52 @@
   var map;
   function initialize() {
     var stylez = [
-      { featureType: 'landscape', elementType: 'all', stylers: [
+      { featureType: 'landscape', elementType: 'geometry', stylers: [
         { hue: '#e3e3eb' },
         { saturation: -38 },
         { lightness: 14 },
+        { visibility: 'on' }
+      ] },
+      { featureType: 'landscape', elementType: 'labels', stylers: [
+        { hue: '#6c6c74' },
+        { saturation: -87 },
+        { lightness: -51 },
+        { visibility: 'on' }
+      ] },
+      { featureType: 'road.highway', elementType: 'geometry', stylers: [
+        { hue: '#c2c2ca' },
+        { saturation: -93 },
+        { lightness: 38 },
+        { visibility: 'on' }
+      ] },
+      { featureType: 'road.highway', elementType: 'labels', stylers: [
+        { hue: '#c2c2ca' },
+        { saturation: -93 },
+        { lightness: 38 },
+        { visibility: 'on' }
+      ] },
+      { featureType: 'road.arterial', elementType: 'geometry', stylers: [
+        { hue: '#ffffff' },
+        { saturation: -100 },
+        { lightness: 100 },
+        { visibility: 'on' }
+      ] },
+      { featureType: 'road.arterial', elementType: 'geometry.stroke', stylers: [
+        { hue: '#d0d0d8' },
+        { saturation: -91 },
+        { lightness: -17 },
+        { visibility: 'on' }
+      ] },
+      { featureType: 'road.local', elementType: 'geometry.fill', stylers: [
+        { hue: '#ffffff' },
+        { saturation: -100 },
+        { lightness: 100 },
+        { visibility: 'on' }
+      ] },
+      { featureType: 'road.local', elementType: 'geometry.stroke', stylers: [
+        { hue: '#d0d0d8' },
+        { saturation: -91 },
+        { lightness: -17 },
         { visibility: 'on' }
       ] },
       { featureType: 'poi', elementType: 'all', stylers: [
@@ -81,19 +148,10 @@
         { lightness: 57 },
         { visibility: 'on' }
       ] },
-      { featureType: 'road.highway', elementType: 'all', stylers: [
-        { hue: '#c1c1c9' },
-        { saturation: -93 },
-        { lightness: 37 },
-        { visibility: 'on' }
-      ] },
       { featureType: 'water', elementType: 'all', stylers: [
-        { hue: '#b3b4c4' },
-        { saturation: -72 },
-        { lightness: -3 },
-        { visibility: 'on' }
-      ] },
-      { featureType: 'water', elementType: 'all', stylers: [
+        { hue: '#c2c2ca' },
+        { saturation: -84 },
+        { lightness: 7 },
         { visibility: 'on' }
       ] }
     ];
@@ -101,21 +159,23 @@
       zoom: 16,
       center: new google.maps.LatLng(47.590266 , 19.046832),
       mapTypeId: google.maps.MapTypeId.ROADMAP,
-      disableDefaultUI: true
+      disableDefaultUI: true,
+      backgroundColor: '#ceced6'
     };
     map = new google.maps.Map(document.getElementById('gmaps'),
       mapOptions);
-    var mapType = new google.maps.StyledMapType(stylez, { name:"Grayscale" });
-    map.mapTypes.set('tehgrayz', mapType);
-    map.setMapTypeId('tehgrayz');
+    var mapType = new google.maps.StyledMapType(stylez, { name:"RDI" });
+    map.mapTypes.set('rdi', mapType);
+    map.setMapTypeId('rdi');
+    var rdiMarker = new google.maps.Marker({
+      position: new google.maps.LatLng(47.590266 , 19.046832),
+      map: map,
+      icon: {
+        url: 'images/p92rdipin.png'
+      }
+    });
   }
   google.maps.event.addDomListener(window, 'load', initialize);
-
-//  var options = { mapTypeControlOptions: { mapTypeIds: [ 'Styled'] }, center: new google.maps.LatLng(47.607266707957315, 19.102673625946064), zoom: 12, mapTypeId: 'Styled' };
-//  var div = document.getElementById('map');
-//  var map = new google.maps.Map(div, options);
-//  var styledMapType = new google.maps.StyledMapType(styles, { name: 'Styled' });
-//  map.mapTypes.set('Styled', styledMapType);
 </script>
 
 
