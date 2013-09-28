@@ -1492,14 +1492,16 @@ blockquote p {
   padding: 0 8px;
   background-color: rgba(47, 34, 110, 0.6);
   display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.1);
 }
-/* line 83, ../sass/app.scss */
+/* line 85, ../sass/app.scss */
 .slogen .columns p {
   color: white;
   line-height: 1.4375em;
   margin-top: 29px;
 }
-/* line 88, ../sass/app.scss */
+/* line 90, ../sass/app.scss */
 .slogen .columns p span {
   background-color: rgba(47, 34, 110, 0.6);
   padding: 1px 8px;
@@ -1508,7 +1510,7 @@ blockquote p {
   color: #e8e8fe;
 }
 
-/* line 99, ../sass/app.scss */
+/* line 101, ../sass/app.scss */
 .gear {
   background: -webkit-linear-gradient(30deg, #f5f5f7 0%, #f5f5f7 50%, #ffffff 50%, #ffffff 100%);
   background: -moz-linear-gradient(30deg, #f5f5f7 0%, #f5f5f7 50%, #ffffff 50%, #ffffff 100%);
@@ -1519,7 +1521,7 @@ blockquote p {
   background-position: -859px 0;
   height: 426px;
 }
-/* line 106, ../sass/app.scss */
+/* line 108, ../sass/app.scss */
 .gear .quotation {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -1530,7 +1532,7 @@ blockquote p {
   padding-bottom: 6px;
   color: #55575e;
 }
-/* line 117, ../sass/app.scss */
+/* line 119, ../sass/app.scss */
 .gear .author {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -1539,22 +1541,22 @@ blockquote p {
   padding-top: 6px;
   color: #55575e;
 }
-/* line 126, ../sass/app.scss */
+/* line 128, ../sass/app.scss */
 .gear .disc {
   padding-top: 35px;
 }
-/* line 128, ../sass/app.scss */
+/* line 130, ../sass/app.scss */
 .gear .disc img {
   margin-left: -1px;
 }
 
-/* line 134, ../sass/app.scss */
+/* line 136, ../sass/app.scss */
 .content {
   background-color: #ededf0;
   height: 518px;
 }
 
-/* line 139, ../sass/app.scss */
+/* line 141, ../sass/app.scss */
 .contact {
   background: -webkit-linear-gradient(30deg, #ceced6 0%, #ceced6 50%, #d8d8e0 50%, #d8d8e0 100%);
   background: -moz-linear-gradient(30deg, #ceced6 0%, #ceced6 50%, #d8d8e0 50%, #d8d8e0 100%);
@@ -1565,7 +1567,7 @@ blockquote p {
   background-position: 499px 0;
   height: 266px;
 }
-/* line 146, ../sass/app.scss */
+/* line 148, ../sass/app.scss */
 .contact .contact-info {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -1575,12 +1577,12 @@ blockquote p {
   padding-left: 25px;
   line-height: 1.1875em;
 }
-/* line 155, ../sass/app.scss */
+/* line 157, ../sass/app.scss */
 .contact .contact-info .company-name {
   font-size: 1.125em;
 }
 
-/* line 161, ../sass/app.scss */
+/* line 163, ../sass/app.scss */
 .footer {
   background: -webkit-linear-gradient(30deg, #0a1159 0%, #0a1159 50%, #121a6b 50%, #121a6b 100%);
   background: -moz-linear-gradient(30deg, #0a1159 0%, #0a1159 50%, #121a6b 50%, #121a6b 100%);
@@ -1591,35 +1593,49 @@ blockquote p {
   background-position: -233px 0;
   height: 181px;
 }
-/* line 168, ../sass/app.scss */
+/* line 172, ../sass/app.scss */
 .footer .social {
-  padding-top: 1.0625em;
+  padding-top: 1.8125em;
   padding-left: 0;
 }
-/* line 172, ../sass/app.scss */
+/* line 176, ../sass/app.scss */
 .footer .social a.share {
   font-family: 'icomoon';
-  font-weight: bold;
   font-size: 23px;
-  color: #9da0bd;
+  color: #fff;
   background-color: rgba(116, 107, 192, 0.6);
-  padding: 7px;
+  padding: 0.1875em;
+  margin-right: 16px;
 }
-/* line 182, ../sass/app.scss */
+/* line 185, ../sass/app.scss */
+.footer .social a.tech {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+  color: #fff;
+  text-transform: uppercase;
+  margin-right: 16px;
+  vertical-align: top;
+  display: inline-block;
+  position: relative;
+  top: -6px;
+}
+/* line 199, ../sass/app.scss */
 .footer .copyright {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 0.75em;
   color: #a19ec2;
-  padding-top: 0.625em;
+  padding-top: 1.625em;
+  padding-left: 25px;
 }
 
-/* line 191, ../sass/app.scss */
+/* line 209, ../sass/app.scss */
 #gmaps {
   height: 266px;
 }
 
-/* line 197, ../sass/app.scss */
+/* line 215, ../sass/app.scss */
 #language-selector {
   position: absolute;
   display: block;
@@ -1628,7 +1644,7 @@ blockquote p {
   padding: 7px 12px;
   background-color: #dfe0e8;
 }
-/* line 205, ../sass/app.scss */
+/* line 223, ../sass/app.scss */
 #language-selector a {
   text-transform: uppercase;
   text-decoration: none;

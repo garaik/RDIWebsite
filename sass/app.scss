@@ -79,6 +79,8 @@ $menu-bar-top-padding: 71px;
       padding: 0 8px;
       background-color: rgba(47, 34, 110, .6);
       display: inline-block;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-stroke: 1px rgba(0,0,0,0.1);
     }
     p {
       color: white;
@@ -165,17 +167,32 @@ $menu-bar-top-padding: 71px;
   background-position: -233px 0;
   height: 181px;
 
+  $social-icon-padding: emCalc(3);
+
   .social {
-    padding-top: $column-gutter + emCalc(7);
+    padding-top: $column-gutter + $social-icon-padding + emCalc(16);
     padding-left: 0;
 
     a.share {
       font-family: 'icomoon';
-      font-weight: bold;
       font-size: 23px;
-      color: #9da0bd;
+      color: #fff;
       background-color: rgba(116, 107, 192, .6);
-      padding: 7px;
+      padding: $social-icon-padding;
+      margin-right: 16px;
+    }
+
+    a.tech {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      font-size: emCalc(16);
+      color: #fff;
+      text-transform: uppercase;
+      margin-right: 16px;
+      vertical-align: top;
+      display: inline-block;
+      position: relative;
+      top: -6px;
     }
   }
 
@@ -184,7 +201,8 @@ $menu-bar-top-padding: 71px;
     font-weight: 400;
     font-size: emCalc(12);
     color: #a19ec2;
-    padding-top: $column-gutter;
+    padding-top: $column-gutter + emCalc(16);
+    padding-left: 25px;
   }
 }
 
