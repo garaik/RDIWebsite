@@ -18,10 +18,10 @@
 </div>
 <div class="menubar">
   <div class="row">
-    <div class="small-2 columns logo">
+    <div class="small-4 columns logo">
       <a href="#"><img src="images/p92rdilogo.png" /></a>
     </div>
-    <div class="small-offset-1 small-6 columns menu">
+    <div class="small-offset-2 small-12 columns menu">
       <a href="#">Research</a> &nbsp;&nbsp;
       <a href="#">Development</a> &nbsp;&nbsp;
       <a href="#">Innovation</a> &nbsp;&nbsp;
@@ -36,7 +36,7 @@
 </div>
 <div class="slogen">
   <div class="row">
-    <div class="small-12 columns">
+    <div class="small-18 columns">
       <h1>Szoftverfejlesztéssel foglalkozunk</h1>
       <p>
         <span>Célunk az intelligens problémamegoldás és olyan újszerű</span><br>
@@ -47,21 +47,65 @@
   </div>
 </div>
 <div class="gear">
-  <div class="row collapse">
-    <div class="small-6 columns">
-      <div class="quotation">&ldquo;It is a mistake to think you can solve any major problems just with potatoes.&rdquo;</div>
-      <div class="author">Douglas Adams</div>
+  <div class="row">
+    <div class="small-12 columns">
+      <div class="quotation">
+        <span class="quotation-text">We cannot solve our problems with the same thinking we used when we created them.</span>
+        <span class="quotation-author">Albert Einstein</span>
+      </div>
+      <div class="division-content">
+        <p>Kutatási eredményeinket fejlesztési folyamatainkba integráljuk, így hozzuk létre saját innovációinkat.
+          Fejlesztéseink elsődleges célja, hogy partnereink üzleti informatikai törekvéseit támogassuk.</p>
+        <p>Innovációink kiindulópontja minden esetben valós probléma, mellyel munkánk során találkoztunk.
+          A fejlesztések tervezésekor mindig segítségünkre voltak olyan szakemberek, akik az adott területen naponta
+          találkoznak a megoldandó problémákkal. Így született a partyszervező problémájának megoldásaként a
+          <strong>FoundryBox Live</strong>, a dokumentum hegyek&shy;kel küzdő kommunikációs szolgáltató cég rendszereként a
+          <strong>The DOX</strong>, a
+          hatalmas ügy&shy;nökhálózatot működtető óriásvállalat csodafegyvereként a <strong>FieldBack</strong> és – hogy magunk&shy;at se hagyjuk
+          ki a sorból – a szoftverfejlesztők sárga angyala, a <strong>GraFight</strong>.</p>
+      </div>
     </div>
-    <div class="small-3 columns disc">
+    <div class="small-6 columns disc">
       <img src="images/rdidisc.png" />
     </div>
   </div>
 </div>
-<div class="content"></div>
+<div class="content">
+  <div class="row">
+    <div class="small-9 columns">
+      <div class="product" id="thedox">
+        <h2><span>Digitálisvagyon-kezelés</span></h2>
+        <p>Egy vállalatnál sokféle, nagy mennyiségű elektronikus tartalom keletkezik a napi munka során. Feljegyzések, pénzügyi kimu&shy;tatások, hivatalos iratok, hangfelvételek, naptárbejegyzések, feladatlisták - ezt a rengeteg dokumentumot rendszerezni, és</p>
+      </div>
+    </div>
+    <div class="small-9 columns">
+      <div class="product" id="fieldback">
+        <h2><span>Terepmunka támogatás<br>és helyszíni adatgyűjtés</span></h2>
+        <p>Képviselői vagy bolt hálózatot működtető, támogató vál&shy;lalkozások nélkülözhetetlen támogató eszköze. Hatékony és költségkímélő megoldás a FielDBack komplex mobil alkal&shy;mazás, amellyel az üzletkötők, területi képviselők kiemelkedő</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-9 columns">
+      <div class="product" id="grafight">
+        <h2><span>Szoftvererózió védelem</span></h2>
+        <p>Az egyedi fejlesztésű szoftvereket használó vállalkozások számára jelentős problémát okoz a szoftver-eróziónak nevezett jelenség. A szoftverek fejlesztése során indul el a folyamat, és minden új funkció hozzáadásával, jogszabálykövetéssel mélyül</p>
+      </div>
+    </div>
+    <div class="small-9 columns">
+      <div class="product" id="foundryboxlive">
+        <h2><span>Rendezvénytuning</span></h2>
+        <p>Egyedülálló és igényes party fotó szolgáltatás az Ön kezében, amellyel sikeres rendezvényeket fog szervezni. Legyen az egy fesztivál, egy céges party, egy szakmai kiállítás, egy futball mérkőzés vagy egy rock koncert.</p>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="contact">
   <div class="row">
-    <div class="small-6 columns" id="gmaps"></div>
-    <div class="small-3 columns contact-info">
+    <div class="small-12 columns">
+      <div id="gmaps"></div>
+    </div>
+    <div class="small-6 columns contact-info">
       <span class="company-name"><strong>P92 RDI</strong> Ltd.</span><br>
       <br>
       H-1038 Budapest<br>
@@ -75,7 +119,7 @@
 </div>
 <div class="footer">
   <div class="row">
-    <div class="small-6 column social">
+    <div class="small-12 column social">
       <a href="#" class="share">&#xe004;</a>
       <a href="#" class="share">&#xe001;</a>
       <a href="#" class="share">&#xe002;</a>
@@ -83,7 +127,7 @@
       <a href="#" class="tech">Sajtó</a>
       <a href="#" class="tech">Lorem Ipsum</a>
     </div>
-    <div class="small-3 columns copyright">
+    <div class="small-6 columns copyright">
       Copyright &copy;2013 P92 RDI
     </div>
   </div>
@@ -165,6 +209,8 @@
       center: new google.maps.LatLng(47.590266 , 19.046832),
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       disableDefaultUI: true,
+      zoomControl: true,
+      scrollwheel: false,
       backgroundColor: '#ceced6'
     };
     map = new google.maps.Map(document.getElementById('gmaps'),
