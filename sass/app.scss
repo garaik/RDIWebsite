@@ -195,6 +195,7 @@ $default-horizontal-gap: $column-gutter + emCalc(16);
       height: 202px;
       color: #fff;
       overflow: hidden;
+      position: relative;
 
       h2 {
         background-color: #fff;
@@ -219,13 +220,36 @@ $default-horizontal-gap: $column-gutter + emCalc(16);
       }
 
       p {
+        border-top: 6px solid rgba(255, 255, 255, .2);
         margin: 0;
         padding: $default-padding;
+        padding-top: $default-padding - 6px;
         font-family: 'Roboto', sans-serif;
         font-weight: 300;
         font-size: emCalc(15);
         line-height: emCalc(20);
         text-align: justify;
+      }
+
+      span.more {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        font-family: 'Roboto', sans-serif;
+        font-size: emCalc(25);
+        font-weight: 300;
+        width: 50px;
+        height: 30px;
+        text-align: right;
+        padding-top: 6px;
+        padding-right: 4px;
+        background: url('images/more-corner.png');
+        background-position: bottom right;
+        background-repeat: no-repeat;
+
+        a {
+          color: #fff;
+        }
       }
     }
   }
