@@ -1797,9 +1797,10 @@ blockquote p {
 /* line 58, ../sass/app.scss */
 .menubar .menu {
   text-align: right;
-  padding-top: 71px;
+  padding-top: 69px;
+  z-index: 2;
 }
-/* line 62, ../sass/app.scss */
+/* line 63, ../sass/app.scss */
 .menubar .menu a {
   text-transform: uppercase;
   text-decoration: none;
@@ -1807,9 +1808,11 @@ blockquote p {
   font-weight: 500;
   font-size: 0.9375em;
   color: #55575e;
+  background-color: #fff;
+  padding: 1px 3px;
 }
 
-/* line 69, ../sass/app.scss */
+/* line 72, ../sass/app.scss */
 .slogen {
   height: 241px;
   background: url("images/slogenbg2.png"), -webkit-linear-gradient(90deg, #e32428 0%, #e32428 50%, #622479 50%, #622479 100%);
@@ -1818,32 +1821,39 @@ blockquote p {
   background: url("images/slogenbg2.png"), linear-gradient(90deg, #e32428 0%, #e32428 50%, #622479 50%, #622479 100%);
   background-repeat: no-repeat, no-repeat;
   background-position: center, center;
+  position: relative;
+  overflow: hidden;
 }
-/* line 75, ../sass/app.scss */
+/* line 80, ../sass/app.scss */
 .slogen .columns {
   padding-left: 14px;
 }
-/* line 78, ../sass/app.scss */
+/* line 83, ../sass/app.scss */
 .slogen .columns h1 {
+  position: absolute;
   color: #e8e8fe;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 1.8125em;
-  margin-top: 55px;
-  margin-bottom: 0;
+  top: 55px;
+  left: 13px;
+  margin: 0;
   padding: 0 8px;
   background-color: rgba(47, 34, 110, 0.6);
   display: inline-block;
   -webkit-font-smoothing: antialiased;
   -webkit-text-stroke: 1px rgba(0, 0, 0, 0.1);
 }
-/* line 89, ../sass/app.scss */
+/* line 96, ../sass/app.scss */
 .slogen .columns p {
+  position: absolute;
   color: white;
-  line-height: 1.4375em;
-  margin-top: 29px;
+  line-height: 1.5em;
+  top: 120px;
+  left: 13px;
+  margin: 0;
 }
-/* line 94, ../sass/app.scss */
+/* line 105, ../sass/app.scss */
 .slogen .columns p span {
   background-color: rgba(47, 34, 110, 0.6);
   padding: 1px 8px;
@@ -1853,7 +1863,7 @@ blockquote p {
   color: #e8e8fe;
 }
 
-/* line 104, ../sass/app.scss */
+/* line 115, ../sass/app.scss */
 .gear {
   background: -webkit-linear-gradient(30deg, #f5f5f7 0%, #f5f5f7 50%, #ffffff 50%, #ffffff 100%);
   background: -moz-linear-gradient(30deg, #f5f5f7 0%, #f5f5f7 50%, #ffffff 50%, #ffffff 100%);
@@ -1864,99 +1874,102 @@ blockquote p {
   background-position: -859px 0;
   height: 426px;
 }
-/* line 112, ../sass/app.scss */
+/* line 123, ../sass/app.scss */
 .gear > .row > div:first-child {
   padding-right: 0;
   padding-left: 14px;
 }
-/* line 118, ../sass/app.scss */
+/* line 129, ../sass/app.scss */
 .gear .quotation {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  font-size: 1.125em;
   border-bottom: 1px solid #a4a8b4;
   height: 94px;
   color: #55575e;
   position: relative;
   padding-left: 8px;
 }
-/* line 126, ../sass/app.scss */
+/* line 136, ../sass/app.scss */
 .gear .quotation .quotation-text {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.25em;
   position: absolute;
   bottom: 10px;
   line-height: 1.5625em;
   color: #313089;
   padding-right: 33px;
 }
-/* line 133, ../sass/app.scss */
+/* line 144, ../sass/app.scss */
 .gear .quotation .quotation-text:before {
   content: '\201C';
   position: absolute;
   right: 100%;
 }
-/* line 139, ../sass/app.scss */
+/* line 150, ../sass/app.scss */
 .gear .quotation .quotation-text:after {
   content: '\201D';
 }
-/* line 144, ../sass/app.scss */
+/* line 155, ../sass/app.scss */
 .gear .quotation .quotation-author {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.25em;
   position: absolute;
   bottom: 16px;
   right: 33px;
   color: #313089;
   font-size: 0.9375em;
 }
-/* line 153, ../sass/app.scss */
+/* line 165, ../sass/app.scss */
 .gear .disc {
   padding-top: 46px;
   padding-left: 0;
 }
-/* line 156, ../sass/app.scss */
+/* line 168, ../sass/app.scss */
 .gear .disc img {
   margin-left: -1px;
 }
 
-/* line 162, ../sass/app.scss */
+/* line 174, ../sass/app.scss */
 .division-content {
   padding-top: 26px;
   padding-left: 8px;
   padding-right: 26px;
 }
-/* line 167, ../sass/app.scss */
+/* line 179, ../sass/app.scss */
 .division-content p {
   color: #55575e;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 0.9375em;
   margin-bottom: 10px;
-  line-height: 1.25em;
+  line-height: 1.3125em;
 }
 
-/* line 175, ../sass/app.scss */
+/* line 187, ../sass/app.scss */
 .content {
   background-color: #ededf0;
   padding-bottom: 1.625em;
 }
-/* line 181, ../sass/app.scss */
+/* line 193, ../sass/app.scss */
 .content .row {
   padding-top: 1.625em;
 }
-/* line 184, ../sass/app.scss */
+/* line 196, ../sass/app.scss */
 .content .row > div:first-child {
   padding-right: 1.25em;
 }
-/* line 187, ../sass/app.scss */
+/* line 199, ../sass/app.scss */
 .content .row > div:last-child {
   padding-left: 1.25em;
 }
-/* line 191, ../sass/app.scss */
+/* line 203, ../sass/app.scss */
 .content .row .product {
   height: 202px;
   color: #fff;
   overflow: hidden;
   position: relative;
 }
-/* line 197, ../sass/app.scss */
+/* line 209, ../sass/app.scss */
 .content .row .product h2 {
   background-color: #fff;
   margin: 0;
@@ -1972,13 +1985,13 @@ blockquote p {
   text-align: right;
   padding: 0 23px;
 }
-/* line 210, ../sass/app.scss */
+/* line 222, ../sass/app.scss */
 .content .row .product h2 span {
   display: inline-block;
   vertical-align: middle;
   line-height: normal;
 }
-/* line 217, ../sass/app.scss */
+/* line 229, ../sass/app.scss */
 .content .row .product p {
   border-top: 6px solid rgba(255, 255, 255, 0.2);
   margin: 0;
@@ -1990,7 +2003,7 @@ blockquote p {
   line-height: 1.25em;
   text-align: justify;
 }
-/* line 227, ../sass/app.scss */
+/* line 239, ../sass/app.scss */
 .content .row .product span.more {
   position: absolute;
   right: 0;
@@ -2007,12 +2020,12 @@ blockquote p {
   background-position: bottom right;
   background-repeat: no-repeat;
 }
-/* line 241, ../sass/app.scss */
+/* line 253, ../sass/app.scss */
 .content .row .product span.more a {
   color: #fff;
 }
 
-/* line 249, ../sass/app.scss */
+/* line 261, ../sass/app.scss */
 .contact {
   background: -webkit-linear-gradient(30deg, #ceced6 0%, #ceced6 50%, #d8d8e0 50%, #d8d8e0 100%);
   background: -moz-linear-gradient(30deg, #ceced6 0%, #ceced6 50%, #d8d8e0 50%, #d8d8e0 100%);
@@ -2023,7 +2036,7 @@ blockquote p {
   background-position: 499px 0;
   height: 266px;
 }
-/* line 256, ../sass/app.scss */
+/* line 268, ../sass/app.scss */
 .contact .contact-info {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -2033,12 +2046,12 @@ blockquote p {
   padding-left: 25px;
   line-height: 1.1875em;
 }
-/* line 263, ../sass/app.scss */
+/* line 275, ../sass/app.scss */
 .contact .contact-info .company-name {
   font-size: 1.125em;
 }
 
-/* line 269, ../sass/app.scss */
+/* line 281, ../sass/app.scss */
 .footer {
   background: -webkit-linear-gradient(30deg, #0a1159 0%, #0a1159 50%, #121a6b 50%, #121a6b 100%);
   background: -moz-linear-gradient(30deg, #0a1159 0%, #0a1159 50%, #121a6b 50%, #121a6b 100%);
@@ -2049,12 +2062,12 @@ blockquote p {
   background-position: -233px 0;
   height: 181px;
 }
-/* line 278, ../sass/app.scss */
+/* line 290, ../sass/app.scss */
 .footer .social {
   padding-top: 1.8125em;
   padding-left: 0;
 }
-/* line 282, ../sass/app.scss */
+/* line 294, ../sass/app.scss */
 .footer .social a.share {
   font-family: 'icomoon';
   font-size: 23px;
@@ -2063,7 +2076,7 @@ blockquote p {
   padding: 0.1875em;
   margin-right: 16px;
 }
-/* line 291, ../sass/app.scss */
+/* line 303, ../sass/app.scss */
 .footer .social a.tech {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
@@ -2076,7 +2089,7 @@ blockquote p {
   position: relative;
   top: -6px;
 }
-/* line 303, ../sass/app.scss */
+/* line 315, ../sass/app.scss */
 .footer .copyright {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -2086,25 +2099,30 @@ blockquote p {
   padding-left: 25px;
 }
 
-/* line 311, ../sass/app.scss */
+/* line 323, ../sass/app.scss */
 #gmaps {
   height: 266px;
 }
-/* line 314, ../sass/app.scss */
+/* line 326, ../sass/app.scss */
 #gmaps img {
   max-width: none;
 }
 
-/* line 321, ../sass/app.scss */
+/* line 331, ../sass/app.scss */
 #language-selector {
   position: absolute;
   display: block;
   right: 0;
-  top: 71px;
-  padding: 7px 12px;
-  background-color: #dfe0e8;
+  top: 7px;
+  text-align: right;
+  padding-top: 69px;
+  padding-right: 13px;
+  height: 144px;
+  width: 250px;
+  background: url("images/language-selector-bg.png");
+  z-index: 1;
 }
-/* line 329, ../sass/app.scss */
+/* line 344, ../sass/app.scss */
 #language-selector a {
   text-transform: uppercase;
   text-decoration: none;
@@ -2114,41 +2132,55 @@ blockquote p {
   color: #7d7f86;
 }
 
-/* line 335, ../sass/app.scss */
+/* line 351, ../sass/app.scss */
+#slogen-title-1,
+#slogen-description-1 {
+  display: block;
+}
+
+/* line 358, ../sass/app.scss */
+#slogen-title-2,
+#slogen-title-3,
+#slogen-description-2,
+#slogen-description-3 {
+  display: none;
+}
+
+/* line 363, ../sass/app.scss */
 #thedox {
   background-color: #dd2f1d;
 }
-/* line 338, ../sass/app.scss */
+/* line 366, ../sass/app.scss */
 #thedox h2 {
   background-image: url("images/logo-thedox.png");
   background-repeat: no-repeat;
 }
 
-/* line 344, ../sass/app.scss */
+/* line 372, ../sass/app.scss */
 #fieldback {
   background-color: #302f88;
 }
-/* line 347, ../sass/app.scss */
+/* line 375, ../sass/app.scss */
 #fieldback h2 {
   background-image: url("images/logo-fieldback.png");
   background-repeat: no-repeat;
 }
 
-/* line 353, ../sass/app.scss */
+/* line 381, ../sass/app.scss */
 #grafight {
   background-color: #69358e;
 }
-/* line 356, ../sass/app.scss */
+/* line 384, ../sass/app.scss */
 #grafight h2 {
   background-image: url("images/logo-grafight.png");
   background-repeat: no-repeat;
 }
 
-/* line 362, ../sass/app.scss */
+/* line 390, ../sass/app.scss */
 #foundryboxlive {
   background-color: #66666f;
 }
-/* line 365, ../sass/app.scss */
+/* line 393, ../sass/app.scss */
 #foundryboxlive h2 {
   background-image: url("images/logo-foundryboxlive.png");
   background-repeat: no-repeat;

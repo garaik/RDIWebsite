@@ -11,6 +11,12 @@
   <link rel="shortcut icon" href="images/favicon.png">
   <script src="javascripts/vendor/custom.modernizr.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+  <script>
+    document.write('<script src=' + ('__proto__' in {} ? 'javascripts/vendor/zepto' : 'javascripts/vendor/jquery') + '.js><\/script>')
+  </script>
+  <script src="javascripts/foundation/foundation.js"></script>
+  <script src="javascripts/gmaps/gmaps.js"></script>
+  <script src="javascripts/rdi/rdi.js"></script>
 </head>
 <body>
 <div class="topline">
@@ -19,7 +25,7 @@
 <div class="menubar">
   <div class="row">
     <div class="small-4 columns logo">
-      <a href="#"><img src="images/p92rdilogo.png" /></a>
+      <a href="#" id="rdilogolink"><img src="images/p92rdilogo.png" /></a>
     </div>
     <div class="small-offset-2 small-12 columns menu">
       <a href="#">Research</a> &nbsp;&nbsp;
@@ -37,11 +43,24 @@
 <div class="slogen">
   <div class="row">
     <div class="small-18 columns">
-      <h1>Szoftverfejlesztéssel foglalkozunk</h1>
-      <p>
-        <span>Célunk az intelligens problémamegoldás és olyan újszerű</span><br>
-        <span>alkalmazások fejlesztése, amely segít az azokat használó</span><br>
-        <span>vállalkozásoknak egy lépéssel a piac előtt járni.</span>
+      <h1 id="slogen-title-1">Szoftverfejlesztéssel foglalkozunk</h1>
+      <p id="slogen-description-1">
+        <span>Az innováció hiánya nem más, mint elpazarolt kreativitás. A jó ötleteket</span><br>
+        <span>nem szabad veszni hagyni: sok munka és az összegyűlt tapasztalatok</span><br>
+        <span>hozzáadásával igazán hasznos dolgok születhetnek.</span>
+      </p>
+      <h1 id="slogen-title-2"><strong>R</strong>=Research <strong>D</strong>=Development <strong>I</strong>=Innovation</h1>
+      <p id="slogen-description-2">
+        <span>Kutatási eredményeink fejlesztési folyamatokba</span><br>
+        <span>integrálása segítségével létrejövő innovációinkkal</span><br>
+        <span>támogatjuk partnereink informatikai törekvéseit.</span>
+      </p>
+      <h1 id="slogen-title-3">intelligent resolutions</h1>
+      <p id="slogen-description-3">
+        <span>„Minden probléma megoldását hallatlanul megkönnyíti,</span><br>
+        <span>ha biztosan tudjuk, hogy van rá megoldás. Egy problémára</span><br>
+        <span>általában a legegyszerűbb az <strong>intelligens megoldás.</strong>”</span><br>
+        <span>Carl Sagan</span>
       </p>
     </div>
   </div>
@@ -137,103 +156,7 @@
   </div>
 </div>
 <script>
-  document.write('<script src=' + ('__proto__' in {} ? 'javascripts/vendor/zepto' : 'javascripts/vendor/jquery') + '.js><\/script>')
-</script>
-<script src="javascripts/foundation/foundation.js"></script>
-<script>
   $(document).foundation();
 </script>
-<script>
-  var map;
-  function initialize() {
-    var stylez = [
-      { featureType: 'landscape', elementType: 'geometry', stylers: [
-        { hue: '#e3e3eb' },
-        { saturation: -38 },
-        { lightness: 14 },
-        { visibility: 'on' }
-      ] },
-      { featureType: 'landscape', elementType: 'labels', stylers: [
-        { hue: '#6c6c74' },
-        { saturation: -87 },
-        { lightness: -51 },
-        { visibility: 'on' }
-      ] },
-      { featureType: 'road.highway', elementType: 'geometry', stylers: [
-        { hue: '#c2c2ca' },
-        { saturation: -93 },
-        { lightness: 38 },
-        { visibility: 'on' }
-      ] },
-      { featureType: 'road.highway', elementType: 'labels', stylers: [
-        { hue: '#c2c2ca' },
-        { saturation: -93 },
-        { lightness: 38 },
-        { visibility: 'on' }
-      ] },
-      { featureType: 'road.arterial', elementType: 'geometry', stylers: [
-        { hue: '#ffffff' },
-        { saturation: -100 },
-        { lightness: 100 },
-        { visibility: 'on' }
-      ] },
-      { featureType: 'road.arterial', elementType: 'geometry.stroke', stylers: [
-        { hue: '#d0d0d8' },
-        { saturation: -91 },
-        { lightness: -17 },
-        { visibility: 'on' }
-      ] },
-      { featureType: 'road.local', elementType: 'geometry.fill', stylers: [
-        { hue: '#ffffff' },
-        { saturation: -100 },
-        { lightness: 100 },
-        { visibility: 'on' }
-      ] },
-      { featureType: 'road.local', elementType: 'geometry.stroke', stylers: [
-        { hue: '#d0d0d8' },
-        { saturation: -91 },
-        { lightness: -17 },
-        { visibility: 'on' }
-      ] },
-      { featureType: 'poi', elementType: 'all', stylers: [
-        { hue: '#e3e3eb' },
-        { saturation: -61 },
-        { lightness: 57 },
-        { visibility: 'on' }
-      ] },
-      { featureType: 'water', elementType: 'all', stylers: [
-        { hue: '#c2c2ca' },
-        { saturation: -84 },
-        { lightness: 7 },
-        { visibility: 'on' }
-      ] }
-    ];
-    var mapOptions = {
-      zoom: 16,
-      center: new google.maps.LatLng(47.590266 , 19.046832),
-      mapTypeId: google.maps.MapTypeId.ROADMAP,
-      disableDefaultUI: true,
-      zoomControl: true,
-      scrollwheel: false,
-      backgroundColor: '#ceced6'
-    };
-    map = new google.maps.Map(document.getElementById('gmaps'),
-      mapOptions);
-    var mapType = new google.maps.StyledMapType(stylez, { name:"RDI" });
-    map.mapTypes.set('rdi', mapType);
-    map.setMapTypeId('rdi');
-    var rdiMarker = new google.maps.Marker({
-      position: new google.maps.LatLng(47.590266 , 19.046832),
-      map: map,
-      icon: {
-        url: 'images/p92rdipin.png'
-      }
-    });
-  }
-  google.maps.event.addDomListener(window, 'load', initialize);
-</script>
-
-
-
 </body>
 </html>

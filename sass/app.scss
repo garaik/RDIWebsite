@@ -13,7 +13,7 @@
 @import "compass";
 
 $topline-height: 7px;
-$menu-bar-top-padding: 71px;
+$menu-bar-top-padding: 69px;
 
 $default-horizontal-gap: $column-gutter + emCalc(16);
 
@@ -58,10 +58,13 @@ $default-horizontal-gap: $column-gutter + emCalc(16);
   .menu {
     text-align: right;
     padding-top: $menu-bar-top-padding;
+    z-index: 2;
 
     a {
       @include menu-link;
       color: #55575e;
+      background-color: #fff;
+      padding: 1px 3px;
     }
   }
 }
@@ -71,15 +74,19 @@ $default-horizontal-gap: $column-gutter + emCalc(16);
   @include background(url('images/slogenbg2.png'), linear-gradient(90deg, #e32428 0%, #e32428 50%, #622479 50%, #622479 100%));
   background-repeat: no-repeat, no-repeat;
   background-position: center, center;
+  position: relative;
+  overflow: hidden;
 
   .columns {
     padding-left: 14px;
 
     h1 {
+      position: absolute;
       color: #e8e8fe;
       @include roboto-font(300, emCalc(29));
-      margin-top: 55px;
-      margin-bottom: 0;
+      top: 55px;
+      left: 13px;
+      margin: 0;
       padding: 0 8px;
       background-color: rgba(47, 34, 110, .6);
       display: inline-block;
@@ -87,9 +94,13 @@ $default-horizontal-gap: $column-gutter + emCalc(16);
       -webkit-text-stroke: 1px rgba(0,0,0,0.1);
     }
     p {
+      position: absolute;
       color: white;
-      line-height: emCalc(23);
-      margin-top: 29px;
+      line-height: emCalc(24);
+
+      top: 120px;
+      left: 13px;
+      margin: 0;
 
       span {
         background-color: rgba(47, 34, 110, .6);
@@ -116,7 +127,6 @@ $default-horizontal-gap: $column-gutter + emCalc(16);
   }
 
   .quotation {
-    @include roboto-font(400, emCalc(18));
     border-bottom: 1px solid #a4a8b4;
     height: 94px;
     color: #55575e;
@@ -124,6 +134,7 @@ $default-horizontal-gap: $column-gutter + emCalc(16);
     padding-left: 8px;
 
     .quotation-text {
+      @include roboto-font(400, emCalc(20));
       position: absolute;
       bottom: 10px;
       line-height: emCalc(25);
@@ -142,6 +153,7 @@ $default-horizontal-gap: $column-gutter + emCalc(16);
     }
 
     .quotation-author {
+      @include roboto-font(400, emCalc(20));
       position: absolute;
       bottom: 16px;
       right: 33px;
@@ -168,7 +180,7 @@ $default-horizontal-gap: $column-gutter + emCalc(16);
     color: #55575e;
     @include roboto-font(400, emCalc(15));
     margin-bottom: 10px;
-    line-height: emCalc(20);
+    line-height: emCalc(21);
   }
 }
 
@@ -316,21 +328,37 @@ $default-horizontal-gap: $column-gutter + emCalc(16);
   }
 }
 
-$language-selector-vpadding: 7px;
-
 #language-selector {
   position: absolute;
   display: block;
   right: 0;
-  top: $topline-height + $menu-bar-top-padding - $language-selector-vpadding;
-  padding: $language-selector-vpadding 12px;
-  background-color: #dfe0e8;
+  top: $topline-height;
+  text-align: right;
+  padding-top: 69px;
+  padding-right: 13px;
+  height: 144px;
+  width: 250px;
+  background: url('images/language-selector-bg.png');
+  z-index: 1;
 
   a {
     @include menu-link;
     color: #7d7f86;
   }
 }
+
+#slogen-title-1,
+#slogen-description-1 {
+  display: block;
+}
+
+#slogen-title-2,
+#slogen-title-3,
+#slogen-description-2,
+#slogen-description-3 {
+  display: none;
+}
+
 
 #thedox {
   background-color: #dd2f1d;
