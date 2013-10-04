@@ -17,6 +17,8 @@ $menu-bar-top-padding: 69px;
 
 $default-horizontal-gap: $column-gutter + emCalc(16);
 
+$default-padding: 23px;
+
 @font-face {
 	font-family: 'icomoon';
 	src:url('fonts/icomoon.eot');
@@ -45,7 +47,7 @@ $default-horizontal-gap: $column-gutter + emCalc(16);
 @mixin menu-link {
   text-transform: uppercase;
   text-decoration: none;
-  @include roboto-font(500, emCalc(15));
+  @include roboto-font(400, emCalc(15));
 }
 
 .menubar {
@@ -82,9 +84,9 @@ $default-horizontal-gap: $column-gutter + emCalc(16);
 
     h1 {
       position: absolute;
-      color: #e8e8fe;
-      @include roboto-font(300, emCalc(29));
-      top: 55px;
+      color: #fff;
+      @include roboto-font(300, emCalc(38));
+      top: 46px;
       left: 13px;
       margin: 0;
       padding: 0 8px;
@@ -103,10 +105,22 @@ $default-horizontal-gap: $column-gutter + emCalc(16);
       margin: 0;
 
       span {
+        display: inline-block;
         background-color: rgba(47, 34, 110, .6);
-        padding: 1px 8px;
-        @include roboto-font(400, emCalc(17));
+        padding: 0 8px;
+        @include roboto-font(300, emCalc(19));
         color: #e8e8fe;
+
+        strong {
+          color: #fff;
+          font-weight: inherit;
+        }
+
+        em {
+          color: #b1b1ee;
+          font-weight: inherit;
+          font-style: normal;
+        }
       }
     }
   }
@@ -134,10 +148,10 @@ $default-horizontal-gap: $column-gutter + emCalc(16);
     padding-left: 8px;
 
     .quotation-text {
-      @include roboto-font(400, emCalc(20));
+      @include roboto-font(300, emCalc(24));
       position: absolute;
       bottom: 10px;
-      line-height: emCalc(25);
+      line-height: emCalc(20);
       color: #313089;
       padding-right: 33px;
 
@@ -172,7 +186,7 @@ $default-horizontal-gap: $column-gutter + emCalc(16);
 }
 
 .division-content {
-  padding-top: 26px;
+  padding-top: 22px;
   padding-left: 8px;
   padding-right: 26px;
 
@@ -181,12 +195,14 @@ $default-horizontal-gap: $column-gutter + emCalc(16);
     @include roboto-font(400, emCalc(15));
     margin-bottom: 10px;
     line-height: emCalc(21);
+
+    a {
+      color: #dd301d;
+    }
   }
 }
 
 .content {
-  $default-padding: 23px;
-
   background-color: #ededf0;
   padding-bottom: $default-horizontal-gap;
 
@@ -212,7 +228,7 @@ $default-horizontal-gap: $column-gutter + emCalc(16);
         height: 75px;
         line-height: 75px;
         overflow: hidden;
-        @include roboto-font(300, emCalc(20));
+        @include roboto-font(300, emCalc(19));
         text-transform: uppercase;
         word-wrap: normal;
         color: #55575e;
@@ -258,6 +274,30 @@ $default-horizontal-gap: $column-gutter + emCalc(16);
   }
 }
 
+.references {
+  background-color: #dd2f1d;
+
+  .title {
+    background-color: #d1191d;
+    height: 56px;
+    line-height: 56px;
+    vertical-align: middle;
+
+    h2 {
+      @include roboto-font(300, emCalc(24));
+      display: inline-block;
+      line-height: normal;
+      color: #fff;
+      margin: 0;
+      padding: 0 $default-padding;
+    }
+  }
+
+  .logos {
+    height: 164px;
+  }
+}
+
 .contact {
   @include background(linear-gradient(30deg, #ceced6 0%, #ceced6 50%, #d8d8e0 50%, #d8d8e0 100%));
   background-color: #ceced6;
@@ -266,14 +306,14 @@ $default-horizontal-gap: $column-gutter + emCalc(16);
   height: 266px;
 
   .contact-info {
-    @include roboto-font(400, emCalc(14));
+    @include roboto-font(400, emCalc(15));
     color: #55575e;
     padding-top: 69px;
     padding-left: 25px;
     line-height: emCalc(19);
 
     .company-name {
-      font-size: emCalc(18);
+      font-size: emCalc(19);
     }
   }
 }
@@ -353,8 +393,11 @@ $default-horizontal-gap: $column-gutter + emCalc(16);
 }
 
 #slogen-title-2,
+#slogen-description-2 {
+  display: none;
+}
+
 #slogen-title-3,
-#slogen-description-2,
 #slogen-description-3 {
   display: none;
 }
