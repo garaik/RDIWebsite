@@ -6,8 +6,10 @@
 
 // Comment out this import if you are customizing you imports below
 //@import "foundation";
+@import "foundation/variables"; // *always required
 @import "foundation/components/global"; // *always required
 @import "foundation/components/grid";
+@import "foundation/components/block-grid";
 @import "foundation/components/type";
 
 @import "compass";
@@ -294,7 +296,54 @@ $default-padding: 23px;
   }
 
   .logos {
-    height: 164px;
+    $logos-height: 164px;
+    $logos-padding-top: 27px;
+    height: $logos-height;
+
+    ul {
+      display: block;
+      height: $logos-height;
+      margin: 0;
+      list-style: none;
+      word-spacing: emCalc(-5);
+      padding-top: $logos-padding-top;
+
+      li {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        background-color: #fff;
+        @include roboto-font(400, emCalc(11));
+        vertical-align: top;
+        word-spacing: 0;
+        margin-left: $column-gutter;
+        @include border-radius(50px);
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-color: #fff;
+
+        &:hover {
+          @include box-shadow(#69358e 0 0 0 5px);
+        }
+
+        span {
+          display: none;
+        }
+      }
+
+      li:first-child {
+        margin-left: 5px;
+      }
+    }
+
+    .arrow-left {
+      padding-top: $logos-padding-top;
+    }
+
+    .arrow-right {
+      padding-top: $logos-padding-top;
+      text-align: right;
+    }
   }
 }
 
@@ -437,4 +486,26 @@ $default-padding: 23px;
     background-image: url('images/logo-foundryboxlive.png');
     background-repeat: no-repeat;
   }
+}
+
+#ref-tesco {
+  background-image: url('images/reflogo-tesco.png');
+}
+#ref-vodafone {
+  background-image: url('images/reflogo-vodafone.png');
+}
+#ref-inmedio {
+  background-image: url('images/reflogo-inmedio.png');
+}
+#ref-mondiamedia {
+  background-image: url('images/reflogo-mondiamedia.png');
+}
+#ref-mnb {
+  background-image: url('images/reflogo-mnb.png');
+}
+#ref-ppp {
+  background-image: url('images/reflogo-ppp.png');
+}
+#ref-mtv {
+  background-image: url('images/reflogo-mtv.png');
 }

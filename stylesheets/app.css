@@ -1329,6 +1329,431 @@ select {
     float: right !important;
   }
 }
+/* Foundation Block Grids for below small breakpoint */
+@media only screen {
+  /* line 50, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  [class*="block-grid-"] {
+    display: block;
+    padding: 0;
+    margin: 0 -0.625em;
+    *zoom: 1;
+  }
+  /* line 121, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
+  [class*="block-grid-"]:before, [class*="block-grid-"]:after {
+    content: " ";
+    display: table;
+  }
+  /* line 122, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
+  [class*="block-grid-"]:after {
+    clear: both;
+  }
+  /* line 27, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  [class*="block-grid-"] > li {
+    display: inline;
+    height: auto;
+    float: left;
+    padding: 0 0.625em 1.25em;
+  }
+
+  /* line 36, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-1 > li {
+    width: 100%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-1 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-1 > li:nth-of-type(1n+1) {
+    clear: both;
+  }
+
+  /* line 36, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-2 > li {
+    width: 50%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-2 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-2 > li:nth-of-type(2n+1) {
+    clear: both;
+  }
+
+  /* line 36, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-3 > li {
+    width: 33.33333%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-3 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-3 > li:nth-of-type(3n+1) {
+    clear: both;
+  }
+
+  /* line 36, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-4 > li {
+    width: 25%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-4 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-4 > li:nth-of-type(4n+1) {
+    clear: both;
+  }
+
+  /* line 36, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-5 > li {
+    width: 20%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-5 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-5 > li:nth-of-type(5n+1) {
+    clear: both;
+  }
+
+  /* line 36, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-6 > li {
+    width: 16.66667%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-6 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-6 > li:nth-of-type(6n+1) {
+    clear: both;
+  }
+
+  /* line 36, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-7 > li {
+    width: 14.28571%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-7 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-7 > li:nth-of-type(7n+1) {
+    clear: both;
+  }
+
+  /* line 36, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-8 > li {
+    width: 12.5%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-8 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-8 > li:nth-of-type(8n+1) {
+    clear: both;
+  }
+
+  /* line 36, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-9 > li {
+    width: 11.11111%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-9 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-9 > li:nth-of-type(9n+1) {
+    clear: both;
+  }
+
+  /* line 36, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-10 > li {
+    width: 10%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-10 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-10 > li:nth-of-type(10n+1) {
+    clear: both;
+  }
+
+  /* line 36, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-11 > li {
+    width: 9.09091%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-11 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-11 > li:nth-of-type(11n+1) {
+    clear: both;
+  }
+
+  /* line 36, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-12 > li {
+    width: 8.33333%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-12 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-12 > li:nth-of-type(12n+1) {
+    clear: both;
+  }
+}
+/* Foundation Block Grids for above small breakpoint */
+@media only screen and (min-width: 768px) {
+  /* Remove small grid clearing */
+  /* line 63, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-1 > li:nth-of-type(1n+1) {
+    clear: none;
+  }
+
+  /* line 63, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-2 > li:nth-of-type(2n+1) {
+    clear: none;
+  }
+
+  /* line 63, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-3 > li:nth-of-type(3n+1) {
+    clear: none;
+  }
+
+  /* line 63, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-4 > li:nth-of-type(4n+1) {
+    clear: none;
+  }
+
+  /* line 63, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-5 > li:nth-of-type(5n+1) {
+    clear: none;
+  }
+
+  /* line 63, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-6 > li:nth-of-type(6n+1) {
+    clear: none;
+  }
+
+  /* line 63, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-7 > li:nth-of-type(7n+1) {
+    clear: none;
+  }
+
+  /* line 63, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-8 > li:nth-of-type(8n+1) {
+    clear: none;
+  }
+
+  /* line 63, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-9 > li:nth-of-type(9n+1) {
+    clear: none;
+  }
+
+  /* line 63, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-10 > li:nth-of-type(10n+1) {
+    clear: none;
+  }
+
+  /* line 63, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-11 > li:nth-of-type(11n+1) {
+    clear: none;
+  }
+
+  /* line 63, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .small-block-grid-12 > li:nth-of-type(12n+1) {
+    clear: none;
+  }
+
+  /* line 36, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .large-block-grid-1 > li {
+    width: 100%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .large-block-grid-1 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .large-block-grid-1 > li:nth-of-type(1n+1) {
+    clear: both;
+  }
+
+  /* line 36, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .large-block-grid-2 > li {
+    width: 50%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .large-block-grid-2 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .large-block-grid-2 > li:nth-of-type(2n+1) {
+    clear: both;
+  }
+
+  /* line 36, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .large-block-grid-3 > li {
+    width: 33.33333%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .large-block-grid-3 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .large-block-grid-3 > li:nth-of-type(3n+1) {
+    clear: both;
+  }
+
+  /* line 36, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .large-block-grid-4 > li {
+    width: 25%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .large-block-grid-4 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .large-block-grid-4 > li:nth-of-type(4n+1) {
+    clear: both;
+  }
+
+  /* line 36, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .large-block-grid-5 > li {
+    width: 20%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .large-block-grid-5 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .large-block-grid-5 > li:nth-of-type(5n+1) {
+    clear: both;
+  }
+
+  /* line 36, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .large-block-grid-6 > li {
+    width: 16.66667%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .large-block-grid-6 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .large-block-grid-6 > li:nth-of-type(6n+1) {
+    clear: both;
+  }
+
+  /* line 36, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .large-block-grid-7 > li {
+    width: 14.28571%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .large-block-grid-7 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .large-block-grid-7 > li:nth-of-type(7n+1) {
+    clear: both;
+  }
+
+  /* line 36, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .large-block-grid-8 > li {
+    width: 12.5%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .large-block-grid-8 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .large-block-grid-8 > li:nth-of-type(8n+1) {
+    clear: both;
+  }
+
+  /* line 36, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .large-block-grid-9 > li {
+    width: 11.11111%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .large-block-grid-9 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .large-block-grid-9 > li:nth-of-type(9n+1) {
+    clear: both;
+  }
+
+  /* line 36, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .large-block-grid-10 > li {
+    width: 10%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .large-block-grid-10 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .large-block-grid-10 > li:nth-of-type(10n+1) {
+    clear: both;
+  }
+
+  /* line 36, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .large-block-grid-11 > li {
+    width: 9.09091%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .large-block-grid-11 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .large-block-grid-11 > li:nth-of-type(11n+1) {
+    clear: both;
+  }
+
+  /* line 36, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .large-block-grid-12 > li {
+    width: 8.33333%;
+    padding: 0 0.625em 1.25em;
+  }
+  /* line 40, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .large-block-grid-12 > li:nth-of-type(n) {
+    clear: none;
+  }
+  /* line 41, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_block-grid.scss */
+  .large-block-grid-12 > li:nth-of-type(12n+1) {
+    clear: both;
+  }
+}
 /* line 110, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_type.scss */
 p.lead {
   font-size: 1.21875em;
@@ -1773,7 +2198,7 @@ blockquote p {
   font-style: normal;
 }
 
-/* line 39, ../sass/app.scss */
+/* line 41, ../sass/app.scss */
 .topline {
   background: -webkit-linear-gradient(30deg, #782b8f 0%, #782b8f 50%, #eb1c23 50%, #eb1c23 100%);
   background: -moz-linear-gradient(30deg, #782b8f 0%, #782b8f 50%, #eb1c23 50%, #eb1c23 100%);
@@ -1785,22 +2210,22 @@ blockquote p {
   height: 7px;
 }
 
-/* line 53, ../sass/app.scss */
+/* line 55, ../sass/app.scss */
 .menubar {
   height: 144px;
 }
-/* line 56, ../sass/app.scss */
+/* line 58, ../sass/app.scss */
 .menubar .logo {
   padding-top: 36px;
   padding-left: 14px;
 }
-/* line 60, ../sass/app.scss */
+/* line 62, ../sass/app.scss */
 .menubar .menu {
   text-align: right;
   padding-top: 69px;
   z-index: 2;
 }
-/* line 65, ../sass/app.scss */
+/* line 67, ../sass/app.scss */
 .menubar .menu a {
   text-transform: uppercase;
   text-decoration: none;
@@ -1812,7 +2237,7 @@ blockquote p {
   padding: 1px 3px;
 }
 
-/* line 74, ../sass/app.scss */
+/* line 76, ../sass/app.scss */
 .slogen {
   height: 241px;
   background: url("images/slogenbg2.png"), -webkit-linear-gradient(90deg, #e32428 0%, #e32428 50%, #622479 50%, #622479 100%);
@@ -1824,11 +2249,11 @@ blockquote p {
   position: relative;
   overflow: hidden;
 }
-/* line 82, ../sass/app.scss */
+/* line 84, ../sass/app.scss */
 .slogen .columns {
   padding-left: 14px;
 }
-/* line 85, ../sass/app.scss */
+/* line 87, ../sass/app.scss */
 .slogen .columns h1 {
   position: absolute;
   color: #fff;
@@ -1844,7 +2269,7 @@ blockquote p {
   -webkit-font-smoothing: antialiased;
   -webkit-text-stroke: 1px rgba(0, 0, 0, 0.1);
 }
-/* line 98, ../sass/app.scss */
+/* line 100, ../sass/app.scss */
 .slogen .columns p {
   position: absolute;
   color: white;
@@ -1853,7 +2278,7 @@ blockquote p {
   left: 13px;
   margin: 0;
 }
-/* line 107, ../sass/app.scss */
+/* line 109, ../sass/app.scss */
 .slogen .columns p span {
   display: inline-block;
   background-color: rgba(47, 34, 110, 0.6);
@@ -1863,19 +2288,19 @@ blockquote p {
   font-size: 1.1875em;
   color: #e8e8fe;
 }
-/* line 114, ../sass/app.scss */
+/* line 116, ../sass/app.scss */
 .slogen .columns p span strong {
   color: #fff;
   font-weight: inherit;
 }
-/* line 119, ../sass/app.scss */
+/* line 121, ../sass/app.scss */
 .slogen .columns p span em {
   color: #b1b1ee;
   font-weight: inherit;
   font-style: normal;
 }
 
-/* line 129, ../sass/app.scss */
+/* line 131, ../sass/app.scss */
 .gear {
   background: -webkit-linear-gradient(30deg, #f5f5f7 0%, #f5f5f7 50%, #ffffff 50%, #ffffff 100%);
   background: -moz-linear-gradient(30deg, #f5f5f7 0%, #f5f5f7 50%, #ffffff 50%, #ffffff 100%);
@@ -1886,12 +2311,12 @@ blockquote p {
   background-position: -859px 0;
   height: 426px;
 }
-/* line 137, ../sass/app.scss */
+/* line 139, ../sass/app.scss */
 .gear > .row > div:first-child {
   padding-right: 0;
   padding-left: 14px;
 }
-/* line 143, ../sass/app.scss */
+/* line 145, ../sass/app.scss */
 .gear .quotation {
   border-bottom: 1px solid #a4a8b4;
   height: 94px;
@@ -1899,7 +2324,7 @@ blockquote p {
   position: relative;
   padding-left: 8px;
 }
-/* line 150, ../sass/app.scss */
+/* line 152, ../sass/app.scss */
 .gear .quotation .quotation-text {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
@@ -1910,17 +2335,17 @@ blockquote p {
   color: #313089;
   padding-right: 33px;
 }
-/* line 158, ../sass/app.scss */
+/* line 160, ../sass/app.scss */
 .gear .quotation .quotation-text:before {
   content: '\201C';
   position: absolute;
   right: 100%;
 }
-/* line 164, ../sass/app.scss */
+/* line 166, ../sass/app.scss */
 .gear .quotation .quotation-text:after {
   content: '\201D';
 }
-/* line 169, ../sass/app.scss */
+/* line 171, ../sass/app.scss */
 .gear .quotation .quotation-author {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -1931,23 +2356,23 @@ blockquote p {
   color: #313089;
   font-size: 0.9375em;
 }
-/* line 179, ../sass/app.scss */
+/* line 181, ../sass/app.scss */
 .gear .disc {
   padding-top: 46px;
   padding-left: 0;
 }
-/* line 182, ../sass/app.scss */
+/* line 184, ../sass/app.scss */
 .gear .disc img {
   margin-left: -1px;
 }
 
-/* line 188, ../sass/app.scss */
+/* line 190, ../sass/app.scss */
 .division-content {
   padding-top: 22px;
   padding-left: 8px;
   padding-right: 26px;
 }
-/* line 193, ../sass/app.scss */
+/* line 195, ../sass/app.scss */
 .division-content p {
   color: #55575e;
   font-family: 'Roboto', sans-serif;
@@ -1956,36 +2381,36 @@ blockquote p {
   margin-bottom: 10px;
   line-height: 1.3125em;
 }
-/* line 199, ../sass/app.scss */
+/* line 201, ../sass/app.scss */
 .division-content p a {
   color: #dd301d;
 }
 
-/* line 205, ../sass/app.scss */
+/* line 207, ../sass/app.scss */
 .content {
   background-color: #ededf0;
   padding-bottom: 1.625em;
 }
-/* line 209, ../sass/app.scss */
+/* line 211, ../sass/app.scss */
 .content .row {
   padding-top: 1.625em;
 }
-/* line 212, ../sass/app.scss */
+/* line 214, ../sass/app.scss */
 .content .row > div:first-child {
   padding-right: 1.25em;
 }
-/* line 215, ../sass/app.scss */
+/* line 217, ../sass/app.scss */
 .content .row > div:last-child {
   padding-left: 1.25em;
 }
-/* line 219, ../sass/app.scss */
+/* line 221, ../sass/app.scss */
 .content .row .product {
   height: 202px;
   color: #fff;
   overflow: hidden;
   position: relative;
 }
-/* line 225, ../sass/app.scss */
+/* line 227, ../sass/app.scss */
 .content .row .product h2 {
   background-color: #fff;
   margin: 0;
@@ -2001,13 +2426,13 @@ blockquote p {
   text-align: right;
   padding: 0 23px;
 }
-/* line 238, ../sass/app.scss */
+/* line 240, ../sass/app.scss */
 .content .row .product h2 span {
   display: inline-block;
   vertical-align: middle;
   line-height: normal;
 }
-/* line 245, ../sass/app.scss */
+/* line 247, ../sass/app.scss */
 .content .row .product p {
   border-top: 6px solid rgba(255, 255, 255, 0.2);
   margin: 0;
@@ -2019,7 +2444,7 @@ blockquote p {
   line-height: 1.25em;
   text-align: justify;
 }
-/* line 255, ../sass/app.scss */
+/* line 257, ../sass/app.scss */
 .content .row .product span.more {
   position: absolute;
   right: 0;
@@ -2036,23 +2461,23 @@ blockquote p {
   background-position: bottom right;
   background-repeat: no-repeat;
 }
-/* line 269, ../sass/app.scss */
+/* line 271, ../sass/app.scss */
 .content .row .product span.more a {
   color: #fff;
 }
 
-/* line 277, ../sass/app.scss */
+/* line 279, ../sass/app.scss */
 .references {
   background-color: #dd2f1d;
 }
-/* line 280, ../sass/app.scss */
+/* line 282, ../sass/app.scss */
 .references .title {
   background-color: #d1191d;
   height: 56px;
   line-height: 56px;
   vertical-align: middle;
 }
-/* line 286, ../sass/app.scss */
+/* line 288, ../sass/app.scss */
 .references .title h2 {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
@@ -2063,12 +2488,65 @@ blockquote p {
   margin: 0;
   padding: 0 23px;
 }
-/* line 296, ../sass/app.scss */
+/* line 298, ../sass/app.scss */
 .references .logos {
   height: 164px;
 }
+/* line 303, ../sass/app.scss */
+.references .logos ul {
+  display: block;
+  height: 164px;
+  margin: 0;
+  list-style: none;
+  word-spacing: -0.3125em;
+  padding-top: 27px;
+}
+/* line 311, ../sass/app.scss */
+.references .logos ul li {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 0.6875em;
+  vertical-align: top;
+  word-spacing: 0;
+  margin-left: 0.625em;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  border-radius: 50px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-color: #fff;
+}
+/* line 325, ../sass/app.scss */
+.references .logos ul li:hover {
+  -webkit-box-shadow: #69358e 0 0 0 5px;
+  -moz-box-shadow: #69358e 0 0 0 5px;
+  box-shadow: #69358e 0 0 0 5px;
+}
+/* line 329, ../sass/app.scss */
+.references .logos ul li span {
+  display: none;
+}
+/* line 334, ../sass/app.scss */
+.references .logos ul li:first-child {
+  margin-left: 5px;
+}
+/* line 339, ../sass/app.scss */
+.references .logos .arrow-left {
+  padding-top: 27px;
+}
+/* line 343, ../sass/app.scss */
+.references .logos .arrow-right {
+  padding-top: 27px;
+  text-align: right;
+}
 
-/* line 301, ../sass/app.scss */
+/* line 350, ../sass/app.scss */
 .contact {
   background: -webkit-linear-gradient(30deg, #ceced6 0%, #ceced6 50%, #d8d8e0 50%, #d8d8e0 100%);
   background: -moz-linear-gradient(30deg, #ceced6 0%, #ceced6 50%, #d8d8e0 50%, #d8d8e0 100%);
@@ -2079,7 +2557,7 @@ blockquote p {
   background-position: 499px 0;
   height: 266px;
 }
-/* line 308, ../sass/app.scss */
+/* line 357, ../sass/app.scss */
 .contact .contact-info {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -2089,12 +2567,12 @@ blockquote p {
   padding-left: 25px;
   line-height: 1.1875em;
 }
-/* line 315, ../sass/app.scss */
+/* line 364, ../sass/app.scss */
 .contact .contact-info .company-name {
   font-size: 1.1875em;
 }
 
-/* line 321, ../sass/app.scss */
+/* line 370, ../sass/app.scss */
 .footer {
   background: -webkit-linear-gradient(30deg, #0a1159 0%, #0a1159 50%, #121a6b 50%, #121a6b 100%);
   background: -moz-linear-gradient(30deg, #0a1159 0%, #0a1159 50%, #121a6b 50%, #121a6b 100%);
@@ -2105,12 +2583,12 @@ blockquote p {
   background-position: -233px 0;
   height: 181px;
 }
-/* line 330, ../sass/app.scss */
+/* line 379, ../sass/app.scss */
 .footer .social {
   padding-top: 1.8125em;
   padding-left: 0;
 }
-/* line 334, ../sass/app.scss */
+/* line 383, ../sass/app.scss */
 .footer .social a.share {
   font-family: 'icomoon';
   font-size: 23px;
@@ -2119,7 +2597,7 @@ blockquote p {
   padding: 0.1875em;
   margin-right: 16px;
 }
-/* line 343, ../sass/app.scss */
+/* line 392, ../sass/app.scss */
 .footer .social a.tech {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
@@ -2132,7 +2610,7 @@ blockquote p {
   position: relative;
   top: -6px;
 }
-/* line 355, ../sass/app.scss */
+/* line 404, ../sass/app.scss */
 .footer .copyright {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -2142,16 +2620,16 @@ blockquote p {
   padding-left: 25px;
 }
 
-/* line 363, ../sass/app.scss */
+/* line 412, ../sass/app.scss */
 #gmaps {
   height: 266px;
 }
-/* line 366, ../sass/app.scss */
+/* line 415, ../sass/app.scss */
 #gmaps img {
   max-width: none;
 }
 
-/* line 371, ../sass/app.scss */
+/* line 420, ../sass/app.scss */
 #language-selector {
   position: absolute;
   display: block;
@@ -2165,7 +2643,7 @@ blockquote p {
   background: url("images/language-selector-bg.png");
   z-index: 1;
 }
-/* line 384, ../sass/app.scss */
+/* line 433, ../sass/app.scss */
 #language-selector a {
   text-transform: uppercase;
   text-decoration: none;
@@ -2175,60 +2653,95 @@ blockquote p {
   color: #7d7f86;
 }
 
-/* line 391, ../sass/app.scss */
+/* line 440, ../sass/app.scss */
 #slogen-title-1,
 #slogen-description-1 {
   display: block;
 }
 
-/* line 396, ../sass/app.scss */
+/* line 445, ../sass/app.scss */
 #slogen-title-2,
 #slogen-description-2 {
   display: none;
 }
 
-/* line 401, ../sass/app.scss */
+/* line 450, ../sass/app.scss */
 #slogen-title-3,
 #slogen-description-3 {
   display: none;
 }
 
-/* line 406, ../sass/app.scss */
+/* line 455, ../sass/app.scss */
 #thedox {
   background-color: #dd2f1d;
 }
-/* line 409, ../sass/app.scss */
+/* line 458, ../sass/app.scss */
 #thedox h2 {
   background-image: url("images/logo-thedox.png");
   background-repeat: no-repeat;
 }
 
-/* line 415, ../sass/app.scss */
+/* line 464, ../sass/app.scss */
 #fieldback {
   background-color: #302f88;
 }
-/* line 418, ../sass/app.scss */
+/* line 467, ../sass/app.scss */
 #fieldback h2 {
   background-image: url("images/logo-fieldback.png");
   background-repeat: no-repeat;
 }
 
-/* line 424, ../sass/app.scss */
+/* line 473, ../sass/app.scss */
 #grafight {
   background-color: #69358e;
 }
-/* line 427, ../sass/app.scss */
+/* line 476, ../sass/app.scss */
 #grafight h2 {
   background-image: url("images/logo-grafight.png");
   background-repeat: no-repeat;
 }
 
-/* line 433, ../sass/app.scss */
+/* line 482, ../sass/app.scss */
 #foundryboxlive {
   background-color: #66666f;
 }
-/* line 436, ../sass/app.scss */
+/* line 485, ../sass/app.scss */
 #foundryboxlive h2 {
   background-image: url("images/logo-foundryboxlive.png");
   background-repeat: no-repeat;
+}
+
+/* line 491, ../sass/app.scss */
+#ref-tesco {
+  background-image: url("images/reflogo-tesco.png");
+}
+
+/* line 494, ../sass/app.scss */
+#ref-vodafone {
+  background-image: url("images/reflogo-vodafone.png");
+}
+
+/* line 497, ../sass/app.scss */
+#ref-inmedio {
+  background-image: url("images/reflogo-inmedio.png");
+}
+
+/* line 500, ../sass/app.scss */
+#ref-mondiamedia {
+  background-image: url("images/reflogo-mondiamedia.png");
+}
+
+/* line 503, ../sass/app.scss */
+#ref-mnb {
+  background-image: url("images/reflogo-mnb.png");
+}
+
+/* line 506, ../sass/app.scss */
+#ref-ppp {
+  background-image: url("images/reflogo-ppp.png");
+}
+
+/* line 509, ../sass/app.scss */
+#ref-mtv {
+  background-image: url("images/reflogo-mtv.png");
 }
