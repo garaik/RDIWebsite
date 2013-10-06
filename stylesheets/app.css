@@ -545,7 +545,7 @@ select {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 61.25em;
+  max-width: 61.875em;
   *zoom: 1;
 }
 /* line 121, C:/Program Files (x86)/Ruby200-x64/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_global.scss */
@@ -2309,14 +2309,14 @@ blockquote p {
   background-color: #fff;
   background-repeat: no-repeat;
   background-position: -859px 0;
-  height: 426px;
+  height: 824px;
 }
-/* line 139, ../sass/app.scss */
+/* line 140, ../sass/app.scss */
 .gear > .row > div:first-child {
   padding-right: 0;
   padding-left: 14px;
 }
-/* line 145, ../sass/app.scss */
+/* line 146, ../sass/app.scss */
 .gear .quotation {
   border-bottom: 1px solid #a4a8b4;
   height: 94px;
@@ -2324,93 +2324,502 @@ blockquote p {
   position: relative;
   padding-left: 8px;
 }
-/* line 152, ../sass/app.scss */
+/* line 153, ../sass/app.scss */
 .gear .quotation .quotation-text {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 1.5em;
   position: absolute;
-  bottom: 10px;
+  bottom: 11px;
   line-height: 1.25em;
   color: #313089;
   padding-right: 33px;
 }
-/* line 160, ../sass/app.scss */
+/* line 161, ../sass/app.scss */
 .gear .quotation .quotation-text:before {
   content: '\201C';
   position: absolute;
   right: 100%;
 }
-/* line 166, ../sass/app.scss */
+/* line 167, ../sass/app.scss */
 .gear .quotation .quotation-text:after {
   content: '\201D';
 }
-/* line 171, ../sass/app.scss */
+/* line 172, ../sass/app.scss */
 .gear .quotation .quotation-author {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 1.25em;
   position: absolute;
-  bottom: 16px;
+  bottom: 14px;
   right: 33px;
   color: #313089;
   font-size: 0.9375em;
 }
-/* line 181, ../sass/app.scss */
-.gear .disc {
-  padding-top: 46px;
-  padding-left: 0;
-}
-/* line 184, ../sass/app.scss */
-.gear .disc img {
-  margin-left: -1px;
-}
-
-/* line 190, ../sass/app.scss */
-.division-content {
+/* line 245, ../sass/app.scss */
+.gear .division-content {
   padding-top: 22px;
   padding-left: 8px;
   padding-right: 26px;
 }
-/* line 195, ../sass/app.scss */
-.division-content p {
-  color: #55575e;
+/* line 183, ../sass/app.scss */
+.gear .division-content .research h3 {
+  color: #313089;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
+  font-size: 1.25em;
+}
+/* line 187, ../sass/app.scss */
+.gear .division-content .research p {
+  color: #55575e;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
   font-size: 0.9375em;
   margin-bottom: 10px;
   line-height: 1.3125em;
 }
+/* line 193, ../sass/app.scss */
+.gear .division-content .research p a {
+  color: #313089;
+}
+/* line 196, ../sass/app.scss */
+.gear .division-content .research p mark {
+  color: #313089;
+  background-color: inherit;
+}
 /* line 201, ../sass/app.scss */
-.division-content p a {
+.gear .division-content .research ul.twocolumns {
+  line-height: 1.9375em;
+}
+/* line 205, ../sass/app.scss */
+.gear .division-content .research ul.twocolumns li {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 0.9375em;
+  list-style: none;
+  margin-top: -0.96875em;
+}
+/* line 211, ../sass/app.scss */
+.gear .division-content .research ul.twocolumns li:before {
+  content: '- ';
+}
+/* line 217, ../sass/app.scss */
+.gear .division-content .research ul.twocolumns li:nth-child(2n) {
+  padding-left: 345px;
+}
+/* line 220, ../sass/app.scss */
+.gear .division-content .research ul.twocolumns li:first-child {
+  margin-top: 0;
+}
+/* line 225, ../sass/app.scss */
+.gear .division-content .research ul.ornate li {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 0.9375em;
+  list-style: none;
+  padding: 6px 0 8px 0;
+  border-bottom: 1px dotted #313089;
+}
+/* line 231, ../sass/app.scss */
+.gear .division-content .research ul.ornate li:before {
+  display: inline-block;
+  padding-right: 12px;
+  content: "\2022";
+  color: #313089;
+}
+/* line 238, ../sass/app.scss */
+.gear .division-content .research ul.ornate li:last-child {
+  border-bottom: none;
+}
+/* line 183, ../sass/app.scss */
+.gear .division-content .development h3 {
+  color: #69358e;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.25em;
+}
+/* line 187, ../sass/app.scss */
+.gear .division-content .development p {
+  color: #55575e;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 0.9375em;
+  margin-bottom: 10px;
+  line-height: 1.3125em;
+}
+/* line 193, ../sass/app.scss */
+.gear .division-content .development p a {
+  color: #69358e;
+}
+/* line 196, ../sass/app.scss */
+.gear .division-content .development p mark {
+  color: #69358e;
+  background-color: inherit;
+}
+/* line 201, ../sass/app.scss */
+.gear .division-content .development ul.twocolumns {
+  line-height: 1.9375em;
+}
+/* line 205, ../sass/app.scss */
+.gear .division-content .development ul.twocolumns li {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 0.9375em;
+  list-style: none;
+  margin-top: -0.96875em;
+}
+/* line 211, ../sass/app.scss */
+.gear .division-content .development ul.twocolumns li:before {
+  content: '- ';
+}
+/* line 217, ../sass/app.scss */
+.gear .division-content .development ul.twocolumns li:nth-child(2n) {
+  padding-left: 345px;
+}
+/* line 220, ../sass/app.scss */
+.gear .division-content .development ul.twocolumns li:first-child {
+  margin-top: 0;
+}
+/* line 225, ../sass/app.scss */
+.gear .division-content .development ul.ornate li {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 0.9375em;
+  list-style: none;
+  padding: 6px 0 8px 0;
+  border-bottom: 1px dotted #69358e;
+}
+/* line 231, ../sass/app.scss */
+.gear .division-content .development ul.ornate li:before {
+  display: inline-block;
+  padding-right: 12px;
+  content: "\2022";
+  color: #69358e;
+}
+/* line 238, ../sass/app.scss */
+.gear .division-content .development ul.ornate li:last-child {
+  border-bottom: none;
+}
+/* line 258, ../sass/app.scss */
+.gear .division-content .innovation {
+  display: none;
+}
+/* line 183, ../sass/app.scss */
+.gear .division-content .innovation h3 {
+  color: #dd301d;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.25em;
+}
+/* line 187, ../sass/app.scss */
+.gear .division-content .innovation p {
+  color: #55575e;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 0.9375em;
+  margin-bottom: 10px;
+  line-height: 1.3125em;
+}
+/* line 193, ../sass/app.scss */
+.gear .division-content .innovation p a {
   color: #dd301d;
 }
+/* line 196, ../sass/app.scss */
+.gear .division-content .innovation p mark {
+  color: #dd301d;
+  background-color: inherit;
+}
+/* line 201, ../sass/app.scss */
+.gear .division-content .innovation ul.twocolumns {
+  line-height: 1.9375em;
+}
+/* line 205, ../sass/app.scss */
+.gear .division-content .innovation ul.twocolumns li {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 0.9375em;
+  list-style: none;
+  margin-top: -0.96875em;
+}
+/* line 211, ../sass/app.scss */
+.gear .division-content .innovation ul.twocolumns li:before {
+  content: '- ';
+}
+/* line 217, ../sass/app.scss */
+.gear .division-content .innovation ul.twocolumns li:nth-child(2n) {
+  padding-left: 345px;
+}
+/* line 220, ../sass/app.scss */
+.gear .division-content .innovation ul.twocolumns li:first-child {
+  margin-top: 0;
+}
+/* line 225, ../sass/app.scss */
+.gear .division-content .innovation ul.ornate li {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 0.9375em;
+  list-style: none;
+  padding: 6px 0 8px 0;
+  border-bottom: 1px dotted #dd301d;
+}
+/* line 231, ../sass/app.scss */
+.gear .division-content .innovation ul.ornate li:before {
+  display: inline-block;
+  padding-right: 12px;
+  content: "\2022";
+  color: #dd301d;
+}
+/* line 238, ../sass/app.scss */
+.gear .division-content .innovation ul.ornate li:last-child {
+  border-bottom: none;
+}
+/* line 264, ../sass/app.scss */
+.gear .disc {
+  padding-top: 46px;
+  padding-left: 0;
+}
+/* line 268, ../sass/app.scss */
+.gear .disc #pizzasvg {
+  margin-left: 18px;
+}
+/* line 272, ../sass/app.scss */
+.gear .disc .division-aside {
+  margin-top: 7px;
+  padding: 18px;
+}
+/* line 183, ../sass/app.scss */
+.gear .disc .division-aside .research h3 {
+  color: #313089;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.25em;
+}
+/* line 187, ../sass/app.scss */
+.gear .disc .division-aside .research p {
+  color: #55575e;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 0.9375em;
+  margin-bottom: 10px;
+  line-height: 1.3125em;
+}
+/* line 193, ../sass/app.scss */
+.gear .disc .division-aside .research p a {
+  color: #313089;
+}
+/* line 196, ../sass/app.scss */
+.gear .disc .division-aside .research p mark {
+  color: #313089;
+  background-color: inherit;
+}
+/* line 201, ../sass/app.scss */
+.gear .disc .division-aside .research ul.twocolumns {
+  line-height: 1.9375em;
+}
+/* line 205, ../sass/app.scss */
+.gear .disc .division-aside .research ul.twocolumns li {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 0.9375em;
+  list-style: none;
+  margin-top: -0.96875em;
+}
+/* line 211, ../sass/app.scss */
+.gear .disc .division-aside .research ul.twocolumns li:before {
+  content: '- ';
+}
+/* line 217, ../sass/app.scss */
+.gear .disc .division-aside .research ul.twocolumns li:nth-child(2n) {
+  padding-left: 345px;
+}
+/* line 220, ../sass/app.scss */
+.gear .disc .division-aside .research ul.twocolumns li:first-child {
+  margin-top: 0;
+}
+/* line 225, ../sass/app.scss */
+.gear .disc .division-aside .research ul.ornate li {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 0.9375em;
+  list-style: none;
+  padding: 6px 0 8px 0;
+  border-bottom: 1px dotted #313089;
+}
+/* line 231, ../sass/app.scss */
+.gear .disc .division-aside .research ul.ornate li:before {
+  display: inline-block;
+  padding-right: 12px;
+  content: "\2022";
+  color: #313089;
+}
+/* line 238, ../sass/app.scss */
+.gear .disc .division-aside .research ul.ornate li:last-child {
+  border-bottom: none;
+}
+/* line 183, ../sass/app.scss */
+.gear .disc .division-aside .development h3 {
+  color: #69358e;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.25em;
+}
+/* line 187, ../sass/app.scss */
+.gear .disc .division-aside .development p {
+  color: #55575e;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 0.9375em;
+  margin-bottom: 10px;
+  line-height: 1.3125em;
+}
+/* line 193, ../sass/app.scss */
+.gear .disc .division-aside .development p a {
+  color: #69358e;
+}
+/* line 196, ../sass/app.scss */
+.gear .disc .division-aside .development p mark {
+  color: #69358e;
+  background-color: inherit;
+}
+/* line 201, ../sass/app.scss */
+.gear .disc .division-aside .development ul.twocolumns {
+  line-height: 1.9375em;
+}
+/* line 205, ../sass/app.scss */
+.gear .disc .division-aside .development ul.twocolumns li {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 0.9375em;
+  list-style: none;
+  margin-top: -0.96875em;
+}
+/* line 211, ../sass/app.scss */
+.gear .disc .division-aside .development ul.twocolumns li:before {
+  content: '- ';
+}
+/* line 217, ../sass/app.scss */
+.gear .disc .division-aside .development ul.twocolumns li:nth-child(2n) {
+  padding-left: 345px;
+}
+/* line 220, ../sass/app.scss */
+.gear .disc .division-aside .development ul.twocolumns li:first-child {
+  margin-top: 0;
+}
+/* line 225, ../sass/app.scss */
+.gear .disc .division-aside .development ul.ornate li {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 0.9375em;
+  list-style: none;
+  padding: 6px 0 8px 0;
+  border-bottom: 1px dotted #69358e;
+}
+/* line 231, ../sass/app.scss */
+.gear .disc .division-aside .development ul.ornate li:before {
+  display: inline-block;
+  padding-right: 12px;
+  content: "\2022";
+  color: #69358e;
+}
+/* line 238, ../sass/app.scss */
+.gear .disc .division-aside .development ul.ornate li:last-child {
+  border-bottom: none;
+}
+/* line 183, ../sass/app.scss */
+.gear .disc .division-aside .innovation h3 {
+  color: #dd301d;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.25em;
+}
+/* line 187, ../sass/app.scss */
+.gear .disc .division-aside .innovation p {
+  color: #55575e;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 0.9375em;
+  margin-bottom: 10px;
+  line-height: 1.3125em;
+}
+/* line 193, ../sass/app.scss */
+.gear .disc .division-aside .innovation p a {
+  color: #dd301d;
+}
+/* line 196, ../sass/app.scss */
+.gear .disc .division-aside .innovation p mark {
+  color: #dd301d;
+  background-color: inherit;
+}
+/* line 201, ../sass/app.scss */
+.gear .disc .division-aside .innovation ul.twocolumns {
+  line-height: 1.9375em;
+}
+/* line 205, ../sass/app.scss */
+.gear .disc .division-aside .innovation ul.twocolumns li {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 0.9375em;
+  list-style: none;
+  margin-top: -0.96875em;
+}
+/* line 211, ../sass/app.scss */
+.gear .disc .division-aside .innovation ul.twocolumns li:before {
+  content: '- ';
+}
+/* line 217, ../sass/app.scss */
+.gear .disc .division-aside .innovation ul.twocolumns li:nth-child(2n) {
+  padding-left: 345px;
+}
+/* line 220, ../sass/app.scss */
+.gear .disc .division-aside .innovation ul.twocolumns li:first-child {
+  margin-top: 0;
+}
+/* line 225, ../sass/app.scss */
+.gear .disc .division-aside .innovation ul.ornate li {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 0.9375em;
+  list-style: none;
+  padding: 6px 0 8px 0;
+  border-bottom: 1px dotted #dd301d;
+}
+/* line 231, ../sass/app.scss */
+.gear .disc .division-aside .innovation ul.ornate li:before {
+  display: inline-block;
+  padding-right: 12px;
+  content: "\2022";
+  color: #dd301d;
+}
+/* line 238, ../sass/app.scss */
+.gear .disc .division-aside .innovation ul.ornate li:last-child {
+  border-bottom: none;
+}
 
-/* line 207, ../sass/app.scss */
+/* line 291, ../sass/app.scss */
 .content {
   background-color: #ededf0;
   padding-bottom: 1.625em;
 }
-/* line 211, ../sass/app.scss */
+/* line 295, ../sass/app.scss */
 .content .row {
   padding-top: 1.625em;
 }
-/* line 214, ../sass/app.scss */
+/* line 298, ../sass/app.scss */
 .content .row > div:first-child {
   padding-right: 1.25em;
 }
-/* line 217, ../sass/app.scss */
+/* line 301, ../sass/app.scss */
 .content .row > div:last-child {
   padding-left: 1.25em;
 }
-/* line 221, ../sass/app.scss */
+/* line 305, ../sass/app.scss */
 .content .row .product {
   height: 202px;
   color: #fff;
   overflow: hidden;
   position: relative;
 }
-/* line 227, ../sass/app.scss */
+/* line 311, ../sass/app.scss */
 .content .row .product h2 {
   background-color: #fff;
   margin: 0;
@@ -2426,13 +2835,13 @@ blockquote p {
   text-align: right;
   padding: 0 23px;
 }
-/* line 240, ../sass/app.scss */
+/* line 324, ../sass/app.scss */
 .content .row .product h2 span {
   display: inline-block;
   vertical-align: middle;
   line-height: normal;
 }
-/* line 247, ../sass/app.scss */
+/* line 331, ../sass/app.scss */
 .content .row .product p {
   border-top: 6px solid rgba(255, 255, 255, 0.2);
   margin: 0;
@@ -2444,7 +2853,7 @@ blockquote p {
   line-height: 1.25em;
   text-align: justify;
 }
-/* line 257, ../sass/app.scss */
+/* line 341, ../sass/app.scss */
 .content .row .product span.more {
   position: absolute;
   right: 0;
@@ -2461,23 +2870,23 @@ blockquote p {
   background-position: bottom right;
   background-repeat: no-repeat;
 }
-/* line 271, ../sass/app.scss */
+/* line 355, ../sass/app.scss */
 .content .row .product span.more a {
   color: #fff;
 }
 
-/* line 279, ../sass/app.scss */
+/* line 363, ../sass/app.scss */
 .references {
   background-color: #dd2f1d;
 }
-/* line 282, ../sass/app.scss */
+/* line 367, ../sass/app.scss */
 .references .title {
   background-color: #d1191d;
   height: 56px;
   line-height: 56px;
   vertical-align: middle;
 }
-/* line 288, ../sass/app.scss */
+/* line 373, ../sass/app.scss */
 .references .title h2 {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
@@ -2488,28 +2897,30 @@ blockquote p {
   margin: 0;
   padding: 0 23px;
 }
-/* line 298, ../sass/app.scss */
+/* line 383, ../sass/app.scss */
 .references .logos {
   height: 164px;
 }
-/* line 303, ../sass/app.scss */
-.references .logos ul {
-  display: block;
+/* line 388, ../sass/app.scss */
+.references .logos #reference-items {
+  overflow: hidden;
+}
+/* line 391, ../sass/app.scss */
+.references .logos #reference-items ul {
+  display: inline-block;
+  white-space: nowrap;
   height: 164px;
   margin: 0;
   list-style: none;
   word-spacing: -0.3125em;
   padding-top: 27px;
 }
-/* line 311, ../sass/app.scss */
-.references .logos ul li {
+/* line 400, ../sass/app.scss */
+.references .logos #reference-items ul li {
   display: inline-block;
   width: 100px;
   height: 100px;
   background-color: #fff;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  font-size: 0.6875em;
   vertical-align: top;
   word-spacing: 0;
   margin-left: 0.625em;
@@ -2522,31 +2933,31 @@ blockquote p {
   background-repeat: no-repeat;
   background-color: #fff;
 }
-/* line 325, ../sass/app.scss */
-.references .logos ul li:hover {
+/* line 413, ../sass/app.scss */
+.references .logos #reference-items ul li:hover {
   -webkit-box-shadow: #69358e 0 0 0 5px;
   -moz-box-shadow: #69358e 0 0 0 5px;
   box-shadow: #69358e 0 0 0 5px;
 }
-/* line 329, ../sass/app.scss */
-.references .logos ul li span {
+/* line 430, ../sass/app.scss */
+.references .logos #reference-items ul li span {
   display: none;
 }
-/* line 334, ../sass/app.scss */
-.references .logos ul li:first-child {
-  margin-left: 5px;
+/* line 435, ../sass/app.scss */
+.references .logos #reference-items ul li:first-child {
+  margin-left: 0;
 }
-/* line 339, ../sass/app.scss */
+/* line 441, ../sass/app.scss */
 .references .logos .arrow-left {
   padding-top: 27px;
 }
-/* line 343, ../sass/app.scss */
+/* line 445, ../sass/app.scss */
 .references .logos .arrow-right {
   padding-top: 27px;
   text-align: right;
 }
 
-/* line 350, ../sass/app.scss */
+/* line 452, ../sass/app.scss */
 .contact {
   background: -webkit-linear-gradient(30deg, #ceced6 0%, #ceced6 50%, #d8d8e0 50%, #d8d8e0 100%);
   background: -moz-linear-gradient(30deg, #ceced6 0%, #ceced6 50%, #d8d8e0 50%, #d8d8e0 100%);
@@ -2557,7 +2968,7 @@ blockquote p {
   background-position: 499px 0;
   height: 266px;
 }
-/* line 357, ../sass/app.scss */
+/* line 459, ../sass/app.scss */
 .contact .contact-info {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -2567,12 +2978,12 @@ blockquote p {
   padding-left: 25px;
   line-height: 1.1875em;
 }
-/* line 364, ../sass/app.scss */
+/* line 466, ../sass/app.scss */
 .contact .contact-info .company-name {
   font-size: 1.1875em;
 }
 
-/* line 370, ../sass/app.scss */
+/* line 472, ../sass/app.scss */
 .footer {
   background: -webkit-linear-gradient(30deg, #0a1159 0%, #0a1159 50%, #121a6b 50%, #121a6b 100%);
   background: -moz-linear-gradient(30deg, #0a1159 0%, #0a1159 50%, #121a6b 50%, #121a6b 100%);
@@ -2583,12 +2994,12 @@ blockquote p {
   background-position: -233px 0;
   height: 181px;
 }
-/* line 379, ../sass/app.scss */
+/* line 481, ../sass/app.scss */
 .footer .social {
   padding-top: 1.8125em;
   padding-left: 0;
 }
-/* line 383, ../sass/app.scss */
+/* line 485, ../sass/app.scss */
 .footer .social a.share {
   font-family: 'icomoon';
   font-size: 23px;
@@ -2597,7 +3008,7 @@ blockquote p {
   padding: 0.1875em;
   margin-right: 16px;
 }
-/* line 392, ../sass/app.scss */
+/* line 494, ../sass/app.scss */
 .footer .social a.tech {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
@@ -2610,7 +3021,7 @@ blockquote p {
   position: relative;
   top: -6px;
 }
-/* line 404, ../sass/app.scss */
+/* line 506, ../sass/app.scss */
 .footer .copyright {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -2620,16 +3031,16 @@ blockquote p {
   padding-left: 25px;
 }
 
-/* line 412, ../sass/app.scss */
+/* line 514, ../sass/app.scss */
 #gmaps {
   height: 266px;
 }
-/* line 415, ../sass/app.scss */
+/* line 517, ../sass/app.scss */
 #gmaps img {
   max-width: none;
 }
 
-/* line 420, ../sass/app.scss */
+/* line 522, ../sass/app.scss */
 #language-selector {
   position: absolute;
   display: block;
@@ -2643,7 +3054,7 @@ blockquote p {
   background: url("images/language-selector-bg.png");
   z-index: 1;
 }
-/* line 433, ../sass/app.scss */
+/* line 535, ../sass/app.scss */
 #language-selector a {
   text-transform: uppercase;
   text-decoration: none;
@@ -2653,95 +3064,95 @@ blockquote p {
   color: #7d7f86;
 }
 
-/* line 440, ../sass/app.scss */
+/* line 542, ../sass/app.scss */
 #slogen-title-1,
 #slogen-description-1 {
   display: block;
 }
 
-/* line 445, ../sass/app.scss */
+/* line 547, ../sass/app.scss */
 #slogen-title-2,
 #slogen-description-2 {
   display: none;
 }
 
-/* line 450, ../sass/app.scss */
+/* line 552, ../sass/app.scss */
 #slogen-title-3,
 #slogen-description-3 {
   display: none;
 }
 
-/* line 455, ../sass/app.scss */
+/* line 557, ../sass/app.scss */
 #thedox {
   background-color: #dd2f1d;
 }
-/* line 458, ../sass/app.scss */
+/* line 560, ../sass/app.scss */
 #thedox h2 {
   background-image: url("images/logo-thedox.png");
   background-repeat: no-repeat;
 }
 
-/* line 464, ../sass/app.scss */
+/* line 566, ../sass/app.scss */
 #fieldback {
   background-color: #302f88;
 }
-/* line 467, ../sass/app.scss */
+/* line 569, ../sass/app.scss */
 #fieldback h2 {
   background-image: url("images/logo-fieldback.png");
   background-repeat: no-repeat;
 }
 
-/* line 473, ../sass/app.scss */
+/* line 575, ../sass/app.scss */
 #grafight {
   background-color: #69358e;
 }
-/* line 476, ../sass/app.scss */
+/* line 578, ../sass/app.scss */
 #grafight h2 {
   background-image: url("images/logo-grafight.png");
   background-repeat: no-repeat;
 }
 
-/* line 482, ../sass/app.scss */
+/* line 584, ../sass/app.scss */
 #foundryboxlive {
   background-color: #66666f;
 }
-/* line 485, ../sass/app.scss */
+/* line 587, ../sass/app.scss */
 #foundryboxlive h2 {
   background-image: url("images/logo-foundryboxlive.png");
   background-repeat: no-repeat;
 }
 
-/* line 491, ../sass/app.scss */
+/* line 593, ../sass/app.scss */
 #ref-tesco {
   background-image: url("images/reflogo-tesco.png");
 }
 
-/* line 494, ../sass/app.scss */
+/* line 596, ../sass/app.scss */
 #ref-vodafone {
   background-image: url("images/reflogo-vodafone.png");
 }
 
-/* line 497, ../sass/app.scss */
+/* line 599, ../sass/app.scss */
 #ref-inmedio {
   background-image: url("images/reflogo-inmedio.png");
 }
 
-/* line 500, ../sass/app.scss */
+/* line 602, ../sass/app.scss */
 #ref-mondiamedia {
   background-image: url("images/reflogo-mondiamedia.png");
 }
 
-/* line 503, ../sass/app.scss */
+/* line 605, ../sass/app.scss */
 #ref-mnb {
   background-image: url("images/reflogo-mnb.png");
 }
 
-/* line 506, ../sass/app.scss */
+/* line 608, ../sass/app.scss */
 #ref-ppp {
   background-image: url("images/reflogo-ppp.png");
 }
 
-/* line 509, ../sass/app.scss */
+/* line 611, ../sass/app.scss */
 #ref-mtv {
   background-image: url("images/reflogo-mtv.png");
 }

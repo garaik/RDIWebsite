@@ -133,7 +133,8 @@ $default-padding: 23px;
   background-color: #fff;
   background-repeat: no-repeat;
   background-position: -859px 0;
-  height: 426px;
+  //height: 426px;
+  height: 824px;
 
   > .row {
     > div:first-child {
@@ -152,7 +153,7 @@ $default-padding: 23px;
     .quotation-text {
       @include roboto-font(300, emCalc(24));
       position: absolute;
-      bottom: 10px;
+      bottom: 11px;
       line-height: emCalc(20);
       color: #313089;
       padding-right: 33px;
@@ -171,35 +172,118 @@ $default-padding: 23px;
     .quotation-author {
       @include roboto-font(400, emCalc(20));
       position: absolute;
-      bottom: 16px;
+      bottom: 14px;
       right: 33px;
       color: #313089;
       font-size: emCalc(15);
     }
   }
 
+  @mixin div-content($color) {
+    h3 {
+      color: $color;
+      @include roboto-font(400, emCalc(20));
+    }
+    p {
+      color: #55575e;
+      @include roboto-font(300, emCalc(15));
+      margin-bottom: 10px;
+      line-height: emCalc(21);
+
+      a {
+        color: $color;
+      }
+      mark {
+        color: $color;
+        background-color: inherit;
+      }
+    }
+    ul.twocolumns {
+      //display: block;
+      line-height: emCalc(31);
+
+      li {
+        //display: block;
+        @include roboto-font(300, emCalc(15));
+        list-style: none;
+        margin-top: emCalc(-15.5);
+
+        &:before {
+          content: '- ';
+        }
+      }
+      li:nth-child(2n+1) {
+      }
+      li:nth-child(2n) {
+        padding-left: 345px;
+      }
+      li:first-child {
+        margin-top: 0;
+      }
+    }
+    ul.ornate {
+      li {
+        @include roboto-font(300, emCalc(15));
+        list-style: none;
+        padding: 6px 0 8px 0;
+        border-bottom: 1px dotted $color;
+
+        &:before {
+          display: inline-block;
+          padding-right: 12px;
+          content: "\2022";
+          color: $color;
+        }
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  .division-content {
+    padding-top: 22px;
+    padding-left: 8px;
+    padding-right: 26px;
+
+    .research {
+      @include div-content(#313089);
+    }
+
+    .development {
+      @include div-content(#69358e);
+    }
+
+    .innovation {
+      @include div-content(#dd301d);
+      display: none;
+    }
+  }
+
   .disc {
     padding-top: 46px;
     padding-left: 0;
-    img {
-      margin-left: -1px;
+
+    #pizzasvg {
+      margin-left: 18px;
     }
-  }
-}
 
-.division-content {
-  padding-top: 22px;
-  padding-left: 8px;
-  padding-right: 26px;
+    .division-aside {
+      margin-top: 7px;
+      padding: 18px;
 
-  p {
-    color: #55575e;
-    @include roboto-font(400, emCalc(15));
-    margin-bottom: 10px;
-    line-height: emCalc(21);
+      .research {
+        @include div-content(#313089);
+      }
 
-    a {
-      color: #dd301d;
+      .development {
+        @include div-content(#69358e);
+      }
+
+      .innovation {
+        @include div-content(#dd301d);
+      }
     }
   }
 }
@@ -278,11 +362,12 @@ $default-padding: 23px;
 
 .references {
   background-color: #dd2f1d;
+  $title-height: 56px;
 
   .title {
     background-color: #d1191d;
-    height: 56px;
-    line-height: 56px;
+    height: $title-height;
+    line-height: $title-height;
     vertical-align: middle;
 
     h2 {
@@ -300,39 +385,56 @@ $default-padding: 23px;
     $logos-padding-top: 27px;
     height: $logos-height;
 
-    ul {
-      display: block;
-      height: $logos-height;
-      margin: 0;
-      list-style: none;
-      word-spacing: emCalc(-5);
-      padding-top: $logos-padding-top;
+    #reference-items {
+      overflow: hidden;
 
-      li {
+      ul {
         display: inline-block;
-        width: 100px;
-        height: 100px;
-        background-color: #fff;
-        @include roboto-font(400, emCalc(11));
-        vertical-align: top;
-        word-spacing: 0;
-        margin-left: $column-gutter;
-        @include border-radius(50px);
-        background-position: 50% 50%;
-        background-repeat: no-repeat;
-        background-color: #fff;
+        white-space: nowrap;
+        height: $logos-height;
+        margin: 0;
+        list-style: none;
+        word-spacing: emCalc(-5);
+        padding-top: $logos-padding-top;
 
-        &:hover {
-          @include box-shadow(#69358e 0 0 0 5px);
+        li {
+          display: inline-block;
+          width: 100px;
+          height: 100px;
+          background-color: #fff;
+          vertical-align: top;
+          word-spacing: 0;
+          margin-left: $column-gutter;
+          @include border-radius(50px);
+          background-position: 50% 50%;
+          background-repeat: no-repeat;
+          background-color: #fff;
+
+          &:hover {
+            @include box-shadow(#69358e 0 0 0 5px);
+
+            //span {
+            //  display: block;
+            //  position: absolute;
+            //  //top: -$title-height;
+            //  left: 50%;
+            //  @include roboto-font(400, emCalc(15));
+            //  color: #fff;
+            //  width: 100%;
+            //  height: $title-height;
+            //  background-color: green;
+            //  margin-left: -50%;
+            //}
+          }
+
+          span {
+            display: none;
+          }
         }
 
-        span {
-          display: none;
+        li:first-child {
+          margin-left: 0;
         }
-      }
-
-      li:first-child {
-        margin-left: 5px;
       }
     }
 
