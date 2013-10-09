@@ -63,7 +63,14 @@ $(function() {
             var svgDoc = pizzaSvg.contentDocument;
             var svgRoot = svgDoc.documentElement;
             $('#slice-research', svgRoot).click(function() {
-                $(this).remove();
+//                $(this).remove();
+                var mb = $('#menubar');
+                mb.animate({
+                    height: 60
+                });
+                mb.find('.logo img').animate({
+                    maxHeight: 60
+                });
             });
             $('#slice-development', svgRoot).click(function() {
                 $(this).remove();
@@ -77,3 +84,5 @@ $(function() {
 //    startSlogenAnim();
     startPizzaInteraction();
 });
+
+// http://www.1stwebdesigner.com/wp-content/uploads/2010/06/nagging-menu-with-css3-and-jquery/index.html
