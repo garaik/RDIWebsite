@@ -63,14 +63,7 @@ $(function() {
             var svgDoc = pizzaSvg.contentDocument;
             var svgRoot = svgDoc.documentElement;
             $('#slice-research', svgRoot).click(function() {
-//                $(this).remove();
-                var mb = $('#menubar');
-                mb.animate({
-                    height: 60
-                });
-                mb.find('.logo img').animate({
-                    maxHeight: 60
-                });
+                $(this).remove();
             });
             $('#slice-development', svgRoot).click(function() {
                 $(this).remove();
@@ -83,6 +76,33 @@ $(function() {
 
 //    startSlogenAnim();
     startPizzaInteraction();
+
+    var pos;
+    var current = 144;
+    var target;
+    var $w = $(window);
+    var mb = $('#menubar');
+    var mbimg = mb.find('.logo img');
+    $w.scroll(function() {
+        pos = $w.scrollTop();
+        target = pos > 84 ? 60 : 144 - pos;
+    });
+    window.setInterval(function() {
+        if (current < target) {
+            current += 5;
+            if (current > target) {
+                current = target;
+            }
+        }
+        else if (current > target) {
+            current -= 5;
+            if (current < target) {
+                current = target;
+            }
+        }
+        mb.css({ height: current });
+        mbimg.css({ maxHeight: current });
+    }, 5);
 });
 
 // http://www.1stwebdesigner.com/wp-content/uploads/2010/06/nagging-menu-with-css3-and-jquery/index.html
