@@ -19,7 +19,7 @@ $menu-bar-top-padding: 69px;
 
 $default-horizontal-gap: $column-gutter + emCalc(16);
 
-$default-padding: 23px;
+$default-padding: 21px;
 
 $experimental-support-for-svg: true;
 
@@ -57,14 +57,18 @@ $color-text: #55575e;
 
 @mixin div-content($color) {
   h3 {
+    margin-top: 10px;
     color: $color;
     @include roboto-font(400, emCalc(20));
+    padding: 0 $default-padding;
   }
+
   p {
     color: $color-text;
     @include roboto-font(300, emCalc(15));
     margin-bottom: 10px;
     line-height: emCalc(21);
+    padding: 0 $default-padding;
 
     mark {
       color: $color;
@@ -79,25 +83,26 @@ $color-text: #55575e;
     }
   }
 
-  ul {
+  %list-base {
     margin-bottom: 10px;
+    padding: 0 $default-padding;
 
-    li  {
+    $li-left-padding: 16px;
+
+    li {
       display: block;
       @include roboto-font(300, emCalc(15));
-      list-style: none;
       margin-top: 12px;
-
-      &:before {
-        display: inline;
-        content: "\2022";
-        color: $color;
-        padding-right: 11px;
-      }
+      padding-left: $li-left-padding;
+      text-indent: -$li-left-padding;
 
       mark {
         background-color: #ededf0;
         padding: 0 4px;
+      }
+
+      em {
+        color: $color-development;
       }
 
       &:first-child {
@@ -118,25 +123,57 @@ $color-text: #55575e;
         height: 10px;
       }
     }
+
+    &.ornate {
+      li {
+        @include roboto-font(300, emCalc(15));
+        padding: 6px 0 8px $li-left-padding;
+        border-bottom: 1px dotted $color;
+        text-indent: -$li-left-padding;
+        margin-top: 2px;
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
   }
 
-  ul.ornate {
-    li {
-      @include roboto-font(300, emCalc(15));
-      $left-padding: 16px;
-      padding: 6px 0 8px $left-padding;
-      border-bottom: 1px dotted $color;
-      text-indent: -$left-padding;
-      margin-top: 2px;
+  ul {
+    @extend %list-base;
 
-      &:last-child {
-        border-bottom: none;
+    li  {
+      &:before {
+        display: inline;
+        content: "\2022";
+        color: $color;
+        padding-right: 11px;
+      }
+    }
+  }
+
+  ol {
+    @extend %list-base;
+    counter-reset: ol-counter;
+    li  {
+      padding-left: 20px;
+      text-indent: -20px;
+
+      &:before {
+        content: counter(ol-counter) '.';
+        counter-increment: ol-counter;
+        font-weight: 400;
+        font-size: 19px;
+        color: $color-development;
+        text-align: left;
+        padding-right: 4px;
       }
     }
   }
 
   dl {
     line-height: emCalc(21);
+    padding: 0 $default-padding;
 
     dt {
       display: inline;
@@ -331,7 +368,7 @@ $color-text: #55575e;
   > .row {
     > div:first-child {
       padding-right: 0;
-      padding-left: 14px;
+      //padding-left: 14px;
     }
   }
 
@@ -339,7 +376,9 @@ $color-text: #55575e;
     border-bottom: 1px solid #a4a8b4;
     height: 94px;
     position: relative;
-    padding-left: 8px;
+    $quot-margin-left: 13px;
+    margin-left: $quot-margin-left;
+    padding-left: $default-padding - $quot-margin-left;
 
     .quotation-text {
       @include roboto-font(300, emCalc(24));
@@ -380,7 +419,7 @@ $color-text: #55575e;
 
   .division-content {
     padding-top: 22px;
-    padding-left: 8px;
+    //padding-left: 8px;
     padding-right: 26px;
 
     .research {
@@ -406,7 +445,6 @@ $color-text: #55575e;
 
     .division-aside {
       margin-top: 7px;
-      padding: 18px;
 
       .research {
         @include div-content($color-research);
@@ -546,7 +584,7 @@ $color-text: #55575e;
         line-height: $title-height;
         margin: 0;
         @include roboto-font(300, emCalc(35));
-        padding-left: $default-padding;
+        padding: 0 $default-padding;
 
         span {
           display: table-cell;
@@ -574,26 +612,54 @@ $color-text: #55575e;
         line-height: 31px;
         color: $color-text;
         text-align: right;
-        padding: 57px 0 0 0;
+        padding: 57px 0 $default-padding 0;
         margin: 0;
 
-        footer {
+        cite {
           font-size: 15px;
         }
       }
     }
 
-    .figure {
+    .description {
       background-color: #eaeaef;
+      padding-top: 50px;
 
       .row>.columns:nth-child(2) {
         text-align: right;
         padding-top: 16px;
       }
 
+      .figure {
+        width: 440px;
+        height: 400px;
+        float: right;
+        text-align: right;
+        padding-top: 16px;
+        margin-top: -50px;
+      }
+
       .content {
-        padding-top: 50px;
         @include div-content($color-development);
+        text-align: justify;
+      }
+
+      .emphasized {
+        background-color: #fff;
+        padding: 10px 0;
+        border-top: 1px dotted $color-development;
+        border-bottom: 1px dotted $color-development;
+        margin-top: 18px;
+        margin-bottom: 18px;
+      }
+    }
+
+    .explanation {
+      background-color: #f0f1f7;
+
+      .content {
+        @include div-content($color-development);
+        text-align: justify;
       }
     }
   }
@@ -861,3 +927,23 @@ $contact-height: 264px;
 .development {
   display: none;
 }
+
+.row.debug {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: $row-width;
+  width: 100%;
+  margin-left: -($row-width / 2);
+
+  .column,
+  .columns {
+    background: rgba(255,0,0,0.1);
+    height: 7500px;
+    position: relative;
+    //box-shadow: 0.9375em 0 0 rgba(255,255,255,0.5) inset,
+    //            -0.9375em 0 0 rgba(255,255,255,0.5) inset
+    box-shadow: ($column-gutter / 2) 0 0 rgba(255,255,255,0.5) inset, -($column-gutter / 2) 0 0 rgba(255,255,255,0.5) inset;
+  }
+}
+
