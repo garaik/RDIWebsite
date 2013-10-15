@@ -55,6 +55,113 @@ $color-text: #55575e;
   font-size: $size;
 }
 
+@mixin div-content($color) {
+  h3 {
+    color: $color;
+    @include roboto-font(400, emCalc(20));
+  }
+  p {
+    color: $color-text;
+    @include roboto-font(300, emCalc(15));
+    margin-bottom: 10px;
+    line-height: emCalc(21);
+
+    mark {
+      color: $color;
+      background-color: inherit;
+    }
+  }
+
+  a {
+    color: $color-text;
+    &:hover {
+      color: $color;
+    }
+  }
+
+  ul {
+    margin-bottom: 10px;
+
+    li  {
+      display: block;
+      @include roboto-font(300, emCalc(15));
+      list-style: none;
+      margin-top: 12px;
+
+      &:before {
+        display: inline;
+        content: "\2022";
+        color: $color;
+        padding-right: 11px;
+      }
+
+      mark {
+        background-color: #ededf0;
+        padding: 0 4px;
+      }
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    &.twocolumns {
+      li:nth-child(2n+1) {
+        float: left;
+      }
+      li:nth-child(2n) {
+        margin-left: 327px;
+      }
+      li:last-child:after {
+        content: '';
+        display: block;
+        height: 10px;
+      }
+    }
+  }
+
+  ul.ornate {
+    li {
+      @include roboto-font(300, emCalc(15));
+      $left-padding: 16px;
+      padding: 6px 0 8px $left-padding;
+      border-bottom: 1px dotted $color;
+      text-indent: -$left-padding;
+      margin-top: 2px;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  dl {
+    line-height: emCalc(21);
+
+    dt {
+      display: inline;
+      clear: left;
+      @include roboto-font(700, emCalc(15));
+      color: $color;
+
+      &:after {
+        content: ': ';
+      }
+    }
+
+    dd {
+      display: inline;
+      @include roboto-font(300, emCalc(15));
+
+      &:after {
+        content: '';
+        display: block;
+        height: 10px;
+      }
+    }
+  }
+}
+
 .topline {
   @include background(linear-gradient(30deg, #782b8f 0%, #782b8f 50%, #eb1c23 50%, #eb1c23 100%));
   background-color: #eb1c23;
@@ -271,113 +378,6 @@ $color-text: #55575e;
     }
   }
 
-  @mixin div-content($color) {
-    h3 {
-      color: $color;
-      @include roboto-font(400, emCalc(20));
-    }
-    p {
-      color: $color-text;
-      @include roboto-font(300, emCalc(15));
-      margin-bottom: 10px;
-      line-height: emCalc(21);
-
-      mark {
-        color: $color;
-        background-color: inherit;
-      }
-    }
-
-    a {
-      color: $color-text;
-      &:hover {
-        color: $color;
-      }
-    }
-
-    ul {
-      margin-bottom: 10px;
-
-      li  {
-        display: block;
-        @include roboto-font(300, emCalc(15));
-        list-style: none;
-        margin-top: 12px;
-
-        &:before {
-          display: inline;
-          content: "\2022";
-          color: $color;
-          padding-right: 11px;
-        }
-
-        mark {
-          background-color: #ededf0;
-          padding: 0 4px;
-        }
-
-        &:first-child {
-          margin-top: 0;
-        }
-      }
-
-      &.twocolumns {
-        li:nth-child(2n+1) {
-          float: left;
-        }
-        li:nth-child(2n) {
-          margin-left: 327px;
-        }
-        li:last-child:after {
-          content: '';
-          display: block;
-          height: 10px;
-        }
-      }
-    }
-
-    ul.ornate {
-      li {
-        @include roboto-font(300, emCalc(15));
-        $left-padding: 16px;
-        padding: 6px 0 8px $left-padding;
-        border-bottom: 1px dotted $color;
-        text-indent: -$left-padding;
-        margin-top: 2px;
-
-        &:last-child {
-          border-bottom: none;
-        }
-      }
-    }
-
-    dl {
-      line-height: emCalc(21);
-
-      dt {
-        display: inline;
-        clear: left;
-        @include roboto-font(700, emCalc(15));
-        color: $color;
-
-        &:after {
-          content: ': ';
-        }
-      }
-
-      dd {
-        display: inline;
-        @include roboto-font(300, emCalc(15));
-
-        &:after {
-          content: '';
-          display: block;
-          height: 10px;
-        }
-      }
-    }
-  }
-
   .division-content {
     padding-top: 22px;
     padding-left: 8px;
@@ -423,73 +423,177 @@ $color-text: #55575e;
   }
 }
 
-.content {
+.products {
   background-color: #ededf0;
-  padding-bottom: $default-horizontal-gap;
 
-  .row {
-    padding-top: $default-horizontal-gap;
+  .product-boxes {
+    padding-bottom: $default-horizontal-gap;
 
-    > div:first-child {
-      padding-right: ($column-gutter / 2) + emCalc(15);
+    .row {
+      padding-top: $default-horizontal-gap;
+
+      > div:first-child {
+        padding-right: ($column-gutter / 2) + emCalc(15);
+      }
+      > div:last-child {
+        padding-left: ($column-gutter / 2) + emCalc(15);
+      }
+
+      .box {
+        height: 202px;
+        color: #fff;
+        overflow: hidden;
+        position: relative;
+
+        h2 {
+          background-color: #fff;
+          margin: 0;
+          height: 75px;
+          line-height: 75px;
+          overflow: hidden;
+          @include roboto-font(300, emCalc(19));
+          text-transform: uppercase;
+          word-wrap: normal;
+          color: $color-text;
+          text-align: right;
+          padding: 0 $default-padding;
+
+          span {
+            display: inline-block;
+            vertical-align: middle;
+            line-height: normal;
+          }
+        }
+
+        p {
+          border-top: 6px solid rgba(255, 255, 255, .2);
+          margin: 0;
+          padding: $default-padding;
+          padding-top: $default-padding - 6px;
+          @include roboto-font(300, emCalc(15));
+          line-height: emCalc(20);
+          text-align: justify;
+        }
+
+        span.more {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          @include roboto-font(300, emCalc(25));
+          width: 50px;
+          height: 30px;
+          text-align: right;
+          padding-top: 6px;
+          padding-right: 4px;
+          background: url('images/more-corner.png');
+          background-position: bottom right;
+          background-repeat: no-repeat;
+
+          a {
+            color: #fff;
+          }
+        }
+      }
+
+      .thedox {
+        background-color: $color-innovation;
+
+        h2 {
+          background-image: url('images/logo-thedox.png');
+          background-repeat: no-repeat;
+        }
+      }
+
+      .fieldback {
+        background-color: $color-research;
+
+        h2 {
+          background-image: url('images/logo-fieldback.png');
+          background-repeat: no-repeat;
+        }
+      }
+
+      .grafight {
+        background-color: $color-development;
+
+        h2 {
+          background-image: url('images/logo-grafight.png');
+          background-repeat: no-repeat;
+        }
+      }
+
+      .foundryboxlive {
+        background-color: #66666f;
+
+        h2 {
+          background-image: url('images/logo-foundryboxlive.png');
+          background-repeat: no-repeat;
+        }
+      }
     }
-    > div:last-child {
-      padding-left: ($column-gutter / 2) + emCalc(15);
-    }
+  }
 
-    .product {
-      height: 202px;
-      color: #fff;
-      overflow: hidden;
-      position: relative;
+  .product {
+
+    .title {
+      $title-height: 117px;
+      height: $title-height;
+      background-color: $color-innovation;
 
       h2 {
-        background-color: #fff;
+        display: table;
+        height: $title-height;
+        line-height: $title-height;
         margin: 0;
-        height: 75px;
-        line-height: 75px;
-        overflow: hidden;
-        @include roboto-font(300, emCalc(19));
-        text-transform: uppercase;
-        word-wrap: normal;
-        color: $color-text;
-        text-align: right;
-        padding: 0 $default-padding;
+        @include roboto-font(300, emCalc(35));
+        padding-left: $default-padding;
 
         span {
-          display: inline-block;
-          vertical-align: middle;
+          display: table-cell;
+          height: $title-height;
+          width: 100%;
           line-height: normal;
-        }
-      }
-
-      p {
-        border-top: 6px solid rgba(255, 255, 255, .2);
-        margin: 0;
-        padding: $default-padding;
-        padding-top: $default-padding - 6px;
-        @include roboto-font(300, emCalc(15));
-        line-height: emCalc(20);
-        text-align: justify;
-      }
-
-      span.more {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        @include roboto-font(300, emCalc(25));
-        width: 50px;
-        height: 30px;
-        text-align: right;
-        padding-top: 6px;
-        padding-right: 4px;
-        background: url('images/more-corner.png');
-        background-position: bottom right;
-        background-repeat: no-repeat;
-
-        a {
+          vertical-align: middle;
+          text-align: left;
           color: #fff;
         }
+      }
+    }
+
+    .seal {
+      height: 182px;
+      @include background(linear-gradient(180deg, #d5d5dd 0%, #e3e3e9 100%));
+
+      .row>.columns:first-child {
+        padding-left: $default-padding;
+        padding-top: 9px;
+      }
+
+      blockquote {
+        @include roboto-font(300, 24px);
+        line-height: 31px;
+        color: $color-text;
+        text-align: right;
+        padding: 57px 0 0 0;
+        margin: 0;
+
+        footer {
+          font-size: 15px;
+        }
+      }
+    }
+
+    .figure {
+      background-color: #eaeaef;
+
+      .row>.columns:nth-child(2) {
+        text-align: right;
+        padding-top: 16px;
+      }
+
+      .content {
+        padding-top: 50px;
+        @include div-content($color-development);
       }
     }
   }
@@ -699,43 +803,6 @@ $contact-height: 264px;
 #slogen-title-3,
 #slogen-description-3 {
   display: none;
-}
-
-
-#thedox {
-  background-color: $color-innovation;
-
-  h2 {
-    background-image: url('images/logo-thedox.png');
-    background-repeat: no-repeat;
-  }
-}
-
-#fieldback {
-  background-color: $color-research;
-
-  h2 {
-    background-image: url('images/logo-fieldback.png');
-    background-repeat: no-repeat;
-  }
-}
-
-#grafight {
-  background-color: $color-development;
-
-  h2 {
-    background-image: url('images/logo-grafight.png');
-    background-repeat: no-repeat;
-  }
-}
-
-#foundryboxlive {
-  background-color: #66666f;
-
-  h2 {
-    background-image: url('images/logo-foundryboxlive.png');
-    background-repeat: no-repeat;
-  }
 }
 
 #ref-tesco {
