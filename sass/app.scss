@@ -14,12 +14,15 @@
 
 @import "compass";
 
+$debug-mode: false;
+
 $topline-height: 7px;
 $menu-bar-top-padding: 69px;
 
 $default-horizontal-gap: $column-gutter + emCalc(16);
 
-$default-padding: 21px;
+$default-padding: emCalc(22);
+$default-padding-px: 22px;
 
 $experimental-support-for-svg: true;
 
@@ -60,7 +63,7 @@ $color-text: #55575e;
     margin-top: 10px;
     color: $color;
     @include roboto-font(400, emCalc(20));
-    padding: 0 $default-padding;
+    padding: 0 $default-padding-px;
   }
 
   p {
@@ -311,16 +314,17 @@ $color-text: #55575e;
   overflow: hidden;
 
   .columns {
-    padding-left: 14px;
+
+    $slogen-left-pos: 13px;
 
     h1 {
       position: absolute;
       color: #fff;
       @include roboto-font(300, emCalc(38));
       top: 46px;
-      left: 13px;
+      left: $slogen-left-pos;
       margin: 0;
-      padding: 0 8px;
+      padding: 0 ($default-padding-px - $slogen-left-pos);
       background-color: rgba(47, 34, 110, .6);
       display: inline-block;
       -webkit-font-smoothing: antialiased;
@@ -332,13 +336,13 @@ $color-text: #55575e;
       line-height: emCalc(24);
 
       top: 120px;
-      left: 13px;
+      left: $slogen-left-pos;
       margin: 0;
 
       span {
         display: inline-block;
         background-color: rgba(47, 34, 110, .6);
-        padding: 0 8px;
+        padding: 0 ($default-padding-px - $slogen-left-pos);
         @include roboto-font(300, emCalc(19));
         color: #e8e8fe;
 
@@ -376,7 +380,7 @@ $color-text: #55575e;
     border-bottom: 1px solid #a4a8b4;
     height: 94px;
     position: relative;
-    $quot-margin-left: 13px;
+    $quot-margin-left: emCalc(13);
     margin-left: $quot-margin-left;
     padding-left: $default-padding - $quot-margin-left;
 
@@ -507,7 +511,7 @@ $color-text: #55575e;
           border-top: 6px solid rgba(255, 255, 255, .2);
           margin: 0;
           padding: $default-padding;
-          padding-top: $default-padding - 6px;
+          padding-top: $default-padding - emCalc(6);
           @include roboto-font(300, emCalc(15));
           line-height: emCalc(20);
           text-align: justify;
@@ -583,8 +587,8 @@ $color-text: #55575e;
         height: $title-height;
         line-height: $title-height;
         margin: 0;
+        padding: 0 $default-padding-px;
         @include roboto-font(300, emCalc(35));
-        padding: 0 $default-padding;
 
         span {
           display: table-cell;
@@ -594,6 +598,10 @@ $color-text: #55575e;
           vertical-align: middle;
           text-align: left;
           color: #fff;
+        }
+
+        &.fieldback {
+          font-size: emCalc(33);
         }
       }
     }
@@ -612,7 +620,7 @@ $color-text: #55575e;
         line-height: 31px;
         color: $color-text;
         text-align: right;
-        padding: 57px 0 $default-padding 0;
+        padding: 57px ($default-padding - $column-gutter / 2) $default-padding 0;
         margin: 0;
 
         cite {
@@ -631,11 +639,12 @@ $color-text: #55575e;
       }
 
       .figure {
-        width: 440px;
+        width: emCalc(440) + $default-padding;
         height: 400px;
         float: right;
         text-align: right;
         padding-top: 16px;
+        padding-right: $default-padding - emCalc(8);
         margin-top: -50px;
       }
 
@@ -929,21 +938,25 @@ $contact-height: 264px;
 }
 
 .row.debug {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: $row-width;
-  width: 100%;
-  margin-left: -($row-width / 2);
+  @if $debug-mode {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: $row-width;
+    width: 100%;
+    margin-left: -($row-width / 2);
 
-  .column,
-  .columns {
-    background: rgba(255,0,0,0.1);
-    height: 7500px;
-    position: relative;
-    //box-shadow: 0.9375em 0 0 rgba(255,255,255,0.5) inset,
-    //            -0.9375em 0 0 rgba(255,255,255,0.5) inset
-    box-shadow: ($column-gutter / 2) 0 0 rgba(255,255,255,0.5) inset, -($column-gutter / 2) 0 0 rgba(255,255,255,0.5) inset;
+    .column,
+    .columns {
+      background: rgba(255,0,0,0.1);
+      height: 7500px;
+      position: relative;
+      //box-shadow: 0.9375em 0 0 rgba(255,255,255,0.5) inset,
+      //            -0.9375em 0 0 rgba(255,255,255,0.5) inset
+      box-shadow: ($column-gutter / 2) 0 0 rgba(255,255,255,0.5) inset, -($column-gutter / 2) 0 0 rgba(255,255,255,0.5) inset;
+    }
+  } @else {
+    display: none;
   }
 }
 
