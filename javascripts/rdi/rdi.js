@@ -128,40 +128,53 @@ $(function() {
                 left: 6 + i * 110
             });
         }
+        var scrolling = false;
         $('#references-arrow-right').click(function() {
-            for (var i = 7; i <= 9; ++i) {
-                var c = refs[refmod(pos + i)].clone();
-                $refItemsUl.append(c);
-                c.css({
-                    left: 6 + i * 110
+            if (!scrolling) {
+                scrolling = true;
+                for (var i = 7; i <= 9; ++i) {
+                    var c = refs[refmod(pos + i)].clone();
+                    $refItemsUl.append(c);
+                    c.css({
+                        left: 6 + i * 110
+                    });
+                }
+                $refItemsUl.find('li').each(function (i) {
+                    $(this).delay(i * 50).animate({ left: '-=330' }, 500, 'swing', function () {
+                        if (i < 3) {
+                            $(this).remove();
+                        }
+                        else if (i == 9) {
+                            scrolling = false;
+                        }
+                    });
                 });
+                pos += 3;
             }
-            for (i = 1; i <= 10; ++i) {
-                $refItemsUl.find('li:nth-child(' + i + ')').delay((i - 1) * 40).animate({
-                    left: '-=330'
-                }, 400, 'swing', i > 3 ? null : function() {
-                    $(this).remove();
-                });
-            }
-            pos += 3;
             return false;
         });
         $('#references-arrow-left').click(function() {
-            for (var i = -1; i >= -3; --i) {
-                var c = refs[refmod(pos + i)].clone();
-                $refItemsUl.prepend(c);
-                c.css({
-                    left: 6 + i * 110
+            if (!scrolling) {
+                scrolling = true;
+                for (var i = -1; i >= -3; --i) {
+                    var c = refs[refmod(pos + i)].clone();
+                    $refItemsUl.prepend(c);
+                    c.css({
+                        left: 6 + i * 110
+                    });
+                }
+                $refItemsUl.find('li').each(function (i) {
+                    $(this).delay((9 - i) * 50).animate({ left: '+=330' }, 500, 'swing', function () {
+                        if (i > 6) {
+                            $(this).remove();
+                        }
+                        else if (i == 0) {
+                            scrolling = false;
+                        }
+                    });
                 });
+                pos -= 3;
             }
-            for (i = 10; i >= 1; --i) {
-                $refItemsUl.find('li:nth-child(' + i + ')').delay((10 - i) * 40).animate({
-                    left: '+=330'
-                }, 400, 'swing', i < 8 ? null : function() {
-                    $(this).remove();
-                });
-            }
-            pos -= 3;
             return false;
         });
     };
@@ -169,7 +182,7 @@ $(function() {
 //    startSlogenAnim();
 //    startPizzaInteraction();
 //    initTopMenu();
-    initProducts();
+//    initProducts();
     initReferences();
 });
 
