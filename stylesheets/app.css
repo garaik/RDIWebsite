@@ -3895,13 +3895,14 @@ blockquote p {
 }
 /* line 714, ../sass/app.scss */
 .references .logos #reference-items ul li {
+  position: absolute;
   display: inline-block;
   width: 100px;
   height: 100px;
   background-color: #fff;
   vertical-align: top;
   word-spacing: 0;
-  margin-left: 0.625em;
+  margin-left: 0;
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
   -ms-border-radius: 50px;
@@ -3919,13 +3920,13 @@ blockquote p {
   -o-transition-duration: 300ms;
   transition-duration: 300ms;
 }
-/* line 729, ../sass/app.scss */
+/* line 731, ../sass/app.scss */
 .references .logos #reference-items ul li:hover {
   -webkit-box-shadow: #69358e 0 0 0 5px;
   -moz-box-shadow: #69358e 0 0 0 5px;
   box-shadow: #69358e 0 0 0 5px;
 }
-/* line 732, ../sass/app.scss */
+/* line 734, ../sass/app.scss */
 .references .logos #reference-items ul li:hover span {
   display: block;
   position: absolute;
@@ -3941,25 +3942,25 @@ blockquote p {
   height: 56px;
   background-color: green;
 }
-/* line 747, ../sass/app.scss */
+/* line 749, ../sass/app.scss */
 .references .logos #reference-items ul li span {
   display: none;
 }
-/* line 752, ../sass/app.scss */
+/* line 754, ../sass/app.scss */
 .references .logos #reference-items ul li:first-child {
   margin-left: 0;
 }
-/* line 758, ../sass/app.scss */
+/* line 760, ../sass/app.scss */
 .references .logos .arrow-left {
   padding-top: 27px;
 }
-/* line 762, ../sass/app.scss */
+/* line 764, ../sass/app.scss */
 .references .logos .arrow-right {
   padding-top: 27px;
   text-align: right;
 }
 
-/* line 771, ../sass/app.scss */
+/* line 773, ../sass/app.scss */
 .contact {
   background: -webkit-linear-gradient(30deg, #ceced6 0%, #ceced6 50%, #d8d8e0 50%, #d8d8e0 100%);
   background: -moz-linear-gradient(30deg, #ceced6 0%, #ceced6 50%, #d8d8e0 50%, #d8d8e0 100%);
@@ -3970,7 +3971,7 @@ blockquote p {
   background-position: 499px 0;
   height: 264px;
 }
-/* line 779, ../sass/app.scss */
+/* line 781, ../sass/app.scss */
 .contact .contact-info {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -3980,17 +3981,17 @@ blockquote p {
   padding-left: 25px;
   line-height: 1.3125em;
 }
-/* line 786, ../sass/app.scss */
+/* line 788, ../sass/app.scss */
 .contact .contact-info .company-name {
   font-size: 1.1875em;
   color: #69358e;
 }
-/* line 791, ../sass/app.scss */
+/* line 793, ../sass/app.scss */
 .contact .contact-info a.email {
   color: #dd2f1d;
 }
 
-/* line 797, ../sass/app.scss */
+/* line 799, ../sass/app.scss */
 .footer {
   background: -webkit-linear-gradient(30deg, #0a1159 0%, #0a1159 50%, #121a6b 50%, #121a6b 100%);
   background: -moz-linear-gradient(30deg, #0a1159 0%, #0a1159 50%, #121a6b 50%, #121a6b 100%);
@@ -4001,11 +4002,11 @@ blockquote p {
   background-position: -233px 0;
   height: 181px;
 }
-/* line 805, ../sass/app.scss */
+/* line 807, ../sass/app.scss */
 .footer .social {
   padding-top: 49px;
 }
-/* line 808, ../sass/app.scss */
+/* line 810, ../sass/app.scss */
 .footer .social a.share, .footer .social a.tech {
   display: inline-table;
   height: 39px;
@@ -4013,7 +4014,7 @@ blockquote p {
   margin-right: 16px;
   vertical-align: top;
 }
-/* line 815, ../sass/app.scss */
+/* line 817, ../sass/app.scss */
 .footer .social a.share span, .footer .social a.tech span {
   display: table-cell;
   line-height: normal;
@@ -4029,28 +4030,28 @@ blockquote p {
   -o-transition-duration: 300ms;
   transition-duration: 300ms;
 }
-/* line 824, ../sass/app.scss */
+/* line 826, ../sass/app.scss */
 .footer .social a.share span:hover, .footer .social a.tech span:hover {
   color: #fff;
 }
-/* line 830, ../sass/app.scss */
+/* line 832, ../sass/app.scss */
 .footer .social a.share {
   width: 39px;
   background-color: #283080;
 }
-/* line 835, ../sass/app.scss */
+/* line 837, ../sass/app.scss */
 .footer .social a.share span {
   font-family: 'SocialFoundicons';
   font-size: 2.0625em;
 }
-/* line 844, ../sass/app.scss */
+/* line 846, ../sass/app.scss */
 .footer .social a.tech span {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 1em;
   text-transform: uppercase;
 }
-/* line 851, ../sass/app.scss */
+/* line 853, ../sass/app.scss */
 .footer .copyright {
   height: 181px;
   font-family: 'Roboto', sans-serif;
@@ -4061,119 +4062,119 @@ blockquote p {
   padding-left: 25px;
 }
 
-/* line 860, ../sass/app.scss */
+/* line 862, ../sass/app.scss */
 #gmaps {
   height: 264px;
 }
-/* line 863, ../sass/app.scss */
+/* line 865, ../sass/app.scss */
 #gmaps img {
   max-width: none;
 }
 
-/* line 869, ../sass/app.scss */
+/* line 871, ../sass/app.scss */
 #slogen-title-1,
 #slogen-description-1 {
   display: block;
 }
 
-/* line 874, ../sass/app.scss */
+/* line 876, ../sass/app.scss */
 #slogen-title-2,
 #slogen-description-2 {
   display: none;
 }
 
-/* line 879, ../sass/app.scss */
+/* line 881, ../sass/app.scss */
 #slogen-title-3,
 #slogen-description-3 {
   display: none;
 }
 
-/* line 883, ../sass/app.scss */
+/* line 885, ../sass/app.scss */
 #ref-tesco {
   background-image: url("images/reflogo-tesco.png");
 }
 
-/* line 886, ../sass/app.scss */
+/* line 888, ../sass/app.scss */
 #ref-vodafone {
   background-image: url("images/reflogo-vodafone.png");
 }
 
-/* line 889, ../sass/app.scss */
+/* line 891, ../sass/app.scss */
 #ref-inmedio {
   background-image: url("images/reflogo-inmedio.png");
 }
 
-/* line 892, ../sass/app.scss */
+/* line 894, ../sass/app.scss */
 #ref-mondiamedia {
   background-image: url("images/reflogo-mondiamedia.png");
 }
 
-/* line 895, ../sass/app.scss */
+/* line 897, ../sass/app.scss */
 #ref-mnb {
   background-image: url("images/reflogo-mnb.png");
 }
 
-/* line 898, ../sass/app.scss */
+/* line 900, ../sass/app.scss */
 #ref-ppp {
   background-image: url("images/reflogo-ppp.png");
 }
 
-/* line 901, ../sass/app.scss */
+/* line 903, ../sass/app.scss */
 #ref-mtv {
   background-image: url("images/reflogo-mtv.png");
 }
 
-/* line 904, ../sass/app.scss */
+/* line 906, ../sass/app.scss */
 #ref-dm {
   background-image: url("images/reflogo-dm.png");
 }
 
-/* line 907, ../sass/app.scss */
+/* line 909, ../sass/app.scss */
 #ref-o2 {
   background-image: url("images/reflogo-o2.png");
 }
 
-/* line 910, ../sass/app.scss */
+/* line 912, ../sass/app.scss */
 #ref-hemmersbach {
   background-image: url("images/reflogo-hemmersbach.png");
 }
 
-/* line 913, ../sass/app.scss */
+/* line 915, ../sass/app.scss */
 #ref-relay {
   background-image: url("images/reflogo-relay.png");
 }
 
-/* line 916, ../sass/app.scss */
+/* line 918, ../sass/app.scss */
 #ref-szte {
   background-image: url("images/reflogo-szte.png");
 }
 
-/* line 919, ../sass/app.scss */
+/* line 921, ../sass/app.scss */
 #ref-telekomau {
   background-image: url("images/reflogo-telekomau.png");
 }
 
-/* line 922, ../sass/app.scss */
+/* line 924, ../sass/app.scss */
 #ref-drinfo {
   background-image: url("images/reflogo-drinfo.png");
 }
 
-/* line 925, ../sass/app.scss */
+/* line 927, ../sass/app.scss */
 #ref-kt {
   background-image: url("images/reflogo-kt.png");
 }
 
-/* line 932, ../sass/app.scss */
-.innovation {
+/* line 931, ../sass/app.scss */
+.research {
   display: none;
 }
 
-/* line 936, ../sass/app.scss */
+/* line 938, ../sass/app.scss */
 .development {
   display: none;
 }
 
-/* line 940, ../sass/app.scss */
+/* line 942, ../sass/app.scss */
 .row.debug {
   display: none;
 }

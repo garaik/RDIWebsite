@@ -74,35 +74,103 @@ $(function() {
         });
     };
 
-//    startSlogenAnim();
-    startPizzaInteraction();
-
-    var pos;
-    var current = 144;
-    var target;
-    var $w = $(window);
-    var mb = $('#menubar');
-    var mbimg = mb.find('.logo img');
-    $w.scroll(function() {
-        pos = $w.scrollTop();
-        target = pos > 84 ? 60 : 144 - pos;
-    });
-    window.setInterval(function() {
-        if (current < target) {
-            current += 5;
-            if (current > target) {
-                current = target;
-            }
-        }
-        else if (current > target) {
-            current -= 5;
+    var initTopMenu = function() {
+        var pos;
+        var current = 144;
+        var target;
+        var $w = $(window);
+        var mb = $('#menubar');
+        var mbimg = mb.find('.logo img');
+        $w.scroll(function() {
+            pos = $w.scrollTop();
+            target = pos > 84 ? 60 : 144 - pos;
+        });
+        window.setInterval(function() {
             if (current < target) {
-                current = target;
+                current += 5;
+                if (current > target) {
+                    current = target;
+                }
             }
+            else if (current > target) {
+                current -= 5;
+                if (current < target) {
+                    current = target;
+                }
+            }
+            mb.css({ height: current });
+            mbimg.css({ maxHeight: current });
+        }, 5);
+    };
+
+    var initProducts = function() {
+        $('.products').css({
+            display: 'none'
+        });
+    };
+
+    var initReferences = function() {
+        var refs = [];
+        var $refItemsUl = $('#reference-items').find('>ul:first-child');
+        $refItemsUl.find('li').each(function() {
+            var $this = $(this);
+            refs.push($this);
+            $this.detach();
+        });
+        var pos = 0;
+        var refmod = function(n) {
+            return ((n % refs.length) + refs.length) % refs.length;
+        };
+        for (var i = 0; i <= 6; ++i) {
+            var c = refs[refmod(pos + i)].clone();
+            $refItemsUl.append(c);
+            c.css({
+                left: 6 + i * 110
+            });
         }
-        mb.css({ height: current });
-        mbimg.css({ maxHeight: current });
-    }, 5);
+        $('#references-arrow-right').click(function() {
+            for (var i = 7; i <= 9; ++i) {
+                var c = refs[refmod(pos + i)].clone();
+                $refItemsUl.append(c);
+                c.css({
+                    left: 6 + i * 110
+                });
+            }
+            for (i = 1; i <= 10; ++i) {
+                $refItemsUl.find('li:nth-child(' + i + ')').delay((i - 1) * 40).animate({
+                    left: '-=330'
+                }, 400, 'swing', i > 3 ? null : function() {
+                    $(this).remove();
+                });
+            }
+            pos += 3;
+            return false;
+        });
+        $('#references-arrow-left').click(function() {
+            for (var i = -1; i >= -3; --i) {
+                var c = refs[refmod(pos + i)].clone();
+                $refItemsUl.prepend(c);
+                c.css({
+                    left: 6 + i * 110
+                });
+            }
+            for (i = 10; i >= 1; --i) {
+                $refItemsUl.find('li:nth-child(' + i + ')').delay((10 - i) * 40).animate({
+                    left: '+=330'
+                }, 400, 'swing', i < 8 ? null : function() {
+                    $(this).remove();
+                });
+            }
+            pos -= 3;
+            return false;
+        });
+    };
+
+//    startSlogenAnim();
+//    startPizzaInteraction();
+//    initTopMenu();
+    initProducts();
+    initReferences();
 });
 
 // http://www.1stwebdesigner.com/wp-content/uploads/2010/06/nagging-menu-with-css3-and-jquery/index.html

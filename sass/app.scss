@@ -712,13 +712,15 @@ $color-text: #55575e;
         padding-top: $logos-padding-top;
 
         li {
+          position: absolute;
           display: inline-block;
           width: 100px;
           height: 100px;
           background-color: #fff;
           vertical-align: top;
           word-spacing: 0;
-          margin-left: $column-gutter;
+          //margin-left: $column-gutter;
+          margin-left: 0;
           @include border-radius(50px);
           background-position: 50% 50%;
           background-repeat: no-repeat;
@@ -927,10 +929,10 @@ $contact-height: 264px;
 }
 
 .research {
+  display: none;
 }
 
 .innovation {
-  display: none;
 }
 
 .development {
