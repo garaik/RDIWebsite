@@ -445,6 +445,8 @@ $color-text: #55575e;
 
     #pizzasvg {
       margin-left: 18px;
+      width: 280px;
+      height: 280px;
     }
 
     .division-aside {
@@ -701,6 +703,7 @@ $color-text: #55575e;
 
     #reference-items {
       overflow: hidden;
+      height: 164px;
 
       ul {
         display: inline-block;
@@ -732,16 +735,12 @@ $color-text: #55575e;
             @include box-shadow($color-development 0 0 0 5px);
 
             span {
-              display: block;
-              position: absolute;
-              top: -$title-height;
-              text-align: center;
-              left: 50%;
-              margin-left: -50%;
               @include roboto-font(400, emCalc(15));
+              display: block;
+              position: relative;
+              top: 0px;
+              left: 0px;
               color: #fff;
-              width: 100%;
-              height: $title-height;
               background-color: green;
             }
           }
@@ -929,10 +928,10 @@ $contact-height: 264px;
 }
 
 .research {
-  display: none;
 }
 
 .innovation {
+  display: none;
 }
 
 .development {

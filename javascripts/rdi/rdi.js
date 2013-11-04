@@ -182,7 +182,7 @@ $(function() {
 //    startSlogenAnim();
 //    startPizzaInteraction();
 //    initTopMenu();
-//    initProducts();
+    initProducts();
     initReferences();
 });
 

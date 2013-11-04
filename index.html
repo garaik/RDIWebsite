@@ -12,9 +12,14 @@
   <script src="javascripts/vendor/custom.modernizr.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
   <script src="javascripts/vendor/jquery.js"></script>
+  <script src="javascripts/vendor/jquery.browser.js"></script> <!-- needed by SVG plugin to be jquery compliant -->
+  <script src="javascripts/vendor/jquery.svg.js"></script>
+  <script src="javascripts/vendor/jquery.svgdom.js"></script>
+  <script src="javascripts/vendor/jquery.svganim.js"></script>
   <script src="javascripts/foundation/foundation.js"></script>
   <script src="javascripts/gmaps/gmaps.js"></script>
   <script src="javascripts/rdi/rdi.js"></script>
+  <script src="javascripts/rdi/pizzasvg.js"></script>
 </head>
 <body>
 <div class="row debug">
@@ -170,7 +175,7 @@
       </div>
     </div>
     <div class="small-6 columns disc">
-      <object data="images/rdipizza.svg" type="image/svg+xml" id="pizzasvg" width="280" height="280"></object>
+      <div id="pizzasvg"></div>
       <div class="division-aside">
         <div class="research">
           <h3>Kutatási partnereink:</h3>

@@ -2904,8 +2904,10 @@ blockquote p {
 /* line 446, ../sass/app.scss */
 .gear .disc #pizzasvg {
   margin-left: 18px;
+  width: 280px;
+  height: 280px;
 }
-/* line 450, ../sass/app.scss */
+/* line 452, ../sass/app.scss */
 .gear .disc .division-aside {
   margin-top: 7px;
 }
@@ -3345,34 +3347,34 @@ blockquote p {
   height: 10px;
 }
 
-/* line 468, ../sass/app.scss */
+/* line 470, ../sass/app.scss */
 .products {
   background-color: #ededf0;
 }
-/* line 471, ../sass/app.scss */
+/* line 473, ../sass/app.scss */
 .products .product-boxes {
   padding-bottom: 1.625em;
 }
-/* line 474, ../sass/app.scss */
+/* line 476, ../sass/app.scss */
 .products .product-boxes .row {
   padding-top: 1.625em;
 }
-/* line 477, ../sass/app.scss */
+/* line 479, ../sass/app.scss */
 .products .product-boxes .row > div:first-child {
   padding-right: 1.25em;
 }
-/* line 480, ../sass/app.scss */
+/* line 482, ../sass/app.scss */
 .products .product-boxes .row > div:last-child {
   padding-left: 1.25em;
 }
-/* line 484, ../sass/app.scss */
+/* line 486, ../sass/app.scss */
 .products .product-boxes .row .box {
   height: 202px;
   color: #fff;
   overflow: hidden;
   position: relative;
 }
-/* line 490, ../sass/app.scss */
+/* line 492, ../sass/app.scss */
 .products .product-boxes .row .box h2 {
   background-color: #fff;
   margin: 0;
@@ -3388,13 +3390,13 @@ blockquote p {
   text-align: right;
   padding: 0 1.375em;
 }
-/* line 503, ../sass/app.scss */
+/* line 505, ../sass/app.scss */
 .products .product-boxes .row .box h2 span {
   display: inline-block;
   vertical-align: middle;
   line-height: normal;
 }
-/* line 510, ../sass/app.scss */
+/* line 512, ../sass/app.scss */
 .products .product-boxes .row .box p {
   border-top: 6px solid rgba(255, 255, 255, 0.2);
   margin: 0;
@@ -3406,7 +3408,7 @@ blockquote p {
   line-height: 1.25em;
   text-align: justify;
 }
-/* line 520, ../sass/app.scss */
+/* line 522, ../sass/app.scss */
 .products .product-boxes .row .box span.more {
   position: absolute;
   right: 0;
@@ -3423,52 +3425,52 @@ blockquote p {
   background-position: bottom right;
   background-repeat: no-repeat;
 }
-/* line 534, ../sass/app.scss */
+/* line 536, ../sass/app.scss */
 .products .product-boxes .row .box span.more a {
   color: #fff;
 }
-/* line 540, ../sass/app.scss */
+/* line 542, ../sass/app.scss */
 .products .product-boxes .row .thedox {
   background-color: #dd301d;
 }
-/* line 543, ../sass/app.scss */
+/* line 545, ../sass/app.scss */
 .products .product-boxes .row .thedox h2 {
   background-image: url("images/logo-thedox.png");
   background-repeat: no-repeat;
 }
-/* line 549, ../sass/app.scss */
+/* line 551, ../sass/app.scss */
 .products .product-boxes .row .fieldback {
   background-color: #313089;
 }
-/* line 552, ../sass/app.scss */
+/* line 554, ../sass/app.scss */
 .products .product-boxes .row .fieldback h2 {
   background-image: url("images/logo-fieldback.png");
   background-repeat: no-repeat;
 }
-/* line 558, ../sass/app.scss */
+/* line 560, ../sass/app.scss */
 .products .product-boxes .row .grafight {
   background-color: #69358e;
 }
-/* line 561, ../sass/app.scss */
+/* line 563, ../sass/app.scss */
 .products .product-boxes .row .grafight h2 {
   background-image: url("images/logo-grafight.png");
   background-repeat: no-repeat;
 }
-/* line 567, ../sass/app.scss */
+/* line 569, ../sass/app.scss */
 .products .product-boxes .row .foundryboxlive {
   background-color: #66666f;
 }
-/* line 570, ../sass/app.scss */
+/* line 572, ../sass/app.scss */
 .products .product-boxes .row .foundryboxlive h2 {
   background-image: url("images/logo-foundryboxlive.png");
   background-repeat: no-repeat;
 }
-/* line 580, ../sass/app.scss */
+/* line 582, ../sass/app.scss */
 .products .product .title {
   height: 117px;
   background-color: #dd301d;
 }
-/* line 585, ../sass/app.scss */
+/* line 587, ../sass/app.scss */
 .products .product .title h2 {
   display: table;
   height: 117px;
@@ -3479,7 +3481,7 @@ blockquote p {
   font-weight: 300;
   font-size: 2.1875em;
 }
-/* line 593, ../sass/app.scss */
+/* line 595, ../sass/app.scss */
 .products .product .title h2 span {
   display: table-cell;
   height: 117px;
@@ -3489,11 +3491,11 @@ blockquote p {
   text-align: left;
   color: #fff;
 }
-/* line 603, ../sass/app.scss */
+/* line 605, ../sass/app.scss */
 .products .product .title h2.fieldback {
   font-size: 2.0625em;
 }
-/* line 609, ../sass/app.scss */
+/* line 611, ../sass/app.scss */
 .products .product .seal {
   height: 182px;
   background: -webkit-linear-gradient(180deg, #d5d5dd 0%, #e3e3e9 100%);
@@ -3501,12 +3503,12 @@ blockquote p {
   background: -o-linear-gradient(180deg, #d5d5dd 0%, #e3e3e9 100%);
   background: linear-gradient(180deg, #d5d5dd 0%, #e3e3e9 100%);
 }
-/* line 613, ../sass/app.scss */
+/* line 615, ../sass/app.scss */
 .products .product .seal .row > .columns:first-child {
   padding-left: 1.375em;
   padding-top: 9px;
 }
-/* line 618, ../sass/app.scss */
+/* line 620, ../sass/app.scss */
 .products .product .seal blockquote {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
@@ -3517,21 +3519,21 @@ blockquote p {
   padding: 57px 1.0625em 1.375em 0;
   margin: 0;
 }
-/* line 626, ../sass/app.scss */
+/* line 628, ../sass/app.scss */
 .products .product .seal blockquote cite {
   font-size: 15px;
 }
-/* line 632, ../sass/app.scss */
+/* line 634, ../sass/app.scss */
 .products .product .description {
   background-color: #eaeaef;
   padding-top: 50px;
 }
-/* line 636, ../sass/app.scss */
+/* line 638, ../sass/app.scss */
 .products .product .description .row > .columns:nth-child(2) {
   text-align: right;
   padding-top: 16px;
 }
-/* line 641, ../sass/app.scss */
+/* line 643, ../sass/app.scss */
 .products .product .description .figure {
   width: 28.875em;
   height: 400px;
@@ -3541,7 +3543,7 @@ blockquote p {
   padding-right: 0.875em;
   margin-top: -50px;
 }
-/* line 651, ../sass/app.scss */
+/* line 653, ../sass/app.scss */
 .products .product .description .content {
   text-align: justify;
 }
@@ -3690,7 +3692,7 @@ blockquote p {
   display: block;
   height: 10px;
 }
-/* line 656, ../sass/app.scss */
+/* line 658, ../sass/app.scss */
 .products .product .description .emphasized {
   background-color: #fff;
   padding: 10px 0;
@@ -3699,11 +3701,11 @@ blockquote p {
   margin-top: 18px;
   margin-bottom: 18px;
 }
-/* line 666, ../sass/app.scss */
+/* line 668, ../sass/app.scss */
 .products .product .explanation {
   background-color: #f0f1f7;
 }
-/* line 669, ../sass/app.scss */
+/* line 671, ../sass/app.scss */
 .products .product .explanation .content {
   text-align: justify;
 }
@@ -3853,18 +3855,18 @@ blockquote p {
   height: 10px;
 }
 
-/* line 677, ../sass/app.scss */
+/* line 679, ../sass/app.scss */
 .references {
   background-color: #dd2f1d;
 }
-/* line 681, ../sass/app.scss */
+/* line 683, ../sass/app.scss */
 .references .title {
   background-color: #d1191d;
   height: 56px;
   line-height: 56px;
   vertical-align: middle;
 }
-/* line 687, ../sass/app.scss */
+/* line 689, ../sass/app.scss */
 .references .title h2 {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
@@ -3875,15 +3877,16 @@ blockquote p {
   margin: 0;
   padding: 0 1.375em;
 }
-/* line 697, ../sass/app.scss */
+/* line 699, ../sass/app.scss */
 .references .logos {
   height: 164px;
 }
-/* line 702, ../sass/app.scss */
+/* line 704, ../sass/app.scss */
 .references .logos #reference-items {
   overflow: hidden;
+  height: 164px;
 }
-/* line 705, ../sass/app.scss */
+/* line 708, ../sass/app.scss */
 .references .logos #reference-items ul {
   display: inline-block;
   white-space: nowrap;
@@ -3893,7 +3896,7 @@ blockquote p {
   word-spacing: -0.3125em;
   padding-top: 27px;
 }
-/* line 714, ../sass/app.scss */
+/* line 717, ../sass/app.scss */
 .references .logos #reference-items ul li {
   position: absolute;
   display: inline-block;
@@ -3920,47 +3923,43 @@ blockquote p {
   -o-transition-duration: 300ms;
   transition-duration: 300ms;
 }
-/* line 731, ../sass/app.scss */
+/* line 734, ../sass/app.scss */
 .references .logos #reference-items ul li:hover {
   -webkit-box-shadow: #69358e 0 0 0 5px;
   -moz-box-shadow: #69358e 0 0 0 5px;
   box-shadow: #69358e 0 0 0 5px;
 }
-/* line 734, ../sass/app.scss */
+/* line 737, ../sass/app.scss */
 .references .logos #reference-items ul li:hover span {
-  display: block;
-  position: absolute;
-  top: -56px;
-  text-align: center;
-  left: 50%;
-  margin-left: -50%;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 0.9375em;
+  display: block;
+  position: relative;
+  top: 0px;
+  left: 0px;
   color: #fff;
-  width: 100%;
-  height: 56px;
   background-color: green;
 }
-/* line 749, ../sass/app.scss */
+/* line 748, ../sass/app.scss */
 .references .logos #reference-items ul li span {
   display: none;
 }
-/* line 754, ../sass/app.scss */
+/* line 753, ../sass/app.scss */
 .references .logos #reference-items ul li:first-child {
   margin-left: 0;
 }
-/* line 760, ../sass/app.scss */
+/* line 759, ../sass/app.scss */
 .references .logos .arrow-left {
   padding-top: 27px;
 }
-/* line 764, ../sass/app.scss */
+/* line 763, ../sass/app.scss */
 .references .logos .arrow-right {
   padding-top: 27px;
   text-align: right;
 }
 
-/* line 773, ../sass/app.scss */
+/* line 772, ../sass/app.scss */
 .contact {
   background: -webkit-linear-gradient(30deg, #ceced6 0%, #ceced6 50%, #d8d8e0 50%, #d8d8e0 100%);
   background: -moz-linear-gradient(30deg, #ceced6 0%, #ceced6 50%, #d8d8e0 50%, #d8d8e0 100%);
@@ -3971,7 +3970,7 @@ blockquote p {
   background-position: 499px 0;
   height: 264px;
 }
-/* line 781, ../sass/app.scss */
+/* line 780, ../sass/app.scss */
 .contact .contact-info {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -3981,17 +3980,17 @@ blockquote p {
   padding-left: 25px;
   line-height: 1.3125em;
 }
-/* line 788, ../sass/app.scss */
+/* line 787, ../sass/app.scss */
 .contact .contact-info .company-name {
   font-size: 1.1875em;
   color: #69358e;
 }
-/* line 793, ../sass/app.scss */
+/* line 792, ../sass/app.scss */
 .contact .contact-info a.email {
   color: #dd2f1d;
 }
 
-/* line 799, ../sass/app.scss */
+/* line 798, ../sass/app.scss */
 .footer {
   background: -webkit-linear-gradient(30deg, #0a1159 0%, #0a1159 50%, #121a6b 50%, #121a6b 100%);
   background: -moz-linear-gradient(30deg, #0a1159 0%, #0a1159 50%, #121a6b 50%, #121a6b 100%);
@@ -4002,11 +4001,11 @@ blockquote p {
   background-position: -233px 0;
   height: 181px;
 }
-/* line 807, ../sass/app.scss */
+/* line 806, ../sass/app.scss */
 .footer .social {
   padding-top: 49px;
 }
-/* line 810, ../sass/app.scss */
+/* line 809, ../sass/app.scss */
 .footer .social a.share, .footer .social a.tech {
   display: inline-table;
   height: 39px;
@@ -4014,7 +4013,7 @@ blockquote p {
   margin-right: 16px;
   vertical-align: top;
 }
-/* line 817, ../sass/app.scss */
+/* line 816, ../sass/app.scss */
 .footer .social a.share span, .footer .social a.tech span {
   display: table-cell;
   line-height: normal;
@@ -4030,28 +4029,28 @@ blockquote p {
   -o-transition-duration: 300ms;
   transition-duration: 300ms;
 }
-/* line 826, ../sass/app.scss */
+/* line 825, ../sass/app.scss */
 .footer .social a.share span:hover, .footer .social a.tech span:hover {
   color: #fff;
 }
-/* line 832, ../sass/app.scss */
+/* line 831, ../sass/app.scss */
 .footer .social a.share {
   width: 39px;
   background-color: #283080;
 }
-/* line 837, ../sass/app.scss */
+/* line 836, ../sass/app.scss */
 .footer .social a.share span {
   font-family: 'SocialFoundicons';
   font-size: 2.0625em;
 }
-/* line 846, ../sass/app.scss */
+/* line 845, ../sass/app.scss */
 .footer .social a.tech span {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 1em;
   text-transform: uppercase;
 }
-/* line 853, ../sass/app.scss */
+/* line 852, ../sass/app.scss */
 .footer .copyright {
   height: 181px;
   font-family: 'Roboto', sans-serif;
@@ -4062,119 +4061,119 @@ blockquote p {
   padding-left: 25px;
 }
 
-/* line 862, ../sass/app.scss */
+/* line 861, ../sass/app.scss */
 #gmaps {
   height: 264px;
 }
-/* line 865, ../sass/app.scss */
+/* line 864, ../sass/app.scss */
 #gmaps img {
   max-width: none;
 }
 
-/* line 871, ../sass/app.scss */
+/* line 870, ../sass/app.scss */
 #slogen-title-1,
 #slogen-description-1 {
   display: block;
 }
 
-/* line 876, ../sass/app.scss */
+/* line 875, ../sass/app.scss */
 #slogen-title-2,
 #slogen-description-2 {
   display: none;
 }
 
-/* line 881, ../sass/app.scss */
+/* line 880, ../sass/app.scss */
 #slogen-title-3,
 #slogen-description-3 {
   display: none;
 }
 
-/* line 885, ../sass/app.scss */
+/* line 884, ../sass/app.scss */
 #ref-tesco {
   background-image: url("images/reflogo-tesco.png");
 }
 
-/* line 888, ../sass/app.scss */
+/* line 887, ../sass/app.scss */
 #ref-vodafone {
   background-image: url("images/reflogo-vodafone.png");
 }
 
-/* line 891, ../sass/app.scss */
+/* line 890, ../sass/app.scss */
 #ref-inmedio {
   background-image: url("images/reflogo-inmedio.png");
 }
 
-/* line 894, ../sass/app.scss */
+/* line 893, ../sass/app.scss */
 #ref-mondiamedia {
   background-image: url("images/reflogo-mondiamedia.png");
 }
 
-/* line 897, ../sass/app.scss */
+/* line 896, ../sass/app.scss */
 #ref-mnb {
   background-image: url("images/reflogo-mnb.png");
 }
 
-/* line 900, ../sass/app.scss */
+/* line 899, ../sass/app.scss */
 #ref-ppp {
   background-image: url("images/reflogo-ppp.png");
 }
 
-/* line 903, ../sass/app.scss */
+/* line 902, ../sass/app.scss */
 #ref-mtv {
   background-image: url("images/reflogo-mtv.png");
 }
 
-/* line 906, ../sass/app.scss */
+/* line 905, ../sass/app.scss */
 #ref-dm {
   background-image: url("images/reflogo-dm.png");
 }
 
-/* line 909, ../sass/app.scss */
+/* line 908, ../sass/app.scss */
 #ref-o2 {
   background-image: url("images/reflogo-o2.png");
 }
 
-/* line 912, ../sass/app.scss */
+/* line 911, ../sass/app.scss */
 #ref-hemmersbach {
   background-image: url("images/reflogo-hemmersbach.png");
 }
 
-/* line 915, ../sass/app.scss */
+/* line 914, ../sass/app.scss */
 #ref-relay {
   background-image: url("images/reflogo-relay.png");
 }
 
-/* line 918, ../sass/app.scss */
+/* line 917, ../sass/app.scss */
 #ref-szte {
   background-image: url("images/reflogo-szte.png");
 }
 
-/* line 921, ../sass/app.scss */
+/* line 920, ../sass/app.scss */
 #ref-telekomau {
   background-image: url("images/reflogo-telekomau.png");
 }
 
-/* line 924, ../sass/app.scss */
+/* line 923, ../sass/app.scss */
 #ref-drinfo {
   background-image: url("images/reflogo-drinfo.png");
 }
 
-/* line 927, ../sass/app.scss */
+/* line 926, ../sass/app.scss */
 #ref-kt {
   background-image: url("images/reflogo-kt.png");
 }
 
-/* line 931, ../sass/app.scss */
-.research {
+/* line 933, ../sass/app.scss */
+.innovation {
   display: none;
 }
 
-/* line 938, ../sass/app.scss */
+/* line 937, ../sass/app.scss */
 .development {
   display: none;
 }
 
-/* line 942, ../sass/app.scss */
+/* line 941, ../sass/app.scss */
 .row.debug {
   display: none;
 }
