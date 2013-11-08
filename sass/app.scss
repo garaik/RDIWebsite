@@ -177,6 +177,7 @@ $color-text: #55575e;
   dl {
     line-height: emCalc(21);
     padding: 0 $default-padding;
+    margin-bottom: 0;
 
     dt {
       display: inline;
@@ -192,6 +193,7 @@ $color-text: #55575e;
     dd {
       display: inline;
       @include roboto-font(300, emCalc(15));
+      margin-bottom: 0;
 
       &:after {
         content: '';
@@ -366,8 +368,8 @@ $color-text: #55575e;
   background-color: #fff;
   background-repeat: no-repeat;
   background-position: -859px 0;
-  //height: 426px;
-  //height: 824px;
+  //height: 884px;
+  overflow: hidden;
 
   > .row {
     > div:first-child {
@@ -928,13 +930,14 @@ $contact-height: 264px;
 }
 
 .research {
-}
-
-.innovation {
   display: none;
 }
 
 .development {
+  display: none;
+}
+
+.innovation {
   display: none;
 }
 

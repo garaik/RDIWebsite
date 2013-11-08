@@ -179,11 +179,58 @@ $(function() {
         });
     };
 
+    var initRDIContent = function() {
+        var g = $('.gear');
+        var q = g.find('.quotation');
+        var qr = q.find('.research');
+        var qd = q.find('.development');
+        var qi = q.find('.innovation');
+        var d = g.find('.division-content');
+        var dr = d.find('.research');
+        var dd = d.find('.development');
+        var di = d.find('.innovation');
+        var a = g.find('.division-aside');
+        var ar = a.find('.research');
+        var ad = a.find('.development');
+        var ai = a.find('.innovation');
+
+        var setHeightAndInit = function(x) {
+            x.css({
+                display: 'block',
+                position: 'fixed',
+                left: -8000,
+                width: d.width()
+            });
+            x.attr('data-height', dr.height());
+            x.css({
+                height: 0,
+                opacity: 0,
+                position: 'static',
+                left: 0,
+                overflow: 'hidden'
+            });
+        };
+
+        [dr, dd, di].forEach(function(x) {
+            setHeightAndInit(x);
+        });
+
+        $('#menu-development').click(function() {
+            var h = dr.height();
+            dr.animate({
+                opacity: 1,
+                height: dr.attr('data-height')
+            });
+            return false;
+        });
+    };
+
 //    startSlogenAnim();
 //    startPizzaInteraction();
 //    initTopMenu();
     initProducts();
     initReferences();
+    initRDIContent();
 });
 
 // http://www.1stwebdesigner.com/wp-content/uploads/2010/06/nagging-menu-with-css3-and-jquery/index.html
