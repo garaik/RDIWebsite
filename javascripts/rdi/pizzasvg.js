@@ -1,3 +1,12 @@
+var PizzaSVG = (function() {
+
+    return {
+        switchResearch: function() {},
+        switchInnovation: function() {},
+        switchDevelopment: function() {}
+    }
+})();
+
 $(function () {
     $('#pizzasvg').svg({
         loadURL: 'images/rdipizza.svg',

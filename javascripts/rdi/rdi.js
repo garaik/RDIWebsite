@@ -57,23 +57,6 @@ $(function() {
         }, 3000);
     };
 
-    var startPizzaInteraction = function() {
-        var pizzaSvg = document.getElementById('pizzasvg');
-        pizzaSvg.addEventListener("load", function() {
-            var svgDoc = pizzaSvg.contentDocument;
-            var svgRoot = svgDoc.documentElement;
-            $('#slice-research', svgRoot).click(function() {
-                $(this).remove();
-            });
-            $('#slice-development', svgRoot).click(function() {
-                $(this).remove();
-            });
-            $('#slice-innovation', svgRoot).click(function() {
-                $(this).remove();
-            });
-        });
-    };
-
     var initTopMenu = function() {
         var pos;
         var current = 144;
@@ -179,29 +162,36 @@ $(function() {
         });
     };
 
-    var initRDIContent = function() {
+    var RDIContent = (function() {
         var g = $('.gear');
         var q = g.find('.quotation');
-        var qr = q.find('.research');
-        var qd = q.find('.development');
-        var qi = q.find('.innovation');
         var d = g.find('.division-content');
-        var dr = d.find('.research');
-        var dd = d.find('.development');
-        var di = d.find('.innovation');
         var a = g.find('.division-aside');
-        var ar = a.find('.research');
-        var ad = a.find('.development');
-        var ai = a.find('.innovation');
+        var rdi = {
+            r: {
+                q: q.find('.research'),
+                d: d.find('.research'),
+                a: a.find('.research')
+            },
+            d: {
+                q: q.find('.development'),
+                d: d.find('.development'),
+                a: a.find('.development')
+            },
+            i: {
+                q: q.find('.innovation'),
+                d: d.find('.innovation')
+            }
+        };
 
-        var setHeightAndInit = function(x) {
+        function setHeightAndInit(x, p) {
             x.css({
                 display: 'block',
                 position: 'fixed',
                 left: -8000,
-                width: d.width()
+                width: p.width()
             });
-            x.attr('data-height', dr.height());
+            x.attr('data-height', x.height());
             x.css({
                 height: 0,
                 opacity: 0,
@@ -209,28 +199,67 @@ $(function() {
                 left: 0,
                 overflow: 'hidden'
             });
-        };
+        }
 
-        [dr, dd, di].forEach(function(x) {
-            setHeightAndInit(x);
-        });
+        var current = 'r';
+        var delay = 400;
 
-        $('#menu-development').click(function() {
-            var h = dr.height();
-            dr.animate({
-                opacity: 1,
-                height: dr.attr('data-height')
-            });
-            return false;
+        function show(w) {
+            var rdiw = rdi[w];
+            rdiw.q.css({
+                display: 'block'
+            }, delay);
+            rdiw.d.animate({
+                height: rdiw.d.attr('data-height'),
+                opacity: 1
+            }, delay);
+            if (rdiw.a) {
+                rdiw.a.animate({
+                    height: rdiw.a.attr('data-height'),
+                    opacity: 1
+                }, delay);
+            }
+            current = w;
+        }
+
+        function hide() {
+            var rdic = rdi[current];
+            rdic.q.css({ display: 'none' }, delay);
+            rdic.d.animate({ height: 0, opacity: 0 }, delay);
+            if (rdic.a) {
+                rdic.a.animate({ height: 0, opacity: 0 }, delay);
+            }
+        }
+
+        [rdi.r.d, rdi.d.d, rdi.i.d].forEach(function(x) {
+            setHeightAndInit(x, d);
         });
-    };
+        setHeightAndInit(rdi.r.a, a);
+        setHeightAndInit(rdi.d.a, a);
+
+        show(current);
+
+        return {
+            switchResearch: function() { hide(); show('r'); },
+            switchDevelopment: function() { hide(); show('d'); },
+            switchInnovation: function() { hide(); show('i'); }
+        }
+    })();
 
 //    startSlogenAnim();
-//    startPizzaInteraction();
 //    initTopMenu();
     initProducts();
     initReferences();
-    initRDIContent();
+
+    $('#menu-research').click(function() {
+        RDIContent.switchResearch(); return false;
+    });
+    $('#menu-development').click(function() {
+        RDIContent.switchDevelopment(); return false;
+    });
+    $('#menu-innovation').click(function() {
+        RDIContent.switchInnovation(); return false;
+    });
 });
 
 // http://www.1stwebdesigner.com/wp-content/uploads/2010/06/nagging-menu-with-css3-and-jquery/index.html
