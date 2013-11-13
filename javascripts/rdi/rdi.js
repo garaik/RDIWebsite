@@ -1,4 +1,6 @@
-RDI_CONTENT = (function() {
+"use strict";
+
+var RDI_CONTENT = (function() {
     var rdi;
     var current = 'r';
     var delay = 400;
@@ -86,80 +88,98 @@ RDI_CONTENT = (function() {
     }
 })();
 
-REFERENCES = (function() {
+var REFERENCES = (function() {
     var refs = [];
-
     $(function() {
         var $refItemsUl = $('#reference-items').find('>ul:first-child');
-        $refItemsUl.find('li').each(function() {
-            var $this = $(this);
-            refs.push($this);
-            $this.detach();
-        });
-        var pos = 0;
-        var refmod = function(n) {
-            return ((n % refs.length) + refs.length) % refs.length;
-        };
-        for (var i = 0; i <= 6; ++i) {
-            var c = refs[refmod(pos + i)].clone();
-            $refItemsUl.append(c);
-            c.css({
-                left: 6 + i * 110
-            });
-        }
-        var scrolling = false;
-        $('#references-arrow-right').click(function() {
-            if (!scrolling) {
-                scrolling = true;
-                for (var i = 7; i <= 9; ++i) {
-                    var c = refs[refmod(pos + i)].clone();
-                    $refItemsUl.append(c);
-                    c.css({
-                        left: 6 + i * 110
-                    });
-                }
-                $refItemsUl.find('li').each(function (i) {
-                    $(this).delay(i * 50).animate({ left: '-=330' }, 500, 'swing', function () {
-                        if (i < 3) {
-                            $(this).remove();
-                        }
-                        else if (i == 9) {
-                            scrolling = false;
-                        }
-                    });
-                });
-                pos += 3;
-            }
-            return false;
-        });
-        $('#references-arrow-left').click(function() {
-            if (!scrolling) {
-                scrolling = true;
-                for (var i = -1; i >= -3; --i) {
-                    var c = refs[refmod(pos + i)].clone();
-                    $refItemsUl.prepend(c);
-                    c.css({
-                        left: 6 + i * 110
-                    });
-                }
-                $refItemsUl.find('li').each(function (i) {
-                    $(this).delay((9 - i) * 50).animate({ left: '+=330' }, 500, 'swing', function () {
-                        if (i > 6) {
-                            $(this).remove();
-                        }
-                        else if (i == 0) {
-                            scrolling = false;
-                        }
-                    });
-                });
-                pos -= 3;
-            }
-            return false;
+        console.log($refItemsUl.find('li'));
+        $refItemsUl.find('li').click(function() {
+            console.log('click');
         });
     });
+
+
+//    $(function() {
+//        var $refItemsUl = $('#reference-items').find('>ul:first-child');
+//        var refTitle = $('#references-title');
+//        $refItemsUl.find('li').each(function() {
+//            var $this = $(this);
+//            var span = $this.find('span');
+//            span.detach();
+//            refTitle.append(span);
+//            span.css({ opacity: 0 });
+//            refs.push($this);
+//            $this.detach();
+//        });
+//        refs.forEach(function(e) {
+//            e.click(function() {
+//                console.log('click');
+//            });
+//        });
+//        var pos = 0;
+//        var refmod = function(n) {
+//            return ((n % refs.length) + refs.length) % refs.length;
+//        };
+//        for (var i = 0; i <= 6; ++i) {
+//            var c = refs[refmod(pos + i)].clone();
+//            $refItemsUl.append(c);
+//            c.css({
+//                left: 6 + i * 110
+//            });
+//        }
+//        var scrolling = false;
+//        $('#references-arrow-right').click(function() {
+//            if (!scrolling) {
+//                scrolling = true;
+//                for (var i = 7; i <= 9; ++i) {
+//                    var c = refs[refmod(pos + i)].clone();
+//                    $refItemsUl.append(c);
+//                    c.css({
+//                        left: 6 + i * 110
+//                    });
+//                }
+//                $refItemsUl.find('li').each(function (i) {
+//                    $(this).delay(i * 50).animate({ left: '-=330' }, 500, 'swing', function () {
+//                        if (i < 3) {
+//                            $(this).remove();
+//                        }
+//                        else if (i == 9) {
+//                            scrolling = false;
+//                        }
+//                    });
+//                });
+//                pos += 3;
+//            }
+//            return false;
+//        });
+//        $('#references-arrow-left').click(function() {
+//            if (!scrolling) {
+//                scrolling = true;
+//                for (var i = -1; i >= -3; --i) {
+//                    var c = refs[refmod(pos + i)].clone();
+//                    $refItemsUl.prepend(c);
+//                    c.css({
+//                        left: 6 + i * 110
+//                    });
+//                }
+//                $refItemsUl.find('li').each(function (i) {
+//                    $(this).delay((9 - i) * 50).animate({ left: '+=330' }, 500, 'swing', function () {
+//                        if (i > 6) {
+//                            $(this).remove();
+//                        }
+//                        else if (i == 0) {
+//                            scrolling = false;
+//                        }
+//                    });
+//                });
+//                pos -= 3;
+//            }
+//            return false;
+//        });
+//    });
 })();
 
-SLOGEN = (function() {
+var SLOGEN = (function() {
     var dur = 500;
     var defaultCss;
     var i = 1;
@@ -208,7 +228,7 @@ SLOGEN = (function() {
     });
 })();
 
-TOP_MENU = (function(w) {
+var TOP_MENU = (function() {
     var pos;
     var current = 144;
     var target = 144;
@@ -238,8 +258,15 @@ TOP_MENU = (function(w) {
     });
 })();
 
+var PRODUCTS = (function() {
+    $(function() {
+        $('.products').css({
+            display: 'none'
+        });
+    });
+})();
+
 $(function() {
-    $('.products').css({ display: 'none' });
 
     $('#menu-research').click(function() {
         PIZZA_SVG.switchResearch();

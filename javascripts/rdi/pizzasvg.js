@@ -1,3 +1,5 @@
+"use strict";
+
 var PIZZA_SVG = (function() {
     var angle = 0;
     var animate = false;
@@ -55,7 +57,7 @@ var PIZZA_SVG = (function() {
     $(function() {
         $('#pizzasvg').svg({
             loadURL: 'images/rdipizza.svg',
-            onLoad: function (svg) {
+            onLoad: function () {
                 $('#slices, #captions, #outlines').attr('transform', 'rotate(0, 140, 140)');
                 var di = 'data-index';
                 $('#slice-research').attr(di, 'R');
