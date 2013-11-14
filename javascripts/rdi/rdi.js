@@ -112,10 +112,26 @@ var REFERENCES = (function() {
             return ((n % refs.length) + refs.length) % refs.length;
         };
         var refMouseIn = function(e) {
-            $(e.target).data('span').animate({ opacity: 1 });
+            $(e.target).data('span').css({display: 'block'}).animate({ opacity: 1 });
         };
         var refMouseOut = function(e) {
-            $(e.target).data('span').animate({ opacity: 0 });
+            $(e.target).data('span').animate({ opacity: 0 }, function() {
+                $(this).css({display: 'none'});
+            });
+        };
+        var spanMouseIn = function(e) {
+            var $e = $(e.target);
+            console.log('in :' + $e);
+            if ($e.is(':animated')) {
+                $e.stop();
+            }
+        };
+        var spanMouseOut = function(e) {
+            var $e = $(e.target);
+            console.log('out :' + $e);
+            if ($e.is(':animated')) {
+                $e.stop();
+            }
         };
 
         $refItemsUl.find('li').each(function() {
@@ -123,7 +139,8 @@ var REFERENCES = (function() {
             var span = $this.find('span');
             span.detach();
             refTitle.append(span);
-            span.css({ opacity: 0 });
+            span.css({ display: 'none', opacity: 0 });
+            span.hover(spanMouseIn, spanMouseOut);
             $this.data('span', span);
             refs.push($this);
             $this.detach();
