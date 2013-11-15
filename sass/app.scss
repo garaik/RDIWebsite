@@ -689,6 +689,7 @@ $color-text: #55575e;
     line-height: $title-height;
     vertical-align: middle;
     position: relative;
+    overflow: hidden;
 
     h2 {
       @include roboto-font(300, emCalc(24));
@@ -702,13 +703,14 @@ $color-text: #55575e;
     span {
       position: absolute;
       left: 0;
-      top: 0;
+      top: $title-height;
       width: 100%;
       height: 100%;
       @include roboto-font(400, emCalc(15));
       text-align: center;
       color: white;
       background-color: #d1191d;
+      z-index: 499;
 
       a {
         font-weight: 700;

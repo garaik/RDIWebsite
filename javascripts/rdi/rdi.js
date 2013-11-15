@@ -91,60 +91,42 @@ var RDI_CONTENT = (function() {
 var REFERENCES = (function() {
     var refs = [];
 
-//    $(function() {
-//        var $refItemsUl = $('#reference-items').find('>ul:first-child');
-//        console.log($refItemsUl.find('li'));
-//        $refItemsUl.find('li').each(function() {
-//            $(this).click(function() {
-//                console.log('click');
-//            });
-//        });
-//    });
-
-
     $(function() {
         var $refItemsUl = $('#reference-items').find('>ul:first-child');
         var refTitle = $('#references-title');
         var pos = 0;
         var scrolling = false;
-
+        var d = 400;
+        var $defaultTop;
         var refmod = function(n) {
             return ((n % refs.length) + refs.length) % refs.length;
         };
-        var refMouseIn = function(e) {
-            $(e.target).data('span').css({display: 'block'}).animate({ opacity: 1 });
+        var fadeSpanIn = function($s) {
+            $s.stop();
+            var t = parseInt($s.css('top'), 10);
+            $s.css({'z-index' : 500}).animate({top : 0}, d * t / $defaultTop);
         };
-        var refMouseOut = function(e) {
-            $(e.target).data('span').animate({ opacity: 0 }, function() {
-                $(this).css({display: 'none'});
-            });
+        var fadeSpanOut = function($s) {
+            $s.stop();
+            var t = parseInt($s.css('top'), 10);
+            $s.css({'z-index' : 499}).animate({top : $defaultTop}, d * ($defaultTop - t) / $defaultTop);
         };
-        var spanMouseIn = function(e) {
-            var $e = $(e.target);
-            console.log('in :' + $e);
-            if ($e.is(':animated')) {
-                $e.stop();
-            }
-        };
-        var spanMouseOut = function(e) {
-            var $e = $(e.target);
-            console.log('out :' + $e);
-            if ($e.is(':animated')) {
-                $e.stop();
-            }
-        };
+        var refMouseIn = function(e) { fadeSpanIn($(e.target).data('span')); };
+        var refMouseOut = function(e) { fadeSpanOut($(e.target).data('span')) };
+        var spanMouseIn = function(e) { fadeSpanIn($(e.target)); };
+        var spanMouseOut = function(e) { fadeSpanOut($(e.target)); };
 
         $refItemsUl.find('li').each(function() {
             var $this = $(this);
             var span = $this.find('span');
             span.detach();
             refTitle.append(span);
-            span.css({ display: 'none', opacity: 0 });
             span.hover(spanMouseIn, spanMouseOut);
             $this.data('span', span);
             refs.push($this);
             $this.detach();
         });
+        $defaultTop = parseInt(refs[0].data('span').css('top'), 10);
         for (var i = 0; i <= 6; ++i) {
             var c = refs[refmod(pos + i)].clone(true);
             $refItemsUl.append(c);
