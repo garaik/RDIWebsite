@@ -204,6 +204,33 @@ $color-text: #55575e;
   }
 }
 
+@mixin handler() {
+  position: relative;
+  height: 59px;
+
+  a {
+    display: table-cell;
+    position: absolute;
+    top: 0;
+    left: 13px;
+    width: 102px;
+    height: 57px;
+    line-height: 57px;
+    vertical-align: middle;
+    text-align: center;
+    @include roboto-font(300, emCalc(27));
+    color: $color-innovation;
+
+    &.open {
+      background-image: url('images/more-open-bg.png');
+    }
+
+    &.close {
+      background-image: url('images/more-close-bg.png');
+    }
+  }
+}
+
 .topline {
   @include background(linear-gradient(30deg, #782b8f 0%, #782b8f 50%, #eb1c23 50%, #eb1c23 100%));
   background-color: #eb1c23;
@@ -439,6 +466,25 @@ $color-text: #55575e;
     .innovation {
       @include div-content($color-innovation);
     }
+
+    .more {
+      .more-content {
+        overflow: hidden;
+      }
+
+      .handler {
+        @include handler();
+
+        a.open {
+          z-index: 50;
+        }
+
+        a.close {
+          z-index: 49;
+          opacity: 0;
+        }
+      }
+    }
   }
 
   .disc {
@@ -471,6 +517,8 @@ $color-text: #55575e;
 
 .products {
   background-color: #ededf0;
+  position: relative;
+  overflow: hidden;
 
   .product-boxes {
     padding-bottom: $default-horizontal-gap;
@@ -581,11 +629,16 @@ $color-text: #55575e;
   }
 
   .product {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
 
     .title {
       $title-height: 117px;
       height: $title-height;
       background-color: $color-innovation;
+      overflow: hidden;
 
       h2 {
         display: table;
@@ -594,6 +647,7 @@ $color-text: #55575e;
         margin: 0;
         padding: 0 $default-padding-px;
         @include roboto-font(300, emCalc(35));
+        white-space: nowrap;
 
         span {
           display: table-cell;
@@ -674,6 +728,17 @@ $color-text: #55575e;
       .content {
         @include div-content($color-development);
         text-align: justify;
+      }
+    }
+
+    .handler {
+      @include handler();
+      background-color: #fff;
+      padding-top: 15px;
+      height: 74px;
+
+      .close {
+        z-index: 3;
       }
     }
   }
@@ -938,15 +1003,12 @@ $contact-height: 264px;
 }
 
 .research {
-  display: none;
 }
 
 .development {
-  display: none;
 }
 
 .innovation {
-  display: none;
 }
 
 .row.debug {

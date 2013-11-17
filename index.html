@@ -53,9 +53,9 @@
         <a href="#" id="menu-research">Kutatás</a> &nbsp;&nbsp;
         <a href="#" id="menu-development">Fejlesztés</a> &nbsp;&nbsp;
         <a href="#" id="menu-innovation">Innováció</a> &nbsp;&nbsp;
-        <a href="#">Termékek</a> &nbsp;&nbsp;
-        <a href="#">Referencia</a> &nbsp;&nbsp;
-        <a href="#">Kapcsolat</a>
+        <a href="#" id="menu-products">Termékek</a> &nbsp;&nbsp;
+        <a href="#" id="menu-references">Referencia</a> &nbsp;&nbsp;
+        <a href="#" id="menu-contacts">Kapcsolat</a>
         <!--<a href="#">Research</a> &nbsp;&nbsp;-->
         <!--<a href="#">Development</a> &nbsp;&nbsp;-->
         <!--<a href="#">Innovation</a> &nbsp;&nbsp;-->
@@ -122,21 +122,29 @@
             <li><mark>információk legpontosabb célba juttatása - szoftverminőség és kódminőség javítása</mark></li>
           </ul>
           <p><strong>2002 óta számos K+F projektet vittek sikerre munkatársaink.</strong></p>
-          <h3>Néhány példa:</h3>
-          <dl>
-            <dt>LeOnEditor</dt>
-            <dd>Tanulási szokásokon alapuló intelligens tanulási környezet fejlesztése</dd>
-            <dt>Promocio</dt>
-            <dd>Intelligens projektmenedzsment eszközrendszer kutatása és kialakítása</dd>
-            <dt>Visitor</dt>
-            <dd>Intelligens látogatóirányító rendszer kutatása és kifejlesztése</dd>
-            <dt>NAP</dt>
-            <dd>Nagyteljesítményű Alkalmazás Platorm kutatása és fejlesztése</dd>
-            <dt>Kód refaktoring</dt>
-            <dd>Kódelemzésen alapuló kódminősítő és hatékonyságnövelő eszköz és módszertan kidolgozása a Szegedi Egyetemmel együttműködésben. A kutatás célja az, hogy egy elkészült szoftver kódról meg tudjuk mondani, milyen minőségű. A minősítés egy automatikus minősítő rendszerrel működik, mellyel 10-es skálán osztályozzuk a kód minőségét. Az analizáló eszköz képes megmondani, hogy konkrétan hol, milyen szempont szerint, hányas az osztályzat, és inkább egy osztályozó táblázat, mintsem egyetlen szám a végeredmény. Az ügyféllel való kommunikáció és igényfelmérés alapján egy részletes analízis után tudunk tenni javaslatot arra, hogyan kellene megváltoztatni a kódot ahhoz, hogy az ügyfél igényei teljes mértékben teljesüljenek.</dd>
-            <dt>Konzolfejlesztés</dt>
-            <dd>A projekt célja egy olyan Kereskedelmi Tér (elektronikus piactér) kifejlesztése, amelyben különféle hardvereszközökkel elektronikus kereskedelem folytatható. A rendszer célja szolgáltatások, befizetések, egyenlegfeltöltések, elektronikus tartalmak stb. kereskedése innovatív, eszköz-független, biztonságos módon. További információ a <a href="http://www.nubesfuturi.hu">nubesfuturi.hu</a> oldalon.</dd>
-          </dl>
+          <div class="more">
+            <div class="more-content">
+              <h3>Néhány példa:</h3>
+              <dl>
+                <dt>LeOnEditor</dt>
+                <dd>Tanulási szokásokon alapuló intelligens tanulási környezet fejlesztése</dd>
+                <dt>Promocio</dt>
+                <dd>Intelligens projektmenedzsment eszközrendszer kutatása és kialakítása</dd>
+                <dt>Visitor</dt>
+                <dd>Intelligens látogatóirányító rendszer kutatása és kifejlesztése</dd>
+                <dt>NAP</dt>
+                <dd>Nagyteljesítményű Alkalmazás Platorm kutatása és fejlesztése</dd>
+                <dt>Kód refaktoring</dt>
+                <dd>Kódelemzésen alapuló kódminősítő és hatékonyságnövelő eszköz és módszertan kidolgozása a Szegedi Egyetemmel együttműködésben. A kutatás célja az, hogy egy elkészült szoftver kódról meg tudjuk mondani, milyen minőségű. A minősítés egy automatikus minősítő rendszerrel működik, mellyel 10-es skálán osztályozzuk a kód minőségét. Az analizáló eszköz képes megmondani, hogy konkrétan hol, milyen szempont szerint, hányas az osztályzat, és inkább egy osztályozó táblázat, mintsem egyetlen szám a végeredmény. Az ügyféllel való kommunikáció és igényfelmérés alapján egy részletes analízis után tudunk tenni javaslatot arra, hogyan kellene megváltoztatni a kódot ahhoz, hogy az ügyfél igényei teljes mértékben teljesüljenek.</dd>
+                <dt>Konzolfejlesztés</dt>
+                <dd>A projekt célja egy olyan Kereskedelmi Tér (elektronikus piactér) kifejlesztése, amelyben különféle hardvereszközökkel elektronikus kereskedelem folytatható. A rendszer célja szolgáltatások, befizetések, egyenlegfeltöltések, elektronikus tartalmak stb. kereskedése innovatív, eszköz-független, biztonságos módon. További információ a <a href="http://www.nubesfuturi.hu">nubesfuturi.hu</a> oldalon.</dd>
+              </dl>
+            </div>
+            <div class="handler">
+              <a href="#" class="open"><span>+</span></a>
+              <a href="#" class="close"><span>-</span></a>
+            </div>
+          </div>
         </div>
         <div class="development">
           <p>A munkatársaink 2000 óta járnak a fejlesztés élvonalában. Számos unikumnak számító technológiában voltunk az első néhány fejlesztő között, akik profivá váltak az adott területeken.</p>
@@ -144,22 +152,30 @@
           <p><mark><strong>CMS / Vignette:</strong></mark> az egyetlen Kelet-európai cég voltunk, akik a Vignette partnereiként a tartalomkezelés alapjait kutatták és fejlesztették.</p>
           <p><mark><strong>Keretrendszerek:</strong></mark> a Vignette-et is megelőzve dolgoztuk ki a fejlesztői keretrendszerek alapjait különféle technológiai platformokon.</p>
           <p><mark><strong>Kódelemzés / refactoring:</strong></mark> a kódminőség javításának területén jelenleg is futó projektünk keretében vágunk új utakat és fejlesztünk olyan eszközöket, amelyek a piacon lévőknél minőségileg többet tudnak és magasabb színvonalat képviselnek.</p>
-          <h3>Alkalmazott platformok, módszertanok, eszközök, nyelvek</h3>
-          <p>Java, SCRUM, .NET, C#, J2EE, Mobile technologies, iOS, Android, Linux, Windows, VmWare</p>
-          <h3>Teljes körű projektkezelés:</h3>
-          <p>Problémafeltárás, problémák lokalizálása, szegmentálása, Igényelemzés és igények megfogalmazása, Követelményspecifikáció, Tervezés, Fejlesztés / Kódolás, Minőségbiztosítás, Tesztelés tervezése, Tesztelés, Dokumentálás, Oktatás / Képzés, Support, Utómunkák</p>
-          <h3>Néhány általános és specifikus megoldás:</h3>
-          <ul class="twocolumns">
-            <li><mark>Mobil webshop</mark></li>
-            <li><mark>Webalkalmazások</mark></li>
-            <li><mark>Adatszivattyú</mark></li>
-            <li><mark>ERP</mark></li>
-            <li><mark>Banki biztonsági megoldások</mark></li>
-            <li><mark>Dokumentumkezelés</mark></li>
-            <li><mark>Rendszerek szétválasztása</mark></li>
-            <li><mark>Munkafolyamat-automatizálás</mark></li>
-            <li><mark>Intranet és Internet portálok</mark></li>
-          </ul>
+          <div class="more">
+            <div class="more-content">
+              <h3>Alkalmazott platformok, módszertanok, eszközök, nyelvek</h3>
+              <p>Java, SCRUM, .NET, C#, J2EE, Mobile technologies, iOS, Android, Linux, Windows, VmWare</p>
+              <h3>Teljes körű projektkezelés:</h3>
+              <p>Problémafeltárás, problémák lokalizálása, szegmentálása, Igényelemzés és igények megfogalmazása, Követelményspecifikáció, Tervezés, Fejlesztés / Kódolás, Minőségbiztosítás, Tesztelés tervezése, Tesztelés, Dokumentálás, Oktatás / Képzés, Support, Utómunkák</p>
+              <h3>Néhány általános és specifikus megoldás:</h3>
+              <ul class="twocolumns">
+                <li><mark>Mobil webshop</mark></li>
+                <li><mark>Webalkalmazások</mark></li>
+                <li><mark>Adatszivattyú</mark></li>
+                <li><mark>ERP</mark></li>
+                <li><mark>Banki biztonsági megoldások</mark></li>
+                <li><mark>Dokumentumkezelés</mark></li>
+                <li><mark>Rendszerek szétválasztása</mark></li>
+                <li><mark>Munkafolyamat-automatizálás</mark></li>
+                <li><mark>Intranet és Internet portálok</mark></li>
+              </ul>
+            </div>
+            <div class="handler">
+              <a href="#" class="open"><span>+</span></a>
+              <a href="#" class="close"><span>-</span></a>
+            </div>
+          </div>
         </div>
         <div class="innovation">
           <p><strong>Kutatási eredményeinket fejlesztési folyamatainkba integráljuk</strong>, így hozzuk létre saját újításainkat.
@@ -306,6 +322,13 @@
         </div>
       </div>
     </div>
+    <div class="handler">
+      <div class="row">
+        <div class="small-18 columns">
+          <a href="#" class="close"><span>-</span></a>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="product fieldback">
     <div class="title">
@@ -375,6 +398,13 @@
               <li><em>A FielDBack segítségével az információáramlás - és nem csak a rossz híreké - már-már tényleg gyorsabb a fénynél.</em></li>
             </ul>
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="handler">
+      <div class="row">
+        <div class="small-18 columns">
+          <a href="#" class="close"><span>-</span></a>
         </div>
       </div>
     </div>
@@ -479,6 +509,13 @@
         </div>
       </div>
     </div>
+    <div class="handler">
+      <div class="row">
+        <div class="small-18 columns">
+          <a href="#" class="close"><span>-</span></a>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="product foundryboxlive">
     <div class="title">
@@ -561,6 +598,13 @@
         </div>
       </div>
     </div>
+    <div class="handler">
+      <div class="row">
+        <div class="small-18 columns">
+          <a href="#" class="close"><span>-</span></a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 <div class="references">
@@ -568,7 +612,7 @@
     <div class="row">
       <div class="small-18 columns" id="references-title">
         <h2>Referenciáink, partnereink</h2>
-        <span>TESCO, akciókezelő rendszer <a href="http://tesco.hu/">tesco.hu</a></span>
+        <!--<span>TESCO, akciókezelő rendszer <a href="http://tesco.hu/">tesco.hu</a></span>-->
       </div>
     </div>
   </div>
@@ -612,7 +656,7 @@
       <br>
       +36 1 453 4131<br>
       <br>
-      <a class="email" href="mailto:info@p92.hu">info@p92rdi.hu</a>
+      <a class="email" href="mailto:hello@p92.hu">hello@p92rdi.hu</a>
     </div>
   </div>
 </div>

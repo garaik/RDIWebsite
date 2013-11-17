@@ -22,6 +22,89 @@ var RDI_CONTENT = (function() {
         });
     }
 
+    function show(w) {
+        var rdiw = rdi[w];
+        rdiw.q.css({
+            display: 'block'
+        }, delay);
+        rdiw.d.animate({
+            height: rdiw.d.attr('data-height'),
+            opacity: 1
+        }, delay);
+        current = w;
+    }
+
+    function hide() {
+        var rdic = rdi[current];
+        rdic.q.css({ display: 'none' }, delay);
+        rdic.d.animate({ height: 0, opacity: 0 }, delay);
+        if (rdic.mctx) {
+            closeMore(rdic.mctx);
+        }
+    }
+
+    function openMore(mctx) {
+        if (!(mctx.animating || mctx.opened)) {
+            mctx.animating = true;
+            mctx.mc.animate({height: mctx.mch}, delay);
+            mctx.d.animate({height: '+=' + mctx.mch}, delay);
+            if (mctx.aside) {
+                mctx.aside.animate({
+                    height: mctx.aside.attr('data-height'),
+                    opacity: 1
+                }, delay);
+            }
+            mctx.o.css({'z-index' : 49}).animate({opacity: 0}, delay);
+            mctx.c.css({'z-index' : 50}).animate({opacity: 1}, delay, function() {
+                mctx.opened = true;
+                mctx.animating = false;
+            });
+        }
+    }
+
+    function closeMore(mctx) {
+        if (!mctx.animating && mctx.opened) {
+            mctx.animating = true;
+            mctx.mc.animate({height: 0}, delay);
+            mctx.d.animate({height: '-=' +  mctx.mch}, delay);
+            if (mctx.aside) {
+                mctx.aside.animate({ height: 0, opacity: 0 }, delay);
+            }
+            mctx.o.css({'z-index' : 50}).animate({opacity: 1}, delay);
+            mctx.c.css({'z-index' : 49}).animate({opacity: 0}, delay, function() {
+                mctx.opened = false;
+                mctx.animating = false;
+            });
+        }
+    }
+
+    function initMore(d) {
+        var mctx = (function() {
+            var m = d.find('.more');
+            var mc = m.find('.more-content');
+            return {
+                d: d,
+                m: m,
+                mc: mc,
+                mch: mc.height(),
+                o: m.find('.open'),
+                c: m.find('.close') ,
+                opened: false,
+                animating: false
+            };
+        }());
+        mctx.mc.css({height: 0});
+        mctx.o.click(function() {
+            openMore(mctx);
+            return false;
+        });
+        mctx.c.click(function() {
+            closeMore(mctx);
+            return false;
+        });
+        return mctx;
+    }
+
     $(function() {
         var g = $('.gear');
         var q = g.find('.quotation');
@@ -31,11 +114,13 @@ var RDI_CONTENT = (function() {
             r: {
                 q: q.find('.research'),
                 d: d.find('.research'),
+                dm: d.find('.research').find('.more-content'),
                 a: a.find('.research')
             },
             d: {
                 q: q.find('.development'),
                 d: d.find('.development'),
+                dm: d.find('.development').find('.more-content'),
                 a: a.find('.development')
             },
             i: {
@@ -43,6 +128,15 @@ var RDI_CONTENT = (function() {
                 d: d.find('.innovation')
             }
         };
+
+        [rdi.r.q, rdi.d.q, rdi.i.q].forEach(function(x) {
+            x.css({display: 'none'})
+        });
+
+        rdi.r.mctx = initMore(rdi.r.d);
+        rdi.r.mctx.aside = rdi.r.a;
+        rdi.d.mctx = initMore(rdi.d.d);
+        rdi.d.mctx.aside = rdi.d.a;
 
         [rdi.r.d, rdi.d.d, rdi.i.d].forEach(function(x) {
             setHeightAndInit(x, d);
@@ -53,33 +147,6 @@ var RDI_CONTENT = (function() {
 
         show(current);
     });
-
-    function show(w) {
-        var rdiw = rdi[w];
-        rdiw.q.css({
-            display: 'block'
-        }, delay);
-        rdiw.d.animate({
-            height: rdiw.d.attr('data-height'),
-            opacity: 1
-        }, delay);
-        if (rdiw.a) {
-            rdiw.a.animate({
-                height: rdiw.a.attr('data-height'),
-                opacity: 1
-            }, delay);
-        }
-        current = w;
-    }
-
-    function hide() {
-        var rdic = rdi[current];
-        rdic.q.css({ display: 'none' }, delay);
-        rdic.d.animate({ height: 0, opacity: 0 }, delay);
-        if (rdic.a) {
-            rdic.a.animate({ height: 0, opacity: 0 }, delay);
-        }
-    }
 
     return {
         switchResearch: function() { hide(); show('r'); },
@@ -104,12 +171,12 @@ var REFERENCES = (function() {
         var fadeSpanIn = function($s) {
             $s.stop();
             var t = parseInt($s.css('top'), 10);
-            $s.css({'z-index' : 500}).animate({top : 0}, d * t / $defaultTop);
+            $s.css({'z-index' : 50}).animate({top : 0}, d * t / $defaultTop);
         };
         var fadeSpanOut = function($s) {
             $s.stop();
             var t = parseInt($s.css('top'), 10);
-            $s.css({'z-index' : 499}).animate({top : $defaultTop}, d * ($defaultTop - t) / $defaultTop);
+            $s.css({'z-index' : 49}).animate({top : $defaultTop}, d * ($defaultTop - t) / $defaultTop);
         };
         var refMouseIn = function(e) { fadeSpanIn($(e.target).data('span')); };
         var refMouseOut = function(e) { fadeSpanOut($(e.target).data('span')) };
@@ -269,24 +336,107 @@ var TOP_MENU = (function() {
 
 var PRODUCTS = (function() {
     $(function() {
-        $('.products').css({
-            display: 'none'
+        var $ps = $('.products'),
+            delay = 1000;
+        $ps.find('.product-boxes').find('.box').each(function(i, e) {
+            var $b = $(e),
+                $bp = $b.parent(),
+                cn = $b.attr('class').split(' ')[1],
+                $p = $('.product.' + cn);
+            console.log($bp);
+            var ctx = {
+                section: $ps,
+                content: $p,
+                start: {
+                    section: {
+                        height: $ps.height()
+                    },
+                    content: {
+                        left: 0,
+                        top: 0,
+                        width: $ps.width(),
+                        height: 0,
+                        opacity: 1
+                    }
+                },
+                target: {
+                    section: {
+                        height: $p.height()
+                    },
+                    content: {
+                        left: 0,
+                        top: 0,
+                        height: $p.height(),
+                        width: $ps.width(),
+                        opacity: 1
+                    }
+                }
+            };
+            $p.css({'z-index': -1}).css(ctx.start.content);
+            $b.click(function() {
+                ctx.content.css({'z-index': 2});
+                ctx.section.animate(ctx.target.section, delay);
+                ctx.content.animate(ctx.target.content, delay);
+            });
+            $p.find('.handler').find('.close').click(function() {
+                ctx.content.animate(ctx.start.content, delay);
+                ctx.section.animate(ctx.start.section, delay, function() {
+                    ctx.content.css({'z-index': -1});
+                });
+                SCROLL.toProducts();
+                return false;
+            });
         });
     });
 })();
 
-$(function() {
+var SCROLL = (function() {
+    var delay = 500;
+    var scrollTo = function($e) {
+        $('html, body').animate({scrollTop: $e.offset().top - 67}, delay);
+    };
+    return {
+        toRDI: function() {
+            scrollTo($('.gear'));
+        },
+        toProducts: function() {
+            scrollTo($('.products'));
+        },
+        toReferences: function() {
+            scrollTo($('.references'));
+        },
+        toContacts: function() {
+            scrollTo($('.contact'));
+        }
+    };
+}());
 
+$(function() {
     $('#menu-research').click(function() {
+        SCROLL.toRDI();
         PIZZA_SVG.switchResearch();
         return false;
     });
     $('#menu-development').click(function() {
+        SCROLL.toRDI();
         PIZZA_SVG.switchDevelopment();
         return false;
     });
     $('#menu-innovation').click(function() {
+        SCROLL.toRDI();
         PIZZA_SVG.switchInnovation();
+        return false;
+    });
+    $('#menu-products').click(function() {
+        SCROLL.toProducts();
+        return false;
+    });
+    $('#menu-references').click(function() {
+        SCROLL.toReferences();
+        return false;
+    });
+    $('#menu-contacts').click(function() {
+        SCROLL.toContacts();
         return false;
     });
     PIZZA_SVG.setCallback(function(slice) {
