@@ -314,7 +314,8 @@ var TOP_MENU = (function() {
             pos = $(this).scrollTop();
             target = pos > 84 ? 60 : 144 - pos;
         });
-
+        var $ml = $('#menu-logo');
+        var dih = $ml.height();
         window.setInterval(function() {
             if (current < target) {
                 current += 10;
@@ -328,8 +329,12 @@ var TOP_MENU = (function() {
                     current = target;
                 }
             }
-            $('#menubar').css({ height: current });
-            $('#menu-logo').css({ maxHeight: current });
+            $('#menubar').css({height: current});
+            $ml.css({maxHeight: current});
+            var r = (1 - ($ml.height() - 60) / (dih - 60));
+            $ml.css({
+                marginLeft: r * 9
+            });
         }, 20);
     });
 })();
