@@ -60,9 +60,9 @@ var PIZZA_SVG = (function() {
             onLoad: function () {
                 $('#slices, #captions, #outlines').attr('transform', 'rotate(0, 140, 140)');
                 var di = 'data-index';
-                $('#slice-research').attr(di, 'R');
-                $('#slice-development').attr(di, 'D');
-                $('#slice-innovation').attr(di, 'I');
+                $('#slice-research').attr(di, 'R').css({cursor: 'pointer'});
+                $('#slice-development').attr(di, 'D').css({cursor: 'pointer'});
+                $('#slice-innovation').attr(di, 'I').css({cursor: 'pointer'});
                 $('#slice-research, #slice-development, #slice-innovation').click(function () {
                     var slice = $(this).attr(di);
                     rotate(slice);

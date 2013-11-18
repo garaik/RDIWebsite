@@ -300,7 +300,7 @@ var SLOGEN = (function() {
             if (++i == 4) { i = 1; }
             $('#slogen-title-' + i).css(defaultCss.st).animate({ opacity: 1 }, dur);
             $('#slogen-description-' + i).css(defaultCss.sd).animate({ opacity: 1 }, dur);
-        }, 7000);
+        }, 10000);
     });
 })();
 
@@ -379,6 +379,7 @@ var PRODUCTS = (function() {
             };
             $p.css({'z-index': -1}).css(ctx.start.content);
             $b.click(function() {
+                SCROLL.toProducts();
                 ctx.content.css({'z-index': 2});
                 ctx.section.animate(ctx.target.section, delay);
                 ctx.content.animate(ctx.target.content, delay);
@@ -447,10 +448,13 @@ $(function() {
     PIZZA_SVG.setCallback(function(slice) {
         switch (slice) {
             case 'R':
+                SCROLL.toRDI();
                 RDI_CONTENT.switchResearch(); break;
             case 'D':
+                SCROLL.toRDI();
                 RDI_CONTENT.switchDevelopment(); break;
             case 'I':
+                SCROLL.toRDI();
                 RDI_CONTENT.switchInnovation(); break;
         }
     });
