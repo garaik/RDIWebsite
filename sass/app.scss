@@ -359,6 +359,10 @@ $color-text: #55575e;
       display: inline-block;
       -webkit-font-smoothing: antialiased;
       -webkit-text-stroke: 1px rgba(0,0,0,0.1);
+
+      strong {
+        font-weight: 400;
+      }
     }
     p {
       position: absolute;
